@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#00FF0000"
+    android:id="@+id/rl_done_global"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:id="@+id/iv_circle_done"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="0dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:elevation="10dp"
+        app:srcCompat="@drawable/circle_done" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="-50dp"
+        android:layout_below="@+id/iv_circle_done"
+        android:background="@drawable/shape_dialog_done"
+        android:layout_height="match_parent"
+        >
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_marginTop="50dp"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="15dp">
+
+        <TextView
+            android:id="@+id/dialog_done_info"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Potwierdź wykonanie promocji"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/dialog_done_info2"
+            android:layout_below="@id/dialog_done_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="By otrzymać nagrodę w postaci 10 monet za wykonanie promocji uzupełnij poniższe pola. Po pozytywnym zweryfikowaniu przez administratorów, punty zostaną przydzielone do Twojego konta."
+            android:textSize="12sp"
+             />
+
+        <LinearLayout
+            android:id="@+id/done_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/dialog_done_info2"
+            android:gravity="center">
+
+            <EditText
+                android:id="@+id/editTextUsernameDone"
+                android:textColor="#000000"
+                android:hint="@string/edittext_hint"
+                android:background="@layout/rounded_border_edittext_gold"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:textSize="9sp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:padding="5dp"
+                android:textAlignment="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:ems="5"
+                android:inputType="textPersonName"
+                />
+
+            <TextView
+                android:id="@+id/dialog_done_info3"
+                android:layout_below="@id/editTextUsernameDone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:gravity="center"
+                android:padding="12dp"
+                android:textStyle="bold"
+                android:text="Wprowadź datę rejestracji w "
+                android:textSize="12sp"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center">
+
+                <com.github.florent37.singledateandtimepicker.SingleDateAndTimePicker
+                    android:id="@+id/single_day_picker"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_marginTop="-35dp"
+                    android:scaleX="0.7"
+                    android:scaleY="0.7"
+                    app:picker_selectorColor="@android:color/transparent"
+                    app:picker_curved="false"
+                    app:picker_cyclic="true"
+                    app:picker_todayText="@string/picker_today"
+                    app:picker_visibleItemCount="5"
+                    />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_below="@id/single_day_picker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:gravity="center"
+                android:padding="12dp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                android:text="Wprowadź numer telefonu na który mamy Ci wysłać Twoją część bonusu. \n Po pozytywnej weryfikacji płatność zostanie wykonania BLIKiem jako darowizna."
+                android:textSize="12sp"
+                />
+            <EditText
+                android:id="@+id/editTextUsernameAccountNumber"
+                android:textColor="#000000"
+                android:visibility="gone"
+                android:hint="Podaj numer telefonu na który chcesz otrzymać przelew"
+                android:background="@layout/rounded_border_edittext_gold"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:textSize="9sp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:padding="5dp"
+                android:textAlignment="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:ems="5"
+                android:inputType="number"
+                />
+            <EditText
+                android:id="@+id/editTextAdditionalInfo"
+                android:textColor="#000000"
+                android:hint="Wprowadź dodatkowe informacje (opcjonalnie)"
+                android:background="@layout/rounded_border_edittext_gold"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:textSize="9sp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:padding="5dp"
+                android:textAlignment="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:ems="5"
+                android:inputType="textLongMessage"
+                />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/editTextAdditionalInfo"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/button_done_confirm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    style="@style/MyButtonStyle"
+                    android:background="@drawable/gradient_button_shape"
+                    android:foreground="?selectableItemBackgroundBorderless"
+                    android:foregroundGravity="center"
+                    android:gravity="center"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="8dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="8dp"
+                    android:stateListAnimator="@null"
+                    android:text="Potwierdzam wykonanie promocji"
+                    android:textColor="#ffffff"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>
+    </RelativeLayout>
+</RelativeLayout>

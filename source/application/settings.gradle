@@ -1,0 +1,25 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
+    repositories {
+        google()
+        mavenCentral()
+        jcenter() // Warning: this repository is going to shut down soon
+        maven { url 'https://jitpack.io' }
+
+    }
+}
+rootProject.name = "Profitz"
+include ':app'
+include ':customerly-android-sdk'
+include ':app'
+include ':MeowBottomNavigation'
+include ':MeowBottomNavigation'
+include ':imagepicker'
+include ':SuperBottomSheetNew'

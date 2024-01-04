@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_marginEnd="5dp"
+    android:gravity="center"
+    android:foreground="@drawable/ripple_effect_rectangle"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        card_view:layout_constraintEnd_toEndOf="parent"
+        card_view:layout_constraintStart_toStartOf="parent"
+        card_view:layout_constraintTop_toTopOf="parent"
+        android:textAlignment="center"
+        android:id="@+id/card_view_groups_all"
+        android:layout_margin="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textAlignment="center">
+
+            <RelativeLayout
+                android:id="@+id/image"
+                android:layout_width="60dp"
+                android:layout_height="60dp" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/memberImage"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerVertical="true"
+                card_view:layout_constraintEnd_toEndOf="parent"
+                card_view:layout_constraintStart_toStartOf="parent"
+                card_view:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageAnim"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:scaleType="centerInside"
+                card_view:srcCompat="@drawable/progresscircle" />
+
+            <View
+                android:id="@+id/onlineNotifier"
+                style="@style/OnlineNotifier"
+                android:layout_marginStart="45dp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/username"
+        style="@style/MyTextView"
+        android:layout_width="100dp"
+        android:foregroundGravity="center"
+        android:padding="3dp"
+        card_view:layout_constraintEnd_toEndOf="parent"
+        card_view:layout_constraintStart_toStartOf="parent"
+        card_view:layout_constraintTop_toBottomOf="@id/card_view_groups_all"
+        android:textAlignment="center"
+        android:autoSizeTextType="uniform"
+        android:layout_marginTop="5dp"
+        android:autoSizeMinTextSize="1sp"
+        android:autoSizeStepGranularity="3sp"
+        android:autoSizeMaxTextSize="10sp"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_below="@id/card_view_groups_all"
+        android:textStyle="bold" />
+</androidx.constraintlayout.widget.ConstraintLayout>

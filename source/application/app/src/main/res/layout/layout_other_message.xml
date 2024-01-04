@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="start"
+        android:layout_alignParentStart="true"
+        >
+    <TextView
+        android:id="@+id/system_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:textColor="@color/bg_Profitz" />
+    <TextView
+        android:id="@+id/otherSenderName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:visibility="gone"
+        android:layout_marginBottom="3dp"
+        android:textStyle="bold"
+        android:textSize="13sp" />
+
+
+<com.joooonho.SelectableRoundedImageView
+    android:id="@+id/otherAttachment"
+        android:layout_width="200dp"
+    android:maxWidth="100dp"
+    app:sriv_left_bottom_corner_radius="8dp"
+    app:sriv_left_top_corner_radius="23dp"
+    app:sriv_right_bottom_corner_radius="23dp"
+    app:sriv_right_top_corner_radius="23dp"
+        android:layout_height="200dp"
+    android:maxHeight="100dp"
+    android:visibility="gone"
+    android:layout_marginTop="10dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/placeholder_logo" />
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/gradient_bg_gray_other_message_last"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp"
+    android:layout_marginTop="3dp"
+    android:backgroundTint="@color/colorGray"
+    android:id="@+id/layout_other_message_drawable"
+    android:paddingBottom="10dp">
+
+
+    <!--<View
+        android:id="@+id/onlineNotifier"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_below="@+id/attachment"
+        android:layout_marginLeft="2dp"
+        android:layout_toRightOf="@+id/senderName"
+        android:background="@drawable/online_notifier" />-->
+
+    <!--<LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/senderName"
+        android:orientation="vertical">-->
+
+    <TextView
+        android:id="@+id/otherMessage"
+        style="@style/MyTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="280dp" />
+
+    <!--<TextView
+        android:id="@+id/time"
+        style="@style/ChatTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time"
+        android:textColor="@color/colorWhite" />
+</LinearLayout>-->
+</RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

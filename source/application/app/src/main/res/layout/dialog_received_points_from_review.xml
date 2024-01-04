@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape"
+        android:paddingLeft="15dp"
+        android:gravity="center"
+        android:paddingRight="15dp"
+        android:paddingBottom="15dp">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/rl_img"
+    >
+
+
+        <ImageView
+            android:id="@+id/iv_congrats"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="0dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:elevation="10dp"
+            android:orientation="vertical"
+            app:srcCompat="@drawable/prezent" />
+
+        <ImageView
+            android:id="@+id/iv_congrats2"
+            android:layout_width="275dp"
+            android:layout_height="275dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginStart="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:layout_marginTop="20dp"
+            android:elevation="10dp"
+            android:orientation="vertical"
+            app:srcCompat="@drawable/reviews" />
+
+
+</RelativeLayout>
+
+        <TextView
+            android:id="@+id/dialog_received_points_info"
+            android:layout_below="@id/rl_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-35dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Gratulacje!"
+            android:textSize="35dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/dialog_received_points_info2"
+            android:layout_below="@id/dialog_received_points_info"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-10dp"
+            android:layout_centerInParent="true"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text=""
+            android:textSize="20sp"
+             />
+        <TextView
+            android:id="@+id/dialog_received_points_info3"
+            android:layout_below="@id/dialog_received_points_info2"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_centerInParent="true"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+
+            android:text=""
+            android:textSize="16sp"
+            />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_below="@+id/dialog_received_points_info3"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/button_received_points"
+                android:layout_width="230dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                style="@style/MyButtonStyle"
+                android:background="@drawable/gradient_button_shape"
+                android:layout_centerHorizontal = "true"
+                android:foregroundGravity="center"
+                android:gravity="center"
+                android:paddingLeft="20dp"
+                android:paddingTop="4dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="4dp"
+                android:stateListAnimator="@null"
+                android:text="Zamknij"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/done_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/dialog_received_points_info2"
+            android:gravity="center">
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

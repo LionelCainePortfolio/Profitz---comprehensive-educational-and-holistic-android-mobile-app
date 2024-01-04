@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/scene_01"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+   <androidx.constraintlayout.motion.widget.MotionLayout
+       android:id="@+id/motionLayout"
+       app:layoutDescription="@xml/scene_01_header"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       app:showPaths="false"
+       android:background="#fff">
+      <ImageView
+          android:id="@+id/background"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:maxHeight="570dp"
+          android:scaleType="fitCenter"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          />
+      <TextView
+          android:id="@+id/textStepInfo"
+          android:layout_width="70dp"
+          android:layout_height="70dp"
+          android:layout_alignParentStart="true"
+          android:gravity="center_horizontal"
+          android:text="Krok 1"
+          android:alpha="0.6"
+          android:textColor="@color/bg_screen1"
+          android:textSize="22sp"
+          android:textStyle="bold" />
+
+         <TextView
+             android:id="@+id/text_step"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginStart="15dp"
+             android:layout_marginEnd="15dp"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintBottom_toBottomOf="parent"
+             android:gravity="center_horizontal"
+             android:text="Tytuł"
+             android:textColor="@color/bg_screen1"
+             android:textSize="23sp"
+             android:textStyle="bold" />
+   </androidx.constraintlayout.motion.widget.MotionLayout>
+
+   <androidx.core.widget.NestedScrollView
+       android:layout_width="match_parent"
+       android:id="@+id/scrollable"
+       android:focusable="true"
+       android:elevation="10dp"
+       android:fillViewport="true"
+
+       android:focusableInTouchMode="true"
+       app:layout_behavior="@string/appbar_scrolling_view_behavior"
+       app:layoutDescription="@xml/scene_01"
+       android:layout_height="match_parent"
+       >
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:descendantFocusability="blocksDescendants"
+       android:layout_height="match_parent"
+       android:orientation="vertical"
+       android:layout_marginTop="15dp"
+       >
+
+      <TextView
+          android:id="@+id/text_desc"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="30dp"
+          android:layout_marginTop="5dp"
+          android:layout_marginEnd="30dp"
+          android:textAlignment="center"
+          android:textColor="@color/grayEnd"
+          android:textSize="14sp" />
+      <Button
+          android:id="@+id/buttonRefer"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:visibility="gone"
+          android:layout_alignParentEnd="true"
+          android:layout_alignParentStart="true"
+          android:layout_marginEnd="25dp"
+          android:layout_marginStart="25dp"
+          android:layout_gravity="center"
+          android:layout_marginTop="20dp"
+          android:layout_marginBottom="20dp"
+          android:background="@drawable/gradient"
+          android:clickable="true"
+          android:focusable="true"
+          android:foreground="?attr/selectableItemBackground"
+          android:foregroundGravity="center_horizontal"
+          android:gravity="center"
+          android:padding="16dp"
+          android:stateListAnimator="@null"
+          android:text="Chcę wziąć udział w promocji"
+          android:textColor="#ffffff"
+          tools:ignore="NewApi"
+          tools:targetApi="m" />
+      <TextView
+          android:id="@+id/text_desc_2"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="30dp"
+          android:layout_marginTop="5dp"
+          android:textIsSelectable="true"
+          android:layout_marginEnd="30dp"
+          android:textAlignment="center"
+          android:textColor="@color/grayEnd"
+          android:textSize="14sp" />
+
+      <Button
+          android:id="@+id/buttonDone"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:visibility="gone"
+          android:onClick="openPromoDoneDialog"
+          android:layout_alignParentEnd="true"
+          android:layout_alignParentStart="true"
+          android:layout_marginEnd="50dp"
+          android:layout_marginStart="50dp"
+          android:layout_gravity="center"
+          android:layout_marginTop="20dp"
+          android:layout_marginBottom="20dp"
+          android:background="@drawable/gradient"
+          android:clickable="true"
+          android:focusable="true"
+          android:foreground="?attr/selectableItemBackground"
+          android:foregroundGravity="center_horizontal"
+          android:gravity="center"
+          android:padding="16dp"
+          android:stateListAnimator="@null"
+          android:text="Ukończyłem promocję"
+          android:textColor="#ffffff"
+          tools:ignore="NewApi"
+          tools:targetApi="m" />
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textSize="14sp"
+          android:textColor="@color/grayEnd"
+          android:layout_marginTop="10dp"
+          android:layout_marginStart="30dp"
+          android:id="@+id/text_desc_3"
+          android:layout_marginEnd="30dp"
+          android:textAlignment="center"
+          android:layout_marginBottom="20dp"
+          />
+      <com.airbnb.lottie.LottieAnimationView
+          android:id="@+id/anim_move_slides"
+          android:layout_width="match_parent"
+          android:visibility="gone"
+          android:layout_marginTop="20dp"
+          android:layout_height="50dp"
+          android:elevation="10dp"
+          app:lottie_autoPlay="false"
+          android:layout_marginBottom="30dp"
+          app:lottie_renderMode="automatic"
+          app:lottie_repeatCount="0"
+          app:lottie_fileName="swipe_right_to_left.json"
+          app:lottie_loop="false"
+          app:lottie_speed="2"
+          />
+      <TextView
+          android:id="@+id/anim_move_slides_text"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textAlignment="center"
+          android:layout_marginBottom="75dp"
+          android:text="Możesz przewijać okna instrukcji za pomocą gestów."
+          android:textSize="12sp"
+          />
+      <Button
+          android:id="@+id/buttonContact"
+          android:layout_width="150dp"
+          android:layout_height="35dp"
+          android:visibility="gone"
+          android:layout_centerHorizontal="true"
+          android:layout_gravity="center"
+          android:layout_marginTop="10dp"
+          android:layout_marginBottom="100dp"
+          android:background="@drawable/button_rectangle_pink"
+          android:paddingTop="1dp"
+          android:paddingBottom="1dp"
+          android:text="Skontaktuj się"
+          android:textColor="#ffffff"
+          android:textSize="13sp" />
+
+   </LinearLayout>
+
+   </androidx.core.widget.NestedScrollView>
+<com.google.android.material.floatingactionbutton.FloatingActionButton       android:id="@+id/fab_done"
+       android:layout_width="50dp"
+       android:layout_height="50dp"
+       android:foregroundGravity="center"
+       android:elevation="10dp"
+    app:fabCustomSize="50dp"
+    android:focusable="true"
+    android:layout_marginStart="15dp"
+   android:clickable="true"
+       app:fabSize="mini"
+    android:scaleType="fitXY"
+    android:layout_gravity="center"
+    android:textAlignment="center"
+       android:theme="@style/Theme.MaterialComponents.Bridge"
+       style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+       app:backgroundTint="@color/colorPrimaryMid"
+       android:layout_marginEnd="5dp"
+       android:gravity="center"
+       android:src="@drawable/ic_done_border_white_24dp"
+       />
+   <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+       android:id="@+id/fab"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:foregroundGravity="center"
+       android:elevation="10dp"
+       android:onClick="openChat"
+       android:focusable="true"
+       android:clickable="true"
+       android:textColor="@color/white"
+       app:fabSize="mini"
+       android:theme="@style/Theme.MaterialComponents.Light.Bridge"
+       style="@style/ExtendedFAB"
+       android:layout_marginEnd="5dp"
+       android:layout_gravity="end|bottom"
+       android:scaleType="center"
+       android:text="Potrzebuję pomocy"
+       app:icon="@drawable/ic_baseline_help_outline_white_24" />
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

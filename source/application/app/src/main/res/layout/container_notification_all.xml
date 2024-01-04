@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:clickable="true"
+    android:focusable="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:foreground="@drawable/ripple_effect_rectangle"
+    android:layout_marginBottom="5dp"
+    android:layout_marginStart="1.5dp"
+    android:layout_marginEnd="1.5dp"
+    android:layout_marginTop="8dp"
+    android:elevation="1.5dp"
+    app:cardCornerRadius="10dp"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxHeight="90dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            android:background="@color/white"
+            >
+            <ImageView
+                android:layout_width="55dp"
+                android:scaleType="fitCenter"
+                android:layout_gravity="center"
+                android:layout_marginStart="7dp"
+                android:layout_height="55dp"
+                android:id="@+id/ivNotification"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:maxWidth="170dp"
+                android:gravity="start"
+                android:layout_gravity="start"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="0dp">
+
+                <TextView
+                    android:id="@+id/textTitle"
+                    android:text="Rejestracja partnera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxWidth="170dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginLeft="0dp"
+                    android:textColor="#111111"
+                    android:layout_gravity="left"
+                    android:gravity="start"
+                    android:textSize="13.5sp"
+
+                    />
+                <TextView
+                    android:id="@+id/textDescription"
+                    android:text="Gratulacje! Jeden z Twoich znajomych zarejestrował się w aplikacji i wykonał co najmniej jedną promocję. Otrzymujesz w nagrodę 10 monet!"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:maxWidth="165dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="0dp"
+                    android:textColor="#333333"
+                    android:layout_gravity="left"
+                    android:gravity="start"
+                    android:textSize="8sp"
+
+                    />
+                <TextView
+                    android:id="@+id/textDateN"
+                    android:text="Luty 22, 2020"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxWidth="140dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginLeft="0dp"
+                    android:textColor="#666666"
+                    android:layout_gravity="left"
+                    android:gravity="start"
+                    android:textSize="10sp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="end"
+                android:layout_marginTop="0dp"
+                android:elevation="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:paddingStart="1dp"
+                        android:paddingEnd="1dp"
+                        android:text="+"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textEarnN"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="5dp"
+                        android:gravity="center"
+                        android:text="10.00"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textEarnType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginStart="-3.5dp"
+                        android:gravity="left"
+                        android:text="PKT"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="8sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

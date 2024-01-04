@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FDFFFFFF"
+    android:paddingBottom="30dp"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/rl_grey_line"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="10dp"
+        android:textAlignment="center"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="7dp"
+            android:background="@drawable/gradient_grey_button_shape_light_no_gradient"
+            android:gravity="center_horizontal"
+            android:textAlignment="center" />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/dialog_report_bug_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Zgłoś błąd"
+        app:layout_constraintTop_toBottomOf="@id/rl_grey_line"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textAlignment="center"
+        android:textColor="@color/bg_Profitz"
+        android:textSize="27sp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/dialog_report_bug_subtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Twoje zgłoszenie pomaga nam rozwijać Profitz"
+        app:layout_constraintTop_toBottomOf="@id/dialog_report_bug_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textAlignment="center"
+        android:textColor="@color/bnv_tab_item_foreground"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FDFFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/dialog_report_bug_subtitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+
+
+    <VideoView
+        android:layout_width="250dp"
+        android:id="@+id/videoview1"
+        android:layout_height="300dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:id="@+id/report_bug_shake"
+    app:layout_constraintTop_toBottomOf="@id/videoview1"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+
+        >
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginEnd="50dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:text="Potrząśnij by zgłosić błąd"
+            android:textColor="@color/bg_Profitz"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:text="Dowiedz się więcej"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="15sp"
+            />
+    </LinearLayout>
+    <com.suke.widget.SwitchButton
+        android:id="@+id/txt_hide_balance_points2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:sb_background="@color/gray"
+        app:sb_border_width="0dp"
+        app:sb_checked="true"
+        app:sb_checkline_width="0dp"
+        app:sb_shadow_radius="5dp"
+        app:sb_show_indicator="false"
+        app:sb_uncheck_color="@color/gray" />
+    </LinearLayout>
+<RelativeLayout         android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:background="@drawable/gradient_grey_button_shape_light_no_gradient"
+    android:layout_marginTop="10dp"
+    android:layout_marginStart="15dp"
+    android:layout_marginEnd="15dp"
+
+    />
+</LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/report_bug"
+        app:layout_constraintTop_toBottomOf="@id/report_bug_shake"
+        app:layout_constraintStart_toStartOf="parent"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?selectableItemBackgroundBorderless"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center_vertical"
+
+        >
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            app:srcCompat="@drawable/ic_baseline_help_outline_black_24"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:text="Coś nie działa poprawnie"
+            android:textColor="@color/bg_Profitz"
+            android:textSize="20sp"
+            android:textStyle="bold"
+
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/report_bug"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp"
+
+        android:gravity="center_vertical"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?selectableItemBackgroundBorderless"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            app:srcCompat="@drawable/ic_baseline_help_outline_black_24"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jak zgłosić nadużycie"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textColor="@color/bg_Profitz"
+            android:textSize="20sp"
+            android:textStyle="bold"
+
+            />
+    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

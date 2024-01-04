@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:ignore="NamespaceTypo"
+    android:id="@+id/all_coord"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    >
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:id="@+id/nested_scroll_fragment_airdrops"
+            android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="800dp"
+                card_view:layout_constraintTop_toTopOf="parent"
+                card_view:layout_constraintStart_toStartOf="parent">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="20dp"
+                    android:id="@+id/rl_search"
+                    android:layout_marginTop="20dp">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:id="@+id/search_rl2">
+                        <EditText
+                            android:id="@+id/search_airdrop_edit_text"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/round_textedit_grey"
+                            android:drawableStart="@drawable/ic_search_black_24dp"
+                            android:fontFamily="sans-serif-light"
+                            android:hint="Szukaj..."
+                            android:paddingStart="12dp"
+                            android:paddingTop="6dp"
+                            android:inputType="textNoSuggestions"
+                            android:paddingBottom="6dp"
+                            android:drawablePadding="4dp"
+                            android:textColor="@color/searchText"
+                            android:textColorHint="@color/searchHint"
+                            android:textCursorDrawable="@drawable/cursor_color"
+                            android:textSize="18sp"/>
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="35dp"
+                            android:id="@+id/add_airdrop"
+                            android:clickable="true"
+                            android:layout_marginStart="15dp"
+                            android:layout_toEndOf="@id/search_airdrop_edit_text"
+                            android:focusable="true"
+                            android:textStyle="bold"
+                            android:textColor="@color/bg_Profitz"
+                            android:text="Dodaj"
+                            android:textSize="16sp"
+                            android:foreground="?attr/selectableItemBackground"
+                            android:gravity="center"
+                            android:background="@drawable/round_button_gold"
+                            />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rl_featured"
+                    android:visibility="gone"
+                    android:layout_below="@id/rl_search"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center_vertical"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:text="Promowane airdropy"
+                        android:textStyle="bold"
+                        android:textColor="@color/bg_Profitz"
+                        android:textSize="25sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_alignParentEnd="true"
+                        >
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="wrap_content"
+                            card_view:srcCompat="@drawable/ic_baseline_arrow_forward_ios_24_grey"/>
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="wrap_content"
+                            card_view:srcCompat="@drawable/ic_baseline_arrow_forward_ios_24_grey"/>
+                        <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="wrap_content"
+                        card_view:srcCompat="@drawable/ic_baseline_arrow_forward_ios_24_grey"/>
+                    </LinearLayout>
+
+                </RelativeLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/mRVAirdropsFeaturedList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_below="@id/rl_featured"
+                    android:paddingBottom="2dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    />
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rl_texts"
+                    android:layout_below="@id/mRVAirdropsFeaturedList"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:text="Pokaż:"
+                        android:textStyle="bold"
+                        android:id="@+id/show"
+                        android:textColor="@color/bg_Profitz"
+                        android:textSize="22sp" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_toEndOf="@id/show"
+                        android:layout_marginEnd="20dp"
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="20dp">
+
+                            <RelativeLayout
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:id="@+id/show_img_rl1"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:foreground="?attr/selectableItemBackground"
+                                android:gravity="center"
+                                android:background="@drawable/round_cat_gold"
+                                >
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    card_view:srcCompat="@drawable/show_new"/>
+                            </RelativeLayout>
+
+
+                            <RelativeLayout
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:id="@+id/show_img_rl2"
+                                android:clickable="true"
+                                android:focusable="true"
+
+                                android:layout_marginStart="15dp"
+                                android:foreground="?attr/selectableItemBackground"
+                                android:gravity="center"
+                                android:background="@drawable/round_cat_gold"
+                                >
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    card_view:srcCompat="@drawable/show_hot"/>
+                            </RelativeLayout>
+
+
+
+                            <RelativeLayout
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:id="@+id/show_img_rl3"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:layout_marginStart="15dp"
+
+                                android:foreground="?attr/selectableItemBackground"
+                                android:gravity="center"
+                                android:background="@drawable/round_cat_gold"
+                                >
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    card_view:srcCompat="@drawable/show_exclusive"/>
+                            </RelativeLayout>
+
+
+                            <RelativeLayout
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:id="@+id/show_img_rl4"
+                                android:clickable="true"
+                                android:layout_marginStart="15dp"
+
+                                android:focusable="true"
+                                android:foreground="?attr/selectableItemBackground"
+                                android:gravity="center"
+                                android:background="@drawable/round_cat_grey"
+                                >
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    card_view:srcCompat="@drawable/show_upcoming" />
+                            </RelativeLayout>
+
+
+                            <RelativeLayout
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:id="@+id/show_img_rl5"
+                                android:layout_marginStart="15dp"
+
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:foreground="?attr/selectableItemBackground"
+                                android:gravity="center"
+                                android:background="@drawable/round_cat_grey"
+                                >
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    card_view:srcCompat="@drawable/show_inactive"/>
+                            </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/mRVAirdropsList"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="5dp"
+                    android:layout_marginBottom="130dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@id/rl_texts"
+                    />
+
+            </RelativeLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+

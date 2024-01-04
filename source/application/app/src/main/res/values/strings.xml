@@ -1,0 +1,209 @@
+<!--
+Copyright 2018 Felipe Joglar Santos
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+<resources>
+    <string name="app_name" translatable="false">Profitz</string>
+
+    <string name="default_notification_channel_id" translatable="false">my_chanel_012</string>
+
+
+    <string name="edittext_hint" translatable="false"><font size="9">Podaj email podany podczas rejestracji w </font></string>
+
+    <!-- MOVIES LIST -->
+    <string name="default_image_content_description" translatable="false">Autor</string>
+    <string name="tmdb_image_url" translatable="false">https://yoururl.com/api/images/promos/%1$s</string>
+    <string name="empty_view_message" translatable="false">Nic tu nie ma...</string>
+
+    <string name="rate_message" translatable="false">Powiedz nam na ile gwiazdek zagługujemy!</string>
+    <string name="rate_title" translatable="false">Co sądzisz o Profitz?</string>
+    <string name="rate_later" translatable="false">Może później</string>
+    <string name="rate_now" translatable="false">OCEŃ NAS</string>
+
+    <!-- MOVIES MENU -->
+    <!-- MOVIE DETAIL -->
+    <string name="synopsis_title" translatable="false">INFORMACJE</string>
+    <string name="tutorial_title" translatable="false">INSTRUKCJA</string>
+    <string name="author" translatable="false">Dodał: %1$s</string>
+    <string name="play_video_content_description" translatable="false">Odtwórz instrukcję</string>
+    <string name="youtube_thumbnail_url" translatable="false">https://img.youtube.com/vi/%1$s/0.jpg</string>
+    <string name="share" translatable="false">Udostępnij</string>
+    <string name="share_dialog_title" translatable="false">Udostępnij poprzez:</string>
+    <string name="sharing_text" translatable="false">Hej! Sprawdź ten sposób na zarobek %1$s.</string>
+    <string name="zarobek" translatable="false">Zarobek</string>
+    <string name="pozostalo_countdown" translatable="false">Nieograniczone czasowo</string>
+    <string name="gwiazda" translatable="false">gwiazda</string>
+    <string name="article_title" translatable="false">article_title</string>
+    <string name="article_body" translatable="false">article_body</string>
+    <string name="ocena" translatable="false">ocena</string>
+    <string name="czas" translatable="false">czas</string>
+    <string name="zarob_odd" translatable="false">Zarób ok.</string>
+    <string name="zegar" translatable="false">zegar</string>
+    <string name="regulamin" translatable="false"><![CDATA[Regulamin]]></string>
+
+    <string name="err_msg_name" translatable="false"> </string>
+    <string name="err_msg_lastname" translatable="false"> </string>
+
+    <string name="picker_today" translatable="false">Dzisiaj</string>
+    <string name="text2_step1" translatable="false">Jak się nazywasz?</string>
+    <string name="text3_step1" translatable="false">Wprowadź swoje imię i nazwisko poniżej.</string>
+    <string name="text4_step1" translatable="false">Jak mamy się do Ciebie zwracać? :) Twoje imię i nazwisko będą widoczne tylko dla zespołu Profitz.</string>
+    <string name="text2_step2" translatable="false">Ułatwi nam to z Tobą kontakt. Kontaktujemy się tylko w ważnych kwestiach, nie będziemy wysyłać niechcianego spamu bez Twojej zgody :)</string>
+    <string name="text3_step2" translatable="false">Jak jest twój email?</string>
+    <string name="text4_step2" translatable="false">Wprowadź swój adres email</string>
+    <string name="text2_step3" translatable="false">Jaki będzie twój login?</string>
+    <string name="text3_step3" translatable="false">Utwórz login</string>
+    <string name="text4_step3" translatable="false">Twój login to także Twoja nazwa użytkownika, która będzie widoczna publicznie dla innych użytkowników Profitz.</string>
+    <string name="text2_step4" translatable="false">Jakie będzie twoje hasło?</string>
+    <string name="text3_step4" translatable="false">Utwórz hasło</string>
+    <string name="text4_step4" translatable="false">Hasło powinno mieć co najmniej 8 znaków, jedną wielką literę, oraz jedną cyfrę. Zalecamy dodanie do hasła także znaku specjalnego (znaki specjalne: !@#$%*), dzięki któremu ZNACZNIE zwiększysz zabezpieczenie swojego konta.</string>
+    <string name="text2_step5" translatable="false">Czy znasz jakiś kod polecający?</string>
+    <string name="text3_step5" translatable="false">Wprowadź kod polecający</string>
+    <string name="text4_step5" translatable="false">To pole jest opcjonalne. Jeśli nie znasz żadnego kodu polecającego, pomiń ten etap i przejdź do następnego kroku.</string>
+
+    <string name="slide_1_title" translatable="false">Zarabiaj pieniądze!</string>
+    <string name="slide_1_desc" translatable="false">Zacznij zarabiać przez internet, wykonując promocje, grając w gry, oglądające reklamy i więcej...</string>
+
+    <string name="slide_2_title" translatable="false">Zdobywaj punkty!</string>
+    <string name="slide_2_desc" translatable="false">Wykonuj zadania, bierz udział w promocjach, graj w gry, wygrywaj konkursy, loguj się codziennie, udzielaj się i zdobywaj za to punkty.</string>
+
+    <string name="slide_3_title" translatable="false">Wymieniaj punkty!</string>
+    <string name="slide_3_desc" translatable="false">Zdobyte punkty możesz wymienić na pieniądze i wypłacić na konto PayPal, lub na upominki, gadżety i karty podarunkowe.</string>
+
+
+    <string name="pref_title_ringtone" translatable="false">Dzwonek</string>
+    <string name="pref_ringtone_silent" translatable="false">Cichy</string>
+
+    <string name="default_gallery_storage" translatable="false">My Videos</string>
+    <string name="title_auto_upload" translatable="false">Automatyczna zmiana tła</string>
+    <string name="summary_upload_over_wifi" translatable="false">Gdy włączone zmieniaj tło aplikacji automatycznie o 3 minuty</string>
+    <string name="title_upload_quality" translatable="false">Upload Quality</string>
+    <string name="summary_upload_video_quality" translatable="false">Specify video quality for uploads</string>
+    <string name="pref_title_notifications" translatable="false">Powiadomienia</string>
+    <string name="summary_choose_ringtone" translatable="false">Wybierz dźwięk powiadomienia</string>
+    <string name="pref_header_about" translatable="false">O nas</string>
+    <string name="summary_about" translatable="false">Jesteśmy zespołem, który spejalizuje się w promocjach firm i banków. Stale wyszukujemy nowych premii do uzyskania przez nas, oraz naszych partnerów. Jesteśmy gotowi pomóc Ci zarobić przez internet :)</string>
+    <string name="app_version" translatable="false">3.5</string>
+    <string name="summary_support" translatable="false">Masz pytania? Jesteśmy gotowi pomóc!</string>
+    <string name="title_send_feedback" translatable="false">Wyślij wiadomość</string>
+    <string name="title_faq" translatable="false">FAQ</string>
+    <string name="summary_faq" translatable="false">Zobacz najczęściej zadawane pytania</string>
+    <string name="url_faq" translatable="false">http://www.androidhive.info/privacy-policy/</string>
+    <string name="privacy_policy" translatable="false">Polityka prywatności</string>
+    <string name="url_privacy" translatable="false">http://www.androidhive.info/privacy-policy/</string>
+    <string name="title_terms" translatable="false">Regulamin usług</string>
+    <string name="url_terms" translatable="false">http://www.androidhive.info/terms-of-service/</string>
+    <string name="title_version" translatable="false">Wersja</string>
+    <string name="choose_email_client" translatable="false">Wybierz aplikację wysyłki email</string>
+    <string name="title_gallery_storage" translatable="false">Default Storage</string>
+    <string name="title_new_notification_sound" translatable="false">Powiadomienia o nowych promocjach</string>
+    <string name="title_vibrate" translatable="false">Wibracje</string>
+    <string name="summary_vibrate" translatable="false">Wibracje w przypadku otrzymania powiadomienia</string>
+    <string name="key_upload_over_wifi" translatable="false">key_upload_over_wifi</string>
+    <string name="key_gallery_name" translatable="false">key_gallery_name</string>
+    <string name="key_upload_quality" translatable="false">key_upload_quality</string>
+    <string name="notifications_new_message" translatable="false">notifications_new_message</string>
+    <string name="key_notifications_new_message_ringtone" translatable="false">key_notifications_new_message_ringtone</string>
+    <string name="key_vibrate" translatable="false">key_vibrate</string>
+    <string name="key_send_feedback" translatable="false">key_send_feedback</string>
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+    <string name="pref_header_general" translatable="false">Główne</string>
+
+    <string name="pref_title_social_recommendations" translatable="false">Enable social recommendations</string>
+    <string name="pref_description_social_recommendations" translatable="false">Recommendations for people to contact
+        based on your message history
+    </string>
+
+    <string name="pref_title_display_name" translatable="false">Display name</string>
+    <string name="pref_default_display_name" translatable="false">John Smith</string>
+
+    <string name="pref_title_add_friends_to_messages" translatable="false">Add friends to messages</string>
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+
+    <!-- Example settings for Data & Sync -->
+    <string name="pref_header_data_sync" translatable="false">Data &amp; sync</string>
+
+    <string name="pref_title_sync_frequency" translatable="false">Sync frequency</string>
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+
+    <string name="pref_title_system_sync_settings" translatable="false">System sync settings</string>
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_header_notifications" translatable="false">Powiadomienia</string>
+
+    <string name="pref_title_new_message_notifications" translatable="false">Powiadomienia o nowych promocjach</string>
+
+    <string name="pref_title_vibrate" translatable="false">Wibraje</string>
+    <plurals name="days">
+        <item quantity="zero">%d dni</item>
+        <item quantity="one">%d dzień</item>
+        <item quantity="other">%d dni</item>
+    </plurals>
+    <plurals name="hours">
+        <item quantity="zero">%d godzin</item>
+        <item quantity="one">%d godzina</item>
+        <item quantity="two">%d godziny</item>
+        <item quantity="other">%d godzin(y)</item>
+    </plurals>
+    <plurals name="minutes">
+        <item quantity="zero">%d minut</item>
+        <item quantity="one">%d minuta</item>
+        <item quantity="other">%d minut</item>
+    </plurals>
+
+    <string name="headline">Nagłowki</string>
+    <string name="textSize">Rozmiar</string>
+    <string name="textColor">Kolor</string>
+    <string name="textBold">Pogrubienie</string>
+    <string name="textItalic">Italic</string>
+    <string name="textStrike">Podkreślenie</string>
+    <string name="textAlign">Przyklej tekst</string>
+    <string name="confirmButton">Potwierdź</string>
+    <string name="cancelButton">Anuluj</string>
+    <string name="ImageUpload">Dodaj zdjęcie</string>
+    <string name="videoUpload">Dodaj wideo</string>
+
+
+    <string name="msg_token_fmt" translatable="false">FCM registration Token: %s</string>
+
+    <string name="text5_step1">Wprowadź swoje nazwisko</string>
+    <string name="tmdb_image_airdrop_url">https://yoururl.com/api/images/airdrops/%1$s</string>
+</resources>

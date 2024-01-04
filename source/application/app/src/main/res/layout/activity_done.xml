@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:ignore="NamespaceTypo"
+
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_gradient"
+    >
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="15dp"
+        android:id="@+id/arrow_back"
+        card_view:layout_constraintStart_toStartOf="parent"
+        card_view:layout_constraintTop_toTopOf="parent"
+        card_view:srcCompat="@drawable/ic_baseline_arrow_back_ios_white_24"
+        />
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:layout_marginStart="15dp"
+        android:layout_toEndOf="@id/back"
+        android:gravity="center"
+        card_view:layout_constraintTop_toTopOf="parent"
+        card_view:layout_constraintStart_toEndOf="@id/arrow_back"
+        android:text="Ukończone"
+        android:textColor="@color/white"
+        android:textSize="23sp"
+        android:textStyle="bold" />
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="15dp"
+        android:visibility="gone"
+        android:id="@+id/help_button"
+        card_view:layout_constraintEnd_toEndOf="parent"
+       card_view:layout_constraintTop_toTopOf="parent"
+        card_view:srcCompat="@drawable/ic_baseline_help_outline_white_24"
+        />
+
+    <RelativeLayout
+        android:id="@+id/search_rl"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:padding="20dp"
+        card_view:layout_constraintLeft_toLeftOf="parent"
+        card_view:layout_constraintRight_toRightOf="parent"
+        card_view:layout_constraintTop_toBottomOf="@id/arrow_back">
+
+        <TextView
+            android:id="@+id/text_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:text="Chcesz szybko odznaleźć ukończoną promocję lub airdrop?"
+            android:textColor="@color/white"
+            android:textSize="21sp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_2"
+            android:layout_below="@id/text_1"
+            android:layout_margin="5dp"
+            android:text="Wprowadź wybraną nazwę poniżej."
+            android:textColor="@color/white"
+            />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_2"
+            android:layout_marginTop="10dp">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="0dp"
+                    android:id="@+id/search_rl2">
+
+                    <include layout="@layout/user_search" />
+                </RelativeLayout>
+            <RelativeLayout
+                android:layout_marginRight="5dp"
+                android:layout_width="50dp"
+                android:layout_marginBottom="5dp"
+                android:layout_margin="5dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true">
+                <com.robertlevonyan.views.customfloatingactionbutton.FloatingActionButton
+                    android:id="@+id/fab_add_done"
+                    app:fabType="circle"
+                    app:fabIconPosition="center"
+                    android:visibility="gone"
+                    app:backgroundTint="@color/white"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="50dp"
+                    android:gravity="center_horizontal"
+                    app:tint="@color/white"
+                    app:fabSizes="mini"
+                    android:layout_height="50dp"
+                    app:fabRippleColor="@color/white"
+                    app:fabColor="@color/white"
+                    app:fabIcon="@drawable/ic_baseline_filter_24"
+                    app:fabIconColor="#FFC107"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="600dp"
+        android:background="@drawable/shape_round"
+        android:bottomLeftRadius="0dp"
+        android:bottomRightRadius="0dp"
+        android:elevation="20dp"
+        android:topLeftRadius="45dp"
+        android:topRightRadius="45dp"
+        app:cardCornerRadius="25dp"
+        app:cardElevation="0dp"
+        app:cardMaxElevation="0dp"
+        card_view:layout_constraintLeft_toLeftOf="parent"
+        card_view:layout_constraintRight_toRightOf="parent"
+        card_view:layout_constraintTop_toBottomOf="@+id/search_rl">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fishPriceList"
+            android:layout_width="match_parent"
+            android:paddingTop="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:layout_height="match_parent" />
+
+
+        <RelativeLayout
+            android:id="@+id/hide_if_zero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="11dp"
+            card_view:layout_constraintLeft_toLeftOf="parent"
+            card_view:layout_constraintRight_toRightOf="parent">
+
+            <ImageView
+                android:id="@+id/nothings_here"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                card_view:srcCompat="@drawable/ic_done_border_grey_24dp" />
+
+            <TextView
+                android:id="@+id/nothings_here2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nothings_here"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:text="Nic tu nie ma!"
+                android:textColor="@color/darkGray"
+                android:textSize="35sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nothings_here2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:text="Twoja lista ukończonych promocji jest pusta. Dodaj coś do niej :)"
+                android:textAlignment="center"
+                android:textColor="@color/gray"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+

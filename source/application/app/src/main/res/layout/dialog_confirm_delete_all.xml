@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:id="@+id/iv_circle_done"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="0dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:elevation="10dp"
+        app:srcCompat="@drawable/circle_alert" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_circle_done"
+        android:layout_marginTop="-50dp"
+        android:background="@drawable/shape"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="15dp">
+
+        <TextView
+            android:id="@+id/dialog_confirm_delete_all_info"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Jesteś pewien?"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/dialog_confirm_delete_all_info2"
+            android:layout_below="@id/dialog_confirm_delete_all_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Jesteś pewien, że chcesz usunąć wszystkie powiadomienia?"
+            android:textSize="13sp"
+             />
+
+        <TextView
+            android:id="@+id/dialog_confirm_delete_all_info3"
+            android:layout_below="@id/dialog_confirm_delete_all_info2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Zostaną usunięte wszystkie powiadomienia dotyczące monet oprócz tych z zakładek 'monety', oraz 'Nagrody'."
+            android:textSize="13sp"
+            />
+        <TextView
+            android:id="@+id/dialog_confirm_delete_all_info4"
+            android:layout_below="@id/dialog_confirm_delete_all_info3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Tej operacji nie można cofnąć."
+            android:textSize="13sp"
+            />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_below="@+id/dialog_confirm_delete_all_info4"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/button_delete_confirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:elevation="6dp"
+                android:foreground="?attr/selectableItemBackground"
+                android:background="@drawable/gradient_button_shape"
+                android:textStyle="bold"
+                android:foregroundGravity="center"
+                android:gravity="center"
+                android:paddingLeft="25dp"
+                android:paddingTop="8dp"
+                android:paddingRight="25dp"
+                android:paddingBottom="8dp"
+                android:stateListAnimator="@null"
+                android:text="Usuń powiadomienia"
+                android:textColor="#ffffff"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/done_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

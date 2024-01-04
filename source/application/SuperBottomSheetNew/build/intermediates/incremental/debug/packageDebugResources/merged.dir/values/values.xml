@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr format="boolean" name="superBottomSheet_alwaysExpanded"/>
+    <attr format="boolean" name="superBottomSheet_animateCornerRadius"/>
+    <attr format="boolean" name="superBottomSheet_animateStatusBar"/>
+    <attr format="color" name="superBottomSheet_backgroundColor"/>
+    <attr format="boolean" name="superBottomSheet_cancelable"/>
+    <attr format="boolean" name="superBottomSheet_cancelableOnTouchOutside"/>
+    <attr format="dimension" name="superBottomSheet_cornerRadius"/>
+    <attr format="float" name="superBottomSheet_dim"/>
+    <attr format="enum" name="superBottomSheet_expandedHeight">
+        <enum name="match_parent" value="-1"/>
+        <enum name="wrap_content" value="-2"/>
+    </attr>
+    <attr format="dimension" name="superBottomSheet_peekHeight"/>
+    <attr format="color" name="superBottomSheet_statusBarColor"/>
+    <bool name="super_bottom_sheet_animate_corner_radius">true</bool>
+    <bool name="super_bottom_sheet_animate_status_bar">true</bool>
+    <bool name="super_bottom_sheet_cancelable">true</bool>
+    <bool name="super_bottom_sheet_cancelableOnTouchOutside">true</bool>
+    <bool name="super_bottom_sheet_isAlwaysExpanded">false</bool>
+    <bool name="super_bottom_sheet_isTablet">false</bool>
+    <color name="colorPrimaryDark">#FF9800</color>
+    <item format="float" name="super_bottom_sheet_dim" type="dimen">0.6</item>
+    <dimen name="super_bottom_sheet_peek_height">64dp</dimen>
+    <dimen name="super_bottom_sheet_radius">16dp</dimen>
+    <dimen name="super_bottom_sheet_width">0dp</dimen>
+    <integer name="super_bottom_expanded_behaviour">-1</integer>
+    <style name="superBottomSheetDialog" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+    </style>
+</resources>

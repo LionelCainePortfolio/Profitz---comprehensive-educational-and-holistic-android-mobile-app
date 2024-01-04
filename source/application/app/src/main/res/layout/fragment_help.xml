@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+>
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:orientation="vertical"
+                android:paddingBottom="5dp">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:minHeight="700dp"
+                    android:id="@+id/global_const_bg"
+                    android:background="@drawable/shape_round"
+                    android:layout_marginTop="0dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    >
+
+
+                    <RelativeLayout
+                        android:id="@+id/help_layout_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/gold_gradient_shape_oval"
+                        android:bottomLeftRadius="15dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:bottomRightRadius="15dp"
+                        >
+
+                    </RelativeLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="28sp"
+                        android:textColor="@color/white"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="20dp"
+                        android:elevation="1dp"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:text="Jak możemy Ci pomóc?"
+                        />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:background="@drawable/gold_gradient"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_height="60dp">
+
+                        <ImageView
+                            android:id="@+id/arrow_back"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="15dp"
+                            android:clickable="true"
+                            android:visibility="invisible"
+                            android:focusable="true"
+                            android:foreground="@drawable/ripple_effect"
+                            app:srcCompat="@drawable/ic_baseline_arrow_back_ios_white_24"
+                            card_view:layout_constraintStart_toStartOf="parent"
+                            card_view:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/search_button"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_alignParentEnd="true"
+                            android:visibility="invisible"
+
+                            android:layout_marginTop="15dp"
+                            android:layout_marginEnd="15dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?attr/selectableItemBackground"
+                            app:srcCompat="@drawable/ic_baseline_search_24"
+                            card_view:layout_constraintEnd_toEndOf="parent"
+                            card_view:layout_constraintTop_toTopOf="parent" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="22sp"
+                        app:layout_constraintTop_toBottomOf="@id/help_layout_info"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:textColor="@color/bg_Profitz"
+                        android:layout_marginTop="20dp"
+                        android:id="@+id/need_help_text"
+                        android:layout_marginStart="10dp"
+                        android:textStyle="bold"
+                        android:text="Potrzebujesz pomocy?"
+                        />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:focusable="true"
+                        android:clickable="true"
+
+                        android:layout_marginEnd="10dp"
+                        android:foreground="@drawable/ripple_effect"
+                        android:layout_marginStart="15dp"
+                        android:id="@+id/first_quote_rl"
+                        app:layout_constraintTop_toBottomOf="@id/need_help_text"
+                        app:layout_constraintStart_toStartOf="parent"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="17sp"
+                            android:textColor="@color/colorPrimaryMid"
+                            android:textStyle="bold"
+                            android:text="Nie wiem jak zacząć"
+                            />
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_gravity="end"
+                            android:layout_alignParentEnd="true"
+                            app:srcCompat="@drawable/ic_baseline_arrow_forward_ios_24"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="10dp"
+
+                        android:focusable="true"
+                        android:clickable="true"
+                        android:foreground="@drawable/ripple_effect"
+                        android:id="@+id/second_quote_rl"
+                        app:layout_constraintTop_toBottomOf="@id/first_quote_rl"
+                        app:layout_constraintStart_toStartOf="parent"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Zarządzanie kontem"
+                            android:textColor="@color/colorPrimaryMid"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_gravity="end"
+                            android:layout_alignParentEnd="true"
+                            app:srcCompat="@drawable/ic_baseline_arrow_forward_ios_24"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:focusable="true"
+                        android:layout_marginEnd="10dp"
+
+                        android:clickable="true"
+                        android:foreground="@drawable/ripple_effect"
+                        android:layout_marginStart="15dp"
+                        android:id="@+id/third_quote_rl"
+                        app:layout_constraintTop_toBottomOf="@id/second_quote_rl"
+                        app:layout_constraintStart_toStartOf="parent"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="17sp"
+                            android:textColor="@color/colorPrimaryMid"
+                            android:textStyle="bold"
+                            android:text="Chcę więdzieć wszystko o premium"
+                            />
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_gravity="end"
+                            android:layout_alignParentEnd="true"
+                            app:srcCompat="@drawable/ic_baseline_arrow_forward_ios_24"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+
+                        android:focusable="true"
+                        android:clickable="true"
+                        android:foreground="@drawable/ripple_effect"
+                        android:layout_marginStart="15dp"
+                        android:id="@+id/fourth_quote_rl"
+                        app:layout_constraintTop_toBottomOf="@id/third_quote_rl"
+                        app:layout_constraintStart_toStartOf="parent"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Bezpieczeństwo i autoryzacja"
+                            android:textColor="@color/colorPrimaryMid"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_gravity="end"
+                            android:layout_alignParentEnd="true"
+                            app:srcCompat="@drawable/ic_baseline_arrow_forward_ios_24"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="10dp"
+
+                        android:focusable="true"
+                        android:clickable="true"
+                        android:foreground="@drawable/ripple_effect"
+                        android:id="@+id/fifth_quote_rl"
+                        app:layout_constraintTop_toBottomOf="@id/fourth_quote_rl"
+                        app:layout_constraintStart_toStartOf="parent"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="17sp"
+                            android:textColor="@color/colorPrimaryMid"
+                            android:textStyle="bold"
+                            android:text="Potrzebuję pomocy z czymś innym"
+                            />
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_gravity="end"
+                            android:layout_alignParentEnd="true"
+                            app:srcCompat="@drawable/ic_baseline_arrow_forward_ios_24"/>
+                    </RelativeLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="22sp"
+                        app:layout_constraintTop_toBottomOf="@id/fifth_quote_rl"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:textColor="@color/bg_Profitz"
+                        android:layout_marginTop="15dp"
+                        android:id="@+id/topics_text"
+                        android:layout_marginStart="10dp"
+                        android:textStyle="bold"
+                        android:text="Tematy"
+                        />
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/topicsList"
+                        android:layout_width="match_parent"
+                        android:paddingTop="20dp"
+                        android:layout_marginBottom="95dp"
+                        app:layout_constraintTop_toBottomOf="@id/topics_text"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:paddingStart="10dp"
+                        android:paddingBottom="55dp"
+                        android:paddingEnd="10dp"
+                        android:layout_height="match_parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:visibility="gone"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_below="@+id/textEarn3"
+                    android:layout_marginTop="-5dp"
+                    app:srcCompat="@drawable/refferal_line" />
+
+
+                <TextView
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/buttonShareCode"
+                    android:layout_marginTop="10dp"
+                    android:text="Poproś swojego znajomego, aby podał ten kod podczas rejestracji"
+                    android:textAlignment="center"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

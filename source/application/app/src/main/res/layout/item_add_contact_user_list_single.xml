@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="95dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="16dp">
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="@drawable/ripple_effect"
+        android:elevation="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shapewoshadow"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_margin="16dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/image"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+             />
+            <ImageView
+                android:id="@+id/imageAnim"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/progresscircle"
+                />
+
+            <View
+                android:id="@+id/onlineNotifier"
+                style="@style/OnlineNotifier"
+                android:layout_toEndOf="@+id/image" />
+
+            <TextView
+                android:id="@+id/username"
+                style="@style/MyTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="15dp"
+                android:layout_toEndOf="@+id/image"
+                android:textStyle="bold"
+                android:textSize="19sp" />
+
+            <TextView
+                android:id="@+id/btnRequest"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:paddingStart="15dp"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:background="@drawable/gradient_button_shape"
+                android:paddingEnd="15dp"
+                android:text="Wyślij prośbę"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:paddingStart="15dp"
+                android:textColor="#CBFFFFFF"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:visibility="gone"
+                android:background="@drawable/gradient_button_shape_pending"
+                android:paddingEnd="15dp"
+                android:text="Oczekuje..."/>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

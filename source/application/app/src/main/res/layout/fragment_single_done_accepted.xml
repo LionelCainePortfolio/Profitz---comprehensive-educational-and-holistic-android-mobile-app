@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:theme="@style/FullScreenBottonSheet"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/textNamePromo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_gravity="left"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="8dp"
+                android:layout_alignParentEnd="true"
+                android:foregroundGravity="center"
+                android:gravity="center_horizontal"
+                android:text="Nazwa"
+                android:textColor="@color/bg_screen1"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:layout_marginTop="40dp"
+    >
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/anim_accepted"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:elevation="10dp"
+                    app:lottie_autoPlay="true"
+                    app:lottie_renderMode="automatic"
+                    app:lottie_repeatCount="0"
+                    app:lottie_fileName="accepted2.json"
+                    app:lottie_loop="true"
+                    app:lottie_speed="1"
+
+                    />
+</RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:id="@+id/rl_for_expand"
+                />
+            <TextView
+                android:id="@+id/text_accepted"
+                android:layout_below="@id/rl_for_expand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_gravity="left"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_alignParentEnd="true"
+                android:foregroundGravity="center"
+                android:gravity="center_horizontal"
+                android:text="ZAAKCEPTOWANO"
+                android:textColor="@color/bg_screen1"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text_accepted_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_accepted"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="30dp"
+                android:text="Dziękujemy za wykonanie tej promocji z naszego polecenia! Doceniamy naszych partnerów. Dlatego przyznaliśmy Ci aż bonusowych monet!"
+                android:textAlignment="center"
+                android:textColor="@color/grayEnd"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_accepted_2"
+                android:textSize="14sp"
+                android:textColor="@color/grayEnd"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="30dp"
+                android:id="@+id/text_accepted_4"
+                android:layout_marginEnd="30dp"
+                android:textAlignment="center"
+                android:layout_marginBottom="20dp"
+                android:text="Pamiętaj, im więcej promocji wykonasz, tym więcej bonusowych monet otrzymasz."
+                />
+
+            <TextView
+                android:id="@+id/text_accepted_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_accepted_4"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="20dp"
+                android:text="Jeżeli masz problemy z wypłatą zarobionej premii z aplikacji , skontaktuj się z nami używając poniższego przycisku."
+                android:textAlignment="center"
+                android:textColor="@color/grayEnd"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/buttonContact"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_accepted_5"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="100dp"
+                android:foreground="?attr/selectableItemBackground"
+                android:background="@drawable/gradient_button_shape"
+                android:textStyle="bold"
+                android:paddingTop="1dp"
+                android:paddingBottom="1dp"
+                android:text="Skontaktuj się"
+                android:textColor="#ffffff"
+                android:textSize="15sp" />
+            <TextView
+                android:id="@+id/buttonGetPoints"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_accepted_5"
+                android:textAlignment="center"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                android:layout_marginBottom="100dp"
+                android:foreground="?attr/selectableItemBackground"
+                android:background="@drawable/gradient_button_shape"
+                android:textStyle="bold"
+                android:paddingTop="1dp"
+                android:paddingBottom="1dp"
+                android:text="Odbierz monety"
+                android:textColor="#ffffff"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

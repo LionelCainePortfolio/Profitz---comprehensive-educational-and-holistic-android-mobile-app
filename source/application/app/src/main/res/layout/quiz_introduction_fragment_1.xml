@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#fff"
+    android:layout_height="match_parent"
+    tools:context="com.profitz.app.promos.activities.LoginActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minHeight="700dp"
+            android:id="@+id/global_const_bg"
+            android:background="@color/white"
+            android:layout_marginTop="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:paddingBottom="100dp"
+             >
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/airdrop_quiz_one"
+                    app:riv_corner_radius="20dip"
+                    app:riv_mutate_background="true"
+                    app:riv_oval="false" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fajnie, że jesteś otwarty(a) na nowe możliwości zarabiania przez internet. Poznaj kryptowaluty, czyli pieniądz cyfrowy."
+                    android:textSize="18sp"
+                    android:textAlignment="center"
+                    android:id="@+id/text1"
+                    android:layout_marginTop="15dp"
+                    android:textColor="#151515"
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kryptowaluty to rodzaj cyfrowego pieniądza stworzonego na bazie algorytmu. Kryptowaluty funkcjonują autonomicznie, poza tradycyjnymi systemami bankowymi i rządowymi."
+                    android:textSize="15sp"
+                    android:layout_marginTop="15dp"
+                    android:textAlignment="center"
+
+                    android:textColor="#3A3A3A"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kryptowaluty wykorzystują kryptografię - rodzaj cyfrowego szyfrowania, która pozwala zabezpieczyć transakcje i regulować generowanie nowych jednostek pieniężnych. Bitcoin, pierwotna i jak dotąd najbardziej znana kryptowaluta, został uruchomiony w styczniu 2009 roku. Obecnie dostępnych online jest ponad 1000 kryptowalut."
+                    android:textSize="15sp"
+                    android:textAlignment="center"
+
+                    android:layout_marginTop="15dp"
+                    android:textColor="#3A3A3A"
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kryptowaluty różnią się znacznie od tradycyjnych walut. Niemniej jednak nadal można je kupować i sprzedawać jak każde inne aktywo. Możesz również przeprowadzać transakcje w oparciu o ruchy cenowe kryptowalut za pośrednictwem kontraktów CFD."
+                    android:textSize="15sp"
+                    android:textAlignment="center"
+
+                    android:layout_marginTop="15dp"
+                    android:textColor="#3A3A3A"
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kryptowaluty zyskały miano walut cyfrowych, alternatywnych czy też wirtualnych. Przesłanką ich utworzenia było dostarczenie alternatywnego sposobu dokonywania płatności dla transakcji internetowych. Jak dotąd nie uzyskały one jednak szerokiej akceptacji środowiska biznesowego oraz konsumenckiego, a ich wartość nadal poddawana jest zbyt dużym wahaniom, by można je było uznać za wiarygodną i adekwatną metodę płatności. Jako waluta zdecentralizowana, została opracowana w taki sposób, aby nie podlegała ingerencji rządu ani zewnętrznym wpływom, a gospodarka kryptowalutowa jest zamiast tego monitorowana za pomocą protokołu internetowego peer-to-peer. Poszczególne jednostki tworzące kryptowalutę, to zaszyfrowane ciągi danych, które zostały zakodowane w celu reprezentowania jednej zdefiniowanej jednostki."
+                    android:textSize="15sp"
+                    android:textAlignment="center"
+
+                    android:layout_marginTop="15dp"
+                    android:textColor="#3A3A3A"
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bitcoin jest uznawany za pierwszą zdecentralizowaną kryptowalutę. Podobnie jak wszystkie kryptowaluty, jest kontrolowany poprzez bazę danych transakcji blockchain, która działa jako księga główna. Został stworzony przez Satoshi Nakamoto, jednak nie jest pewne, czy twórca kryjący się pod tymi danymi to jedna konkretna osoba, czy może grupa ludzi."
+                    android:textSize="15sp"
+                    android:textAlignment="center"
+
+                    android:layout_marginTop="15dp"
+                    android:textColor="#3A3A3A"
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kryptowaluty zostały zaprojektowane w taki sposób, by z czasem powoli ograniczać tworzenie nowych jednostek. Z założenia w obiegu pozostawać ma z góry określona ich liczba. Odzwierciedla to charakterystykę takich towarów jak złoto, czy inne metale szlachetne. Przykładowo całkowita liczba Bitcoinów zmierza do 21 milionów. Niektóre kryptowaluty, jak Ethereum, funkcjonują nieco inaczej. Emisja ograniczona jest do milionów żetonów Ethereum rocznie, co stanowi 25% początkowej podaży. Ograniczenie liczby Bitcoinów zapewnia 'rzadkość', co z kolei nadaje walucie jej wartość. Niektórzy twierdzą, że twórca Bitcoina faktycznie wzorował kryptowaluty na metalach szlachetnych. W rezultacie wydobycie staje się coraz trudniejsze, ponieważ nagroda dla wydobywcy zmniejsza się o połowę co kilka lat, aż do zera."
+                    android:textSize="15sp"
+                    android:textAlignment="center"
+
+                    android:layout_marginTop="15dp"
+                    android:textColor="#3A3A3A"
+
+                    />
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

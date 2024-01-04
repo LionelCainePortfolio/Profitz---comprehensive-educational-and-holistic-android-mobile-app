@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="75dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginTop="7dp"
+    android:layout_marginEnd="7dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:background="@drawable/shapewoshadow"
+        android:foreground="@drawable/ripple_effect_rectangle">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="13dp"
+            android:layout_marginBottom="13dp" />
+
+        <ImageView
+            android:id="@+id/imageAnimated"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginBottom="13dp"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/progresscircle" />
+
+        <View
+            android:id="@+id/onlineNotifier"
+            style="@style/OnlineNotifier"
+            android:layout_marginStart="47dp"
+            android:layout_marginTop="13dp" />
+
+        <TextView
+            android:id="@+id/username"
+            style="@style/MyTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="13dp"
+            android:layout_toEndOf="@+id/image"
+            android:text="null"
+            android:textSize="19sp" />
+
+        <TextView
+            android:id="@+id/lastUnreadMessage"
+            style="@style/MyTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_below="@id/username"
+            android:layout_marginStart="3dp"
+            android:layout_toEndOf="@+id/image"
+            android:ellipsize="end"
+            android:maxWidth="230dp"
+
+            android:maxLines="1"
+            android:text="null"
+            android:textColor="@color/grey"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/lastUnreadMessageDate"
+            style="@style/MyTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:autoSizeMaxTextSize="10sp"
+            android:autoSizeMinTextSize="3sp"
+            android:autoSizeStepGranularity="5sp"
+            android:autoSizeTextType="uniform"
+            android:gravity="end"
+            android:textColor="@color/grey" />
+
+        <RelativeLayout
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/lastUnreadMessageDate"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="7dp"
+            android:textAlignment="center">
+
+            <TextView
+                android:id="@+id/unreadMessage"
+                style="@style/MyTextView"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:autoSizeMaxTextSize="12sp"
+                android:autoSizeMinTextSize="1sp"
+                android:autoSizeStepGranularity="4sp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/gradient_button_shape"
+                android:gravity="center"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

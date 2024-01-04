@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="390dp"
+    android:layout_height="wrap_content"
+    android:maxHeight="120dp"
+    android:fitsSystemWindows="true"
+    android:paddingBottom="15dp"
+    android:id="@+id/global_comm_nest"
+    >
+
+<androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+
+    app:layout_constraintStart_toStartOf="parent"    android:id="@+id/global_comm_const"
+    >
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/post_detail_currentuser_img"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/default_avatar" />
+
+
+    <RelativeLayout
+        android:layout_width="315dp"
+        android:layout_height="wrap_content"
+        android:maxHeight="120dp"
+        android:id="@+id/rl_comment"
+        android:minHeight="40dp"
+        android:background="@drawable/edittext_button_style_rounded"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toEndOf="@id/post_detail_currentuser_img"
+        app:layout_constraintTop_toTopOf="@id/post_detail_currentuser_img"
+        >
+
+        <EditText
+
+            android:id="@+id/post_detail_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:imeOptions="actionSend|flagNoEnterAction"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="10dp"
+            android:background="@android:color/transparent"
+            android:ems="10"
+            android:hint="Napisz komentarz..."
+            android:inputType="textCapSentences|textMultiLine"
+            android:isScrollContainer="true"
+            android:maxLength="2000"
+            android:maxLines="4"
+            android:minHeight="15dp"
+            android:paddingTop="0dp"
+            android:singleLine="false"
+            android:textSize="13sp" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:foregroundGravity="center"
+        android:layout_marginEnd="10dp"
+        android:id="@+id/sendComment"
+        app:layout_constraintTop_toTopOf="@id/post_detail_currentuser_img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/rl_comment"
+        app:srcCompat="@drawable/sendcomment"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>    </androidx.core.widget.NestedScrollView>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+    android:minHeight="80dp"
+android:id="@+id/rl_global_articles_one"
+    android:focusable="true"
+    android:clickable="true"
+    android:foreground="@drawable/ripple_effect_rectangle"
+android:layout_marginBottom="15dp"
+    android:layout_marginEnd="10dp"
+app:layout_constraintTop_toBottomOf="@id/topics_text"
+app:layout_constraintStart_toStartOf="parent"
+android:layout_marginStart="10dp"
+    >
+
+    <ImageView
+        android:id="@+id/iv_topic"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:foregroundGravity="center_vertical"
+        android:minHeight="80dp"
+        app:srcCompat="@drawable/placeholder_logo" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_toEndOf="@id/iv_topic"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Początki"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        android:id="@+id/text_topic"
+        android:textColor="@color/bg_Profitz"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_desc"
+        android:textSize="15sp"
+        android:layout_marginEnd="30dp"
+        android:text="Postaw pierwsze kroki do rozpoczęcia przygody z Profitz"
+        android:textColor="@color/bg_Profitz"
+        />
+
+</LinearLayout>
+
+</RelativeLayout>

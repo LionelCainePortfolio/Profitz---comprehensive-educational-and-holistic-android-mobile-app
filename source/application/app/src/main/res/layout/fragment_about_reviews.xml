@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:theme="@style/FullScreenBottonSheet"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+
+        >
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:id="@+id/rl_grey_line"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginBottom="10dp"
+                android:textAlignment="center"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="7dp"
+                    android:background="@drawable/gradient_grey_button_shape_light_no_gradient"
+                    android:gravity="center_horizontal"
+                    android:textAlignment="center" />
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/rl_grey_line"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_gravity="left"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="8dp"
+                    android:foregroundGravity="center"
+                    android:gravity="center_horizontal"
+                    android:text="Wskazówki dotyczące zamieszczania opinii w Profitz"
+                    android:textColor="@color/bg_screen1"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/text2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_gravity="left"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Opinię może dodać wyłącznie osoba, która wykonała daną promocję za pośrednictwem aplikacji Profitz. Dzięki temu mamy pewność, że opinie pochodzą od Użytkowników, którzy faktycznie skorzystali z danej promocji. Tylko takie osoby mogą udzielić rzetelnych informacji na temat funkcjonowania firmy, jej jakości usług, terminów i realizacji wypłat bonusów."
+                    android:foregroundGravity="center"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/bg_screen1"
+                    android:textSize="14sp"
+                    />
+
+                <TextView
+                    android:id="@+id/text3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_gravity="left"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Chcemy, abyś opisał wszystkie swoje wrażenia – zarówno te dobre, jak i te złe. Zastosuj się do naszych kilku prostych wskazówek."
+                    android:foregroundGravity="center"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/bg_screen1"
+                    android:textSize="13sp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_gravity="left"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Aby ocena promocji i jej opinie były aktualne, usuwamy wszystkie opinie, które są starsze niż 24 miesięce."
+                    android:foregroundGravity="center"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/bg_screen1"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_gravity="left"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="15dp"
+                    android:foregroundGravity="center"
+                    android:gravity="center_horizontal"
+                    android:text="Zasady dotyczące dodawania opinii"
+                    android:textColor="@color/bg_screen1"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_gravity="left"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Zamieszczane w aplikacji Profitz opinie są odzwierciedleniem zaangażowania naszych Użytkowników, dlatego bardzo je szanujemy i często wynagradzamy punktami."
+                    android:foregroundGravity="center"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/bg_screen1"
+                    android:textSize="14sp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_gravity="left"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Niezależnie od tego, czy dodana opinia jest pozytywna czy też negatywna, zostanie zamieszczona w całości jak najszybciej po jej otrzymaniu i przeprowadzeniu moderacji w celu sprawdzenia, czy jest ona zgodna z naszymi wytycznymi. Informujemy też o statusie przesłanych treści."
+                    android:foregroundGravity="center"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/bg_screen1"
+                    android:textSize="13sp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_gravity="left"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Stosujemy te same wytyczne i standardy do wszystkich treści przygotowanych przez Użytkowników. Pozwalamy, by opinie przemawiały same za siebie i nie wchodzimy w rolę najwyższego trybunału. Zadaniem Profitz jest tylko zamieszczanie zdania Użytkowników."
+                    android:foregroundGravity="center"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/bg_screen1"
+                    android:textSize="13sp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_gravity="left"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="15dp"
+                    android:foregroundGravity="center"
+                    android:gravity="center_horizontal"
+                    android:text="Standardy i wytyczne dotyczące dodawanych opinii"
+                    android:textColor="@color/bg_screen1"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_gravity="left"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Niniejsze wytyczne i standardy mają na celu zapewnienie, aby treści zamieszczane w aplikacji Profitz były rzeczowe i odpowiednie dla Użytkowników w każdym wieku, jednak bez ograniczania prawa do wyrażania także mocnych opinii. Wytyczne i standardy są stosowane niezależnie od tego, czy treści mają charakter pozytywny czy negatywny."
+                    android:foregroundGravity="center"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/bg_screen1"
+                    android:textSize="15sp"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_gravity="left"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Treści powinny dotyczyć danej wykonanej przez Ciebie promocji."
+                    android:foregroundGravity="center"
+                    android:textStyle="bold"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/bg_screen1"
+                    android:textSize="14sp"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_gravity="left"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Najcenniejsze opinie to takie, które są szczegółowe i pomagają innym w podjęciu słusznej decyzji. Nie zamieszczaj więc komentarzy poruszających tematy polityczne, religijne, etyczne i osobiste. Usuwane będą treści promocyjne, a uwagi dotyczące usług Profitz powinny zostać skierowane do działów zajmujących się obsługą klientów."
+                    android:foregroundGravity="center"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/bg_screen1"
+                    android:textSize="13sp"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_gravity="left"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Treści powinny być odpowiednie dla użytkowników na całym świecie."
+                    android:foregroundGravity="center"
+                    android:textStyle="bold"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/bg_screen1"
+                    android:textSize="14sp"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_gravity="left"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Nie używaj wulgaryzmów, także tych zamaskowanych przy użyciu kreatywnego zapisu – w żadnym języku. Opinie i treści zawierające mowę nienawiści, groźby (w tym groźby użycia przemocy), uwagi o charakterze obelżywym lub seksualnym bądź promujące nielegalne działania są karalne i niedozwolone. Dodawanie takich treści będzie skutkowało natychmiastowym usunięciem, oraz banicją Użytkownika jeśli nastąpi ich nagminne używanie."
+                    android:foregroundGravity="center"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/bg_screen1"
+                    android:textSize="13sp"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_gravity="left"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Wszystkie treści powinny być oryginalne i stworzone przez użytkowników."
+                    android:foregroundGravity="center"
+                    android:textStyle="bold"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/bg_screen1"
+                    android:textSize="14sp"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_gravity="left"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Opinie są najcenniejsze, gdy są oryginalne i niewypaczone. Twoja opinia powinna pochodzić od Ciebie. Firmy i osoby bezpośrednio współpracujące z Profitz nie powinny publikować opinii w imieniu Użytkowników ani ich przekupywć w zamian za wystawienie dobrej opinii. Nie będziemy też tolerować prób obniżenia ocen firm konkurencyjnych poprzez wystawianie im negatywnych opinii."
+                    android:foregroundGravity="center"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/bg_screen1"
+                    android:textSize="13sp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_gravity="left"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Szanuj prywatność innych."
+                    android:foregroundGravity="center"
+                    android:textStyle="bold"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/bg_screen1"
+                    android:textSize="14sp"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_gravity="left"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="8dp"
+                    android:text="W Profitz stawiamy bardzo duży nacisk na prywatność danych. Będziemy więc usuwać z zamieszczonych treści adresy e-mail, numery telefonów, adresy stron internetowych, nazwy profili w mediach społecznościowych i podobne dane."
+                    android:foregroundGravity="center"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/bg_screen1"
+                    android:textSize="13sp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_gravity="left"
+                    android:layout_marginBottom="25dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Opinie wyrażane w treściach generowanych przez użytkowników są opiniami klientów i użytkowników Profitz, a nie opiniami Profitz. Profitz nie przyjmuje odpowiedzialności za treść opinii ani ewentualnej odpowiedzi na nie. Profitz pełni tylko funkcję podmiotu rozpowszechniającego (bez obowiązku prowadzenia weryfikacji), a nie publikującego opinie i odpowiedzi na nie."
+                    android:foregroundGravity="center"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/bg_screen1"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

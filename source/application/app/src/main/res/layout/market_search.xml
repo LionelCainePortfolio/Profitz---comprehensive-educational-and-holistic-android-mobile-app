@@ -1,0 +1,25 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+   >
+
+    <EditText
+        android:id="@+id/search_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_textedit_grey"
+        android:drawableStart="@drawable/ic_search_black_24dp"
+        android:fontFamily="sans-serif-light"
+        android:hint="Szukaj..."
+        android:paddingStart="12dp"
+        android:paddingLeft="12dp"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:textColor="@color/searchText"
+        android:textColorHint="@color/searchHint"
+        android:textCursorDrawable="@drawable/cursor_color"
+        android:textSize="18sp"/>
+
+</LinearLayout>

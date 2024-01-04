@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="ndroid.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name='android.requestLegacyExternalStorage="true"' />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <application
+        android:name="com.profitz.app.ProfitzApp"
+
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:resizeableActivity="false"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:requestLegacyExternalStorage="true"
+        android:debuggable="true"
+        android:hardwareAccelerated="true"
+        tools:ignore="HardcodedDebugMode"
+        android:theme="@style/AppTheme"
+        android:networkSecurityConfig="@xml/network"
+        android:usesCleartextTraffic="true">
+
+        <meta-data android:name="io.sentry.dsn" android:value="https://60ba0570c13945f08e0527d41acc2480@o479455.ingest.sentry.io/5524368" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3720384080622115~1553901463"/>
+        <activity android:name="com.profitz.app.SplashActivity"
+            android:screenOrientation="portrait"
+            android:exported="true"
+
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="profitz.app"
+                    android:scheme="https" />
+            </intent-filter>
+
+        </activity>
+        <service android:name="com.profitz.app.promos.ShakeService"></service>
+        <activity
+            android:name="com.profitz.app.promos.PromosActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+
+
+        </activity>
+        <activity
+            android:name="com.thefinestartist.finestwebview.FinestWebViewActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.profitz.app.promos.activities.PrivateChatActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name="com.profitz.app.promos.activities.ProfileActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            />
+        <activity
+            android:name="com.profitz.app.promos.activities.SettingsActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            />
+        <activity
+            android:name="com.profitz.app.promos.activities.MyDataActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            />
+        <activity
+            android:name="com.profitz.app.promos.activities.ChangePasswordActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            />
+
+        <activity
+            android:name="com.profitz.app.promos.activities.ChatsActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.profitz.app.promos.activities.GroupDetailActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.profitz.app.promos.activities.GroupMetaDetailActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.profitz.app.promos.activities.MyGroupsActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            />
+        <activity
+            android:name="com.profitz.app.promos.activities.EditGroupActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            />
+        <activity
+            android:name="com.profitz.app.promos.activities.AddUserInContactListActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            />
+
+        <activity
+            android:name="com.profitz.app.promos.activities.PrivateCallActivity"
+
+
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.profitz.app.promos.activities.PrivateVideoCallActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name="com.profitz.app.promodetail.PromoDetailActivity"
+            android:theme="@style/AppTheme.NoActionBarDetail"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:parentActivityName="com.profitz.app.promos.PromosActivity" />
+        <activity
+            android:name="com.profitz.app.promos.activities.AirdropDetailActivity"
+            android:theme="@style/AppTheme.NoActionBarDetail"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:parentActivityName="com.profitz.app.promos.PromosActivity" />
+<meta-data android:name="com.google.firebase.messaging.default_notification_channel_id" android:value="@string/default_notification_channel_id"/>
+
+        <provider
+            android:name="com.profitz.app.data.source.local.provider.MovieContentProvider"
+            android:authorities="com.profitz.app."
+            android:exported="false" />
+        <!-- Firebase Notifications -->
+        <service android:name="com.profitz.app.service.FirebaseMessagingService"
+            android:exported="true"
+            android:stopWithTask="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.profitz.app.service.SetUserOnlineService"
+            android:enabled="true"
+            android:exported="true"/>
+        <service android:name="com.profitz.app.service.FirebaseInstanceIDService"
+            android:exported="true"
+            >
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <!-- ./Firebase Notifications -->
+
+        <!-- END Added for GCM -->
+        <activity android:name="com.profitz.app.promos.activities.AdminActivity"  android:parentActivityName="com.profitz.app.promos.PromosActivity"  android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan"   android:screenOrientation="portrait"/>
+        <activity android:name="com.profitz.app.promos.activities.PointsActivity"  android:parentActivityName="com.profitz.app.promos.PromosActivity"  android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan"  android:screenOrientation="portrait"/>
+        <activity android:name="com.profitz.app.promos.activities.AwardsActivity"  android:parentActivityName="com.profitz.app.promos.PromosActivity"   android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan"  android:screenOrientation="portrait" />
+        <activity android:name="com.profitz.app.promos.activities.MyInformationsActivity"  android:parentActivityName="com.profitz.app.promos.PromosActivity"   android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan"  android:screenOrientation="portrait" />
+        <activity android:name="com.profitz.app.promos.activities.BuyLicenceActivity" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name="com.profitz.app.promos.activities.HotPay" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name="com.profitz.app.promos.activities.ReferFriendHowItWorksActivity" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name="com.profitz.app.promos.activities.ChatSupportActivity" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.NoActionBar" />
+
+        <activity android:name="com.profitz.app.promos.activities.LoginActivity" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name="com.profitz.app.promos.activities.SignUpActivity"  android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.NoActionBar"/>
+        <activity android:name="com.profitz.app.promos.activities.DoneActivity"   android:parentActivityName="com.profitz.app.promos.PromosActivity" />
+        <activity android:name="com.profitz.app.promos.activities.ArticlesActivity"  android:screenOrientation="portrait"  android:parentActivityName="com.profitz.app.promos.PromosActivity" />
+        <activity android:name="com.profitz.app.promos.activities.ArticleActivity"  android:screenOrientation="portrait"  android:parentActivityName="com.profitz.app.promos.PromosActivity" />
+
+        <activity android:name="com.profitz.app.promos.activities.FavoriteActivity"   android:parentActivityName="com.profitz.app.promos.PromosActivity" />
+        <activity android:name="com.profitz.app.promos.activities.RefferalsActivity"   android:parentActivityName="com.profitz.app.promos.PromosActivity" />
+        <activity android:name="com.profitz.app.promos.activities.AchivmentsActivity"   android:parentActivityName="com.profitz.app.promos.PromosActivity" android:screenOrientation="portrait"  />
+        <activity android:name="com.profitz.app.promos.activities.WelcomeActivity" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name="com.profitz.app.promos.activities.SuccessActivity" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.NoActionBar"/>
+        <activity
+            android:name="com.profitz.app.promos.activities.SettingsHeadersActivity" android:parentActivityName="com.profitz.app.promos.PromosActivity"/>
+        <activity
+            android:name="com.profitz.app.promos.activities.SettingsOldActivity" android:parentActivityName="com.profitz.app.promos.PromosActivity"  android:screenOrientation="portrait" />
+
+
+    </application>
+
+</manifest>

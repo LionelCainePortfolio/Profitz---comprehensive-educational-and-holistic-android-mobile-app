@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/shape"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="20dp">
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/anim_declined"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:elevation="10dp"
+                app:lottie_autoPlay="true"
+                app:lottie_renderMode="automatic"
+                app:lottie_repeatCount="0"
+                app:lottie_fileName="declined.json"
+                app:lottie_loop="false"
+                app:lottie_speed="1"
+
+                />
+        </RelativeLayout>
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Brak połączenia z internetem!"
+    android:layout_marginTop="5dp"
+    android:textAlignment="center"
+    android:paddingEnd="10dp"
+    android:paddingStart="10dp"
+    android:textSize="23sp"
+    />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textSize="14sp"
+        android:textAlignment="center"
+        android:text="Wygląda na to iż nie masz połączenia z internetem. Sprawdź status swojej sieci i spróbuj ponownie. \n W przypadku dalszych problemów skontaktuj się ze swoim dostawcą internetu."
+        />
+        <Button
+            android:id="@+id/button_retry_internet_connection"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            style="@style/MyButtonStyle"
+            android:background="@drawable/gradient_button_shape"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="Ponów"
+            android:textColor="#ffffff"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            tools:ignore="NewApi"
+            android:textStyle="bold"
+
+            android:stateListAnimator="@null"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:foregroundGravity="center_horizontal"
+            tools:targetApi="m" />
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

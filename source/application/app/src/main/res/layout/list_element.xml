@@ -1,0 +1,1848 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.profitz.app.util.ScrollViewPremium
+ xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D5D5D5"
+>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D5D5D5"
+
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/rl2"
+        android:paddingStart="15dp"
+        android:elevation="5dp"
+        android:paddingBottom="15dp"
+        android:paddingEnd="15dp"
+        android:paddingTop="5dp"
+        android:background="@color/white"
+        android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Benefity które otrzymasz na tym poziomie:"
+        android:textSize="15sp"
+        android:id="@+id/text_benefity"
+        android:textStyle="bold"
+        />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+
+            android:id="@+id/level_zero_partner"
+            android:layout_below="@id/text_benefity"
+            >
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/level_zero_benefit1">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/level_zero_benefit1_img"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/level_zero_benefit1_img"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/benefit1_text"
+            android:layout_marginTop="10dp"
+            android:textSize="18sp"
+            android:layout_marginStart="5dp"
+            android:textStyle="bold"
+            android:layout_toEndOf="@id/level_zero_benefit1_img"
+            android:text="Dodatkowe 0.1% z promocji"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="5dp"
+            android:text="Za wykonanie promocji z gwiazdką, otrzymasz dodatkowo 0.1% bonusu w postaci monet z wykonanej promocji!"
+            android:layout_toEndOf="@id/level_zero_benefit1_img"
+            android:layout_below="@id/benefit1_text"
+
+            />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/level_zero_benefit1"
+                android:id="@+id/level_zero_benefit2">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/level_zero_benefit2_img"
+                    android:layout_marginTop="10dp"
+                    app:srcCompat="@drawable/level_zero_benefit2_img"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/benefit2_text"
+                    android:layout_marginTop="10dp"
+                    android:textSize="18sp"
+                    android:layout_marginStart="5dp"
+                    android:textStyle="bold"
+                    android:layout_toEndOf="@id/level_zero_benefit2_img"
+                    android:text="Prezent za codzienne logowanie"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="5dp"
+                    android:text="Loguj się codziennie do aplikacji i odblokowywuj za to prezent z punktami!"
+                    android:layout_toEndOf="@id/level_zero_benefit2_img"
+                    android:layout_below="@id/benefit2_text"
+
+                    />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/level_zero_benefit2"
+                android:id="@+id/level_zero_benefit3">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/level_zero_benefit3_img"
+                    android:layout_marginTop="10dp"
+                    app:srcCompat="@drawable/level_zero_benefit3_img"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/benefit3_text"
+                    android:layout_marginTop="10dp"
+                    android:textSize="18sp"
+                    android:layout_marginStart="5dp"
+                    android:textStyle="bold"
+                    android:layout_toEndOf="@id/level_zero_benefit3_img"
+                    android:text="Codzienne zadanie"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/benefit3_text"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@id/level_zero_benefit3_img"
+                    android:text="Codziennie w aplikacji dostępne będzie dla Ciebie inne zadanie, za które otrzymasz dodatkowe monety!" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/level_zero_benefit3">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/level_zero_benefit4_img"
+                    android:layout_marginTop="10dp"
+                    app:srcCompat="@drawable/level_zero_benefit4_img"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/benefit4_text"
+                    android:layout_marginTop="10dp"
+                    android:textSize="18sp"
+                    android:layout_marginStart="5dp"
+                    android:textStyle="bold"
+                    android:layout_toEndOf="@id/level_zero_benefit4_img"
+                    android:text="Gotowe instrukcje"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:text="Na tym poziomie, na start zyskujesz także gotowe instrukcje, które wyjaśnią Ci krok po kroku co należy zrobić, aby skorzystać z promocji i trochę zarobić :)"
+                    android:layout_toEndOf="@id/level_zero_benefit4_img"
+                    android:layout_below="@id/benefit4_text"
+                    android:layout_marginStart="5dp"
+
+                    />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+
+            android:id="@+id/level_one_partner"
+            android:layout_below="@id/text_benefity"
+            >
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/level_one_benefit1">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/level_one_benefit1_img"
+                    android:layout_marginTop="10dp"
+                    app:srcCompat="@drawable/level_one_benefit1_img"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/benefit1_text_one"
+                    android:layout_marginTop="10dp"
+                    android:textSize="18sp"
+                    android:layout_marginStart="5dp"
+                    android:textStyle="bold"
+                    android:layout_toEndOf="@id/level_one_benefit1_img"
+                    android:text="Dodatkowe 10% z promocji"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="5dp"
+                    android:text="Za wykonanie promocji z gwiazdką, otrzymasz dodatkowo 10% bonusu w postaci monet z wykonanej promocji!"
+                    android:layout_toEndOf="@id/level_one_benefit1_img"
+                    android:layout_below="@id/benefit1_text_one"
+
+                    />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/level_one_benefit1"
+                android:id="@+id/level_one_benefit2">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/level_one_benefit2_img"
+                    android:layout_marginTop="10dp"
+                    app:srcCompat="@drawable/level_one_benefit2_img"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/benefit2_text_one"
+                    android:layout_marginTop="10dp"
+                    android:textSize="18sp"
+                    android:layout_marginStart="5dp"
+                    android:textStyle="bold"
+                    android:layout_toEndOf="@id/level_one_benefit2_img"
+                    android:text="Program poleceń"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="5dp"
+                    android:text="Ulepszając konto do tego poziomu, otrzymasz możliwość dołączenia do programu poleceń i zarabiania poprzez zapraszanie znajomych do korzystania z aplikacji Profitz"
+                    android:layout_toEndOf="@id/level_one_benefit2_img"
+                    android:layout_below="@id/benefit2_text_one"
+
+                    />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/level_one_benefit2"
+                android:id="@+id/level_one_benefit3">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/level_one_benefit3_img"
+                    android:layout_marginTop="10dp"
+                    app:srcCompat="@drawable/level_one_benefit3_img"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/benefit3_text_one"
+                    android:layout_marginTop="10dp"
+                    android:textSize="18sp"
+                    android:layout_marginStart="5dp"
+                    android:textStyle="bold"
+                    android:layout_toEndOf="@id/level_one_benefit3_img"
+                    android:text="Bonusowa energia"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="5dp"
+                    android:text="Za ulepszenie konta do tego poziomu otrzymasz bonusową energię, którą możesz wykorzystać w grach i reklamach"
+                    android:layout_toEndOf="@id/level_one_benefit3_img"
+                    android:layout_below="@id/benefit3_text_one"
+
+                    />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/level_one_benefit3">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/level_one_benefit4_img"
+                    android:layout_marginTop="10dp"
+                    app:srcCompat="@drawable/level_one"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/benefit4_text_one"
+                    android:layout_marginTop="10dp"
+                    android:textSize="18sp"
+                    android:layout_marginStart="5dp"
+                    android:textStyle="bold"
+                    android:layout_toEndOf="@id/level_one_benefit4_img"
+                    android:text="Gotowe instrukcje"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="5dp"
+                    android:text="Na tym poziomie, na start zyskujesz także gotowe instrukcje, które wyjaśnią Ci krok po kroku co należy zrobić, aby skorzystać z promocji i trochę zarobić :)"
+                    android:layout_toEndOf="@id/level_one_benefit4_img"
+                    android:layout_below="@id/benefit4_text_one"
+
+                    />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/level_two_partner"
+            android:visibility="gone"
+
+            android:layout_below="@id/text_benefity"
+            >
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/level_two_benefit1">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/level_two_benefit1_img"
+                    android:layout_marginTop="10dp"
+                    app:srcCompat="@drawable/level_two_benefit1_img"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/benefit1_text_two"
+                    android:layout_marginTop="10dp"
+                    android:textSize="18sp"
+                    android:layout_marginStart="5dp"
+                    android:textStyle="bold"
+                    android:layout_toEndOf="@id/level_two_benefit1_img"
+                    android:text="Dodatkowe 20% z promocji"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="5dp"
+                    android:text="Za wykonanie promocji z gwiazdką, otrzymasz dodatkowo 20% bonusu w postaci monet z wykonanej promocji!"
+                    android:layout_toEndOf="@id/level_two_benefit1_img"
+                    android:layout_below="@id/benefit1_text_two"
+
+                    />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/level_two_benefit1"
+                android:id="@+id/level_two_benefit2">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/level_two_benefit2_img"
+                    android:layout_marginTop="10dp"
+                    app:srcCompat="@drawable/level_two"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/benefit2_text_two"
+                    android:layout_marginTop="10dp"
+                    android:textSize="18sp"
+                    android:layout_marginStart="5dp"
+                    android:textStyle="bold"
+                    android:layout_toEndOf="@id/level_two_benefit2_img"
+                    android:text="Prezent za codzienne logowanie"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:text="Loguj się codziennie do aplikacji i odblokowywuj za to prezent z punktami!"
+                    android:layout_toEndOf="@id/level_two_benefit2_img"
+                    android:layout_below="@id/benefit2_text_two"
+                    android:layout_marginStart="5dp"
+                    />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/level_two_benefit2"
+                android:id="@+id/level_two_benefit3">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/level_two_benefit3_img"
+                    android:layout_marginTop="10dp"
+                    app:srcCompat="@drawable/level_two"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/benefit3_text_two"
+                    android:layout_marginTop="10dp"
+                    android:textSize="18sp"
+                    android:layout_marginStart="5dp"
+                    android:textStyle="bold"
+                    android:layout_toEndOf="@id/level_two_benefit3_img"
+                    android:text="Codzienne zadanie"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:text="Codziennie w aplikacji dostępne będzie dla Ciebie inne zadanie, za które otrzymasz dodatkowe monety!"
+                    android:layout_toEndOf="@id/level_two_benefit3_img"
+                    android:layout_below="@id/benefit3_text_two"
+                    android:layout_marginStart="5dp"
+                    />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/level_two_benefit3">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/level_two_benefit4_img"
+                    android:layout_marginTop="10dp"
+                    app:srcCompat="@drawable/level_two"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/benefit4_text_two"
+                    android:layout_marginTop="10dp"
+                    android:textSize="18sp"
+                    android:layout_marginStart="5dp"
+                    android:textStyle="bold"
+                    android:layout_toEndOf="@id/level_two_benefit4_img"
+                    android:text="Gotowe instrukcje"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:text="Na tym poziomie, na start zyskujesz także gotowe instrukcje, które wyjaśnią Ci krok po kroku co należy zrobić, aby skorzystać z promocji i trochę zarobić :)"
+                    android:layout_toEndOf="@id/level_two_benefit4_img"
+                    android:layout_below="@id/benefit4_text_two"
+                    android:layout_marginStart="5dp"
+                    />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/level_three_partner"
+            android:visibility="gone"
+
+            android:layout_below="@id/text_benefity"
+            >
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/level_three_benefit1">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/level_three_benefit1_img"
+                    android:layout_marginTop="10dp"
+                    app:srcCompat="@drawable/level_three_benefit1_img"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/benefit1_text_three"
+                    android:layout_marginTop="10dp"
+                    android:textSize="18sp"
+                    android:layout_marginStart="5dp"
+                    android:textStyle="bold"
+                    android:layout_toEndOf="@id/level_three_benefit1_img"
+                    android:text="Dodatkowe 30% z promocji"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="5dp"
+                    android:text="Za wykonanie promocji z gwiazdką, otrzymasz dodatkowo 30% bonusu w postaci monet z wykonanej promocji!"
+                    android:layout_toEndOf="@id/level_three_benefit1_img"
+                    android:layout_below="@id/benefit1_text_three"
+
+                    />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/level_three_benefit1"
+                android:id="@+id/level_three_benefit2">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/level_three_benefit2_img"
+                    android:layout_marginTop="10dp"
+                    app:srcCompat="@drawable/level_three_benefit2_img"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/benefit2_text_three"
+                    android:layout_marginTop="10dp"
+                    android:textSize="18sp"
+                    android:layout_marginStart="5dp"
+                    android:textStyle="bold"
+                    android:layout_toEndOf="@id/level_three_benefit2_img"
+                    android:text="Darmowy obrót w kole fortuny (wkrótce)"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:text="Ulepszając konto do tego poziomu otrzymasz w prezencie 1 darmowy obrót w kole fortuny!"
+                    android:layout_toEndOf="@id/level_three_benefit2_img"
+                    android:layout_below="@id/benefit2_text_three"
+                    android:layout_marginStart="5dp"
+                    />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/level_three_benefit2"
+                android:id="@+id/level_three_benefit3">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/level_three_benefit3_img"
+                    android:layout_marginTop="10dp"
+                    app:srcCompat="@drawable/level_three_benefit3_img"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/benefit3_text_three"
+                    android:layout_marginTop="10dp"
+                    android:textSize="18sp"
+                    android:layout_marginStart="5dp"
+                    android:textStyle="bold"
+                    android:layout_toEndOf="@id/level_three_benefit3_img"
+                    android:text="Poradnik 'Transfery Kryptowalut'"
+                    />
+
+                <TextView
+                    android:layout_width="332dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/benefit3_text_three"
+                    android:layout_marginStart="-1dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_toEndOf="@id/level_three_benefit3_img"
+                    android:text="Ulepsz konto do tego poziomu i otrzymaj w prezencie poradnik pt.'Transfery Kryptowalut' o wartości 59,00 zł" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/level_three_benefit3">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/level_three_benefit4_img"
+                    android:layout_marginTop="10dp"
+                    app:srcCompat="@drawable/level_three"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/benefit4_text_three"
+                    android:layout_marginTop="10dp"
+                    android:textSize="18sp"
+                    android:layout_marginStart="5dp"
+                    android:textStyle="bold"
+                    android:layout_toEndOf="@id/level_three_benefit4_img"
+                    android:text="Bonusowa energia"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:text="Za ulepszenie konta do tego poziomu otrzymasz bonusową energię, którą możesz wykorzystać w grach i reklamach"
+                    android:layout_toEndOf="@id/level_three_benefit4_img"
+                    android:layout_below="@id/benefit4_text_three"
+                    android:layout_marginStart="5dp"
+                    />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/level_four_partner"
+            android:visibility="gone"
+            android:layout_below="@id/text_benefity"
+            >
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/level_four_benefit1">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/level_four_benefit1_img"
+                    android:layout_marginTop="10dp"
+                    app:srcCompat="@drawable/level_four_benefit1_img"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/benefit1_text_four"
+                    android:layout_marginTop="10dp"
+                    android:textSize="18sp"
+                    android:layout_marginStart="5dp"
+                    android:textStyle="bold"
+                    android:layout_toEndOf="@id/level_four_benefit1_img"
+                    android:text="Dodatkowe 40% z promocji"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="5dp"
+                    android:text="Za wykonanie promocji z gwiazdką, otrzymasz dodatkowo 40% bonusu w postaci monet z wykonanej promocji!"
+                    android:layout_toEndOf="@id/level_four_benefit1_img"
+                    android:layout_below="@id/benefit1_text_four"
+
+                    />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/level_four_benefit1"
+                android:id="@+id/level_four_benefit2">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/level_four_benefit2_img"
+                    android:layout_marginTop="10dp"
+                    app:srcCompat="@drawable/level_four_benefit2_img"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/benefit2_text_four"
+                    android:layout_marginTop="10dp"
+                    android:textSize="18sp"
+                    android:layout_marginStart="5dp"
+                    android:textStyle="bold"
+                    android:layout_toEndOf="@id/level_four_benefit2_img"
+                    android:text="Dodatkowe monety za polecenie"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:text="Posiadając konto na tym poziomie otrzymasz za każde udane polecenie aplikacji Profitz swojemu znajomemu 15 monet zamiast 10!"
+                    android:layout_toEndOf="@id/level_four_benefit2_img"
+                    android:layout_below="@id/benefit2_text_four"
+                    android:layout_marginStart="5dp"
+
+                    />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/level_four_benefit2"
+                android:id="@+id/level_four_benefit3">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/level_four_benefit3_img"
+                    android:layout_marginTop="10dp"
+                    app:srcCompat="@drawable/level_four_benefit3_img"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/benefit3_text_four"
+                    android:layout_marginTop="10dp"
+                    android:textSize="18sp"
+                    android:layout_marginStart="5dp"
+                    android:textStyle="bold"
+                    android:layout_toEndOf="@id/level_four_benefit3_img"
+                    android:text="Zniżka na premium (-10%)"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:text="Masz 4 poziom partnera? Super! Masz też dożywotnio 10% zniżki na zakup usługi Premium! :)"
+                    android:layout_toEndOf="@id/level_four_benefit3_img"
+                    android:layout_below="@id/benefit3_text_four"
+                    android:layout_marginStart="5dp"
+
+                    />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/level_four_benefit3"
+                android:id="@+id/level_four_benefit4">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/level_four_benefit4_img"
+                    android:layout_marginTop="10dp"
+                    app:srcCompat="@drawable/level_four_benefit4_img"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/benefit4_text_four"
+                    android:layout_marginTop="10dp"
+                    android:textSize="18sp"
+                    android:layout_marginStart="5dp"
+                    android:textStyle="bold"
+                    android:layout_toEndOf="@id/level_four_benefit4_img"
+                    android:text="Trzy darmowe obroty w kole fortuny (wkrótce)"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:text="Ulepszając konto do tego poziomu otrzymasz w prezencie 3 darmowe obroty w kole fortuny!"
+                    android:layout_toEndOf="@id/level_four_benefit4_img"
+                    android:layout_below="@id/benefit4_text_four"
+                    android:layout_marginStart="5dp"
+
+                    />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/level_four_benefit4">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/level_four_benefit5_img"
+                    android:layout_marginTop="10dp"
+                    app:srcCompat="@drawable/level_four_benefit5_img"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/benefit5_text_four"
+                    android:layout_marginTop="10dp"
+                    android:textSize="18sp"
+                    android:layout_marginStart="5dp"
+                    android:textStyle="bold"
+                    android:layout_toEndOf="@id/level_four_benefit5_img"
+                    android:text="Bonusowa energia"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:text="Za ulepszenie konta do tego poziomu otrzymasz bonusową energię, którą możesz wykorzystać w grach i reklamach"
+                    android:layout_toEndOf="@id/level_four_benefit5_img"
+                    android:layout_below="@id/benefit5_text_four"
+                    android:layout_marginStart="5dp"
+
+                    />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/level_five_partner"
+            android:visibility="gone"
+
+            android:layout_below="@id/text_benefity"
+            >
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/level_five_benefit1">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/level_five_benefit1_img"
+                    android:layout_marginTop="10dp"
+                    app:srcCompat="@drawable/level_five_benefit1_img"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/benefit1_text_five"
+                    android:layout_marginTop="10dp"
+                    android:textSize="18sp"
+                    android:layout_marginStart="5dp"
+                    android:textStyle="bold"
+                    android:layout_toEndOf="@id/level_five_benefit1_img"
+                    android:text="Dodatkowe 50% z promocji"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+
+                    android:text="Za wykonanie promocji z gwiazdką, otrzymasz dodatkowo 50% bonusu w postaci monet z wykonanej promocji!"
+                    android:layout_toEndOf="@id/level_five_benefit1_img"
+                    android:layout_below="@id/benefit1_text_five"
+
+                    />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/level_five_benefit1"
+                android:id="@+id/level_five_benefit2">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/level_five_benefit2_img"
+                    android:layout_marginTop="10dp"
+                    app:srcCompat="@drawable/level_five_benefit2_img"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/benefit2_text_five"
+                    android:layout_marginTop="10dp"
+                    android:textSize="18sp"
+                    android:layout_marginStart="5dp"
+                    android:textStyle="bold"
+                    android:layout_toEndOf="@id/level_five_benefit2_img"
+                    android:text="Dodatkowe monety za polecenie"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:text="Posiadając konto na tym poziomie otrzymasz za każde udane polecenie aplikacji Profitz swojemu znajomemu 20 monet zamiast 10!"
+                    android:layout_toEndOf="@id/level_five_benefit2_img"
+                    android:layout_below="@id/benefit2_text_five"
+
+                    />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/level_five_benefit2"
+                android:id="@+id/level_five_benefit3">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/level_five_benefit3_img"
+                    android:layout_marginTop="10dp"
+                    app:srcCompat="@drawable/level_five_benefit3_img"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/benefit3_text_five"
+                    android:layout_marginTop="10dp"
+                    android:textSize="18sp"
+                    android:layout_marginStart="5dp"
+                    android:textStyle="bold"
+                    android:layout_toEndOf="@id/level_five_benefit3_img"
+                    android:text="Mega zniżka na premium (-15%)"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:text="Masz 5 poziom partnera? Wyśmienicie! Masz też dożywotnio aż 15% zniżki na zakup usługi Premium! :)"
+                    android:layout_toEndOf="@id/level_five_benefit3_img"
+                    android:layout_below="@id/benefit3_text_five"
+
+                    />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/level_five_benefit3"
+                android:id="@+id/level_five_benefit4">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/level_five_benefit4_img"
+                    android:layout_marginTop="10dp"
+                    app:srcCompat="@drawable/level_five_benefit4_img"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/benefit4_text_five"
+                    android:layout_marginTop="10dp"
+                    android:textSize="18sp"
+                    android:layout_marginStart="5dp"
+                    android:textStyle="bold"
+                    android:layout_toEndOf="@id/level_five_benefit4_img"
+                    android:text="Darmowe licencje dla poleconych"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:text="Zaprosiłeś znajomego do Profitz i masz 5 poziom partnera? Twój znajomy klikając w przycisk z linkiem polecającym znajdujący się w instrukcji zostanie przekierowany do Twojego linku! Oczywiście o ile go uprzednio dodasz ;) Zajrzyj do zakładki 'Moje Licencje', lub 'Pomoc' by dowiedzieć się więcej o licencjach."
+                    android:layout_toEndOf="@id/level_five_benefit4_img"
+                    android:layout_below="@id/benefit4_text_five"
+
+                    />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/level_five_benefit4"
+                android:id="@+id/level_five_benefit5">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/level_five_benefit5_img"
+                    android:layout_marginTop="10dp"
+                    app:srcCompat="@drawable/level_five_benefit5_img"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/benefit5_text_five"
+                    android:layout_marginTop="10dp"
+                    android:textSize="18sp"
+                    android:layout_marginStart="5dp"
+                    android:textStyle="bold"
+                    android:layout_toEndOf="@id/level_five_benefit5_img"
+                    android:text="Darmowy obrót raz dziennie w kole fortuny (wkrótce)"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:text="Ulepszając konto do tego poziomu otrzymasz w prezencie 3 darmowe obroty w kole fortuny!"
+                    android:layout_toEndOf="@id/level_five_benefit5_img"
+                    android:layout_below="@id/benefit5_text_five"
+                    android:layout_marginStart="5dp"
+
+                    />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/level_five_benefit5">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/level_five_benefit6_img"
+                    android:layout_marginTop="10dp"
+                    app:srcCompat="@drawable/level_five_benefit6_img"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/benefit6_text_five"
+                    android:layout_marginTop="10dp"
+                    android:textSize="18sp"
+                    android:layout_marginStart="5dp"
+                    android:textStyle="bold"
+                    android:layout_toEndOf="@id/level_five_benefit6_img"
+                    android:text="Bonusowa energia"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:text="Za ulepszenie konta do tego poziomu otrzymasz bonusową energię, którą możesz wykorzystać w grach i reklamach"
+                    android:layout_toEndOf="@id/level_five_benefit6_img"
+                    android:layout_below="@id/benefit6_text_five"
+                    android:layout_marginStart="5dp"
+
+                    />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl2"
+        android:layout_marginTop="5dp"
+        android:background="@color/white"
+        android:elevation="5dp"
+        android:paddingStart="15dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="0dp"
+        android:paddingBottom="10dp">
+
+        <TextView
+            android:id="@+id/wskazowki"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:text="Wskazówki do poziomów partnera"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/levels"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/wskazowki"
+            android:text="Poziomy partnera"
+            android:textColor="@color/darkGray"
+            android:textSize="13sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/potrzebne"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/wskazowki"
+            android:layout_alignParentEnd="true"
+            android:gravity="center_horizontal"
+            android:text="Wymagane"
+            android:textColor="@color/darkGray"
+            android:textSize="13sp"
+            android:textStyle="normal" />
+
+        <RelativeLayout
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/potrzebne"
+            android:layout_alignParentEnd="true"
+
+            >
+
+            <RelativeLayout
+                android:id="@+id/rl_wymagane"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_toStartOf="@id/line"
+                    android:gravity="center"
+                    android:text="Zebrane monety"
+                    android:textColor="@color/darkGray"
+                    android:textSize="7sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/line"
+                    android:layout_width="1dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_toStartOf="@id/text_ukonczone"
+                    android:gravity="center"
+                    android:text="|"
+                    android:textColor="@color/darkGray"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/text_ukonczone"
+                    android:layout_width="40dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center"
+                    android:text="Ukończone promocje"
+                    android:textColor="@color/darkGray"
+                    android:textSize="7sp"
+                    android:textStyle="normal" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_info0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_wymagane"
+                android:layout_marginTop="5dp"
+                android:gravity="center_horizontal"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp">
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_toStartOf="@id/line0"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/bgGradientEnd"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/line0"
+                    android:layout_width="1dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_toStartOf="@id/text_ukonczone_number0"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/darkGray"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/text_ukonczone_number0"
+                    android:layout_width="40dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/bgGradientEnd"
+                    android:textStyle="normal" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_info1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_info0"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp">
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_toStartOf="@id/line2"
+                    android:gravity="center"
+                    android:text="10"
+                    android:textColor="@color/bgGradientEnd"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/line2"
+                    android:layout_width="1dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_toStartOf="@id/text_ukonczone_number"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/darkGray"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/text_ukonczone_number"
+                    android:layout_width="40dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textColor="@color/bgGradientEnd"
+                    android:textStyle="normal" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_info2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_info1"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp">
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_toStartOf="@id/line3"
+                    android:gravity="center"
+                    android:text="20"
+                    android:textColor="@color/bgGradientEnd"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/line3"
+                    android:layout_width="1dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_toStartOf="@id/text_ukonczone_number1"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/darkGray"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/text_ukonczone_number1"
+                    android:layout_width="40dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center"
+                    android:text="3"
+                    android:textColor="@color/bgGradientEnd"
+                    android:textStyle="normal" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_info3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_info2"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp">
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_toStartOf="@id/line4"
+                    android:gravity="center"
+                    android:text="30"
+                    android:textColor="@color/bgGradientEnd"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/line4"
+                    android:layout_width="1dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_toStartOf="@id/text_ukonczone_number2"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/darkGray"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/text_ukonczone_number2"
+                    android:layout_width="40dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center"
+                    android:text="5"
+                    android:textColor="@color/bgGradientEnd"
+                    android:textStyle="normal" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_info4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_info3"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp">
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_toStartOf="@id/line5"
+                    android:gravity="center"
+                    android:text="40"
+                    android:textColor="@color/bgGradientEnd"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/line5"
+                    android:layout_width="1dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_toStartOf="@id/text_ukonczone_number3"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/darkGray"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/text_ukonczone_number3"
+                    android:layout_width="40dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center"
+                    android:text="8"
+                    android:textColor="@color/bgGradientEnd"
+                    android:textStyle="normal" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_info4"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp">
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_toStartOf="@id/line6"
+                    android:gravity="center"
+                    android:text="50"
+                    android:textColor="@color/bgGradientEnd"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/line6"
+                    android:layout_width="1dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_toStartOf="@id/text_ukonczone_number5"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/darkGray"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/text_ukonczone_number5"
+                    android:layout_width="40dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center"
+                    android:text="12"
+                    android:textColor="@color/bgGradientEnd"
+                    android:textStyle="normal" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/lv_0_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/levels"
+            android:layout_marginTop="20dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp">
+
+            <ImageView
+                android:id="@+id/iv0"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:srcCompat="@drawable/level_zero" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@id/iv0"
+                android:gravity="center_vertical"
+                android:text="Nowy Partner"
+                android:textColor="@color/bgGradientEnd"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/lv_1_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lv_0_rl"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp">
+
+            <ImageView
+                android:id="@+id/iv1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:srcCompat="@drawable/level_one" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@id/iv1"
+                android:gravity="center_vertical"
+                android:text="Poziom Pierwszy"
+                android:textColor="@color/bgGradientEnd"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/lv_2_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lv_1_rl"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp">
+
+            <ImageView
+                android:id="@+id/iv2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:srcCompat="@drawable/level_two" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@id/iv2"
+                android:gravity="center_vertical"
+                android:text="Poziom Drugi"
+                android:textColor="@color/bgGradientEnd"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/lv_3_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lv_2_rl"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp">
+
+            <ImageView
+                android:id="@+id/iv3"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:srcCompat="@drawable/level_three" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@id/iv3"
+                android:gravity="center_vertical"
+                android:text="Poziom Trzeci"
+                android:textColor="@color/bgGradientEnd"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/lv_4_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lv_3_rl"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp">
+
+            <ImageView
+                android:id="@+id/iv4"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:srcCompat="@drawable/level_four" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@id/iv4"
+                android:gravity="center_vertical"
+                android:text="Poziom Czwarty"
+                android:textColor="@color/bgGradientEnd"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lv_4_rl"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp">
+
+            <ImageView
+                android:id="@+id/iv5"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:srcCompat="@drawable/level_five" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@id/iv5"
+                android:gravity="center_vertical"
+                android:text="Poziom Piąty"
+                android:textColor="@color/bgGradientEnd"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@id/rl3"
+        android:layout_width="match_parent"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:paddingBottom="20dp"
+        android:paddingTop="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/white"
+        android:layout_height="wrap_content">
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Jak działa system monet?"
+      android:textSize="15sp"
+        android:id="@+id/system_punktow_text"
+      android:textStyle="bold"
+      />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginTop="5dp"
+            android:maxWidth="350dp"
+            android:layout_height="wrap_content"
+            android:text="monety to nie tylko statystyki w naszej apliakcji. Co prawda nie pełnią rodzaju waluty wewnętrznej, ale mają kilka ciekawych możliwości. Dowiedz się o nich wiecej. Poniżej znajdziesz listę sposobów pozyskania punków."
+            android:textSize="12sp"
+            android:layout_below="@id/system_punktow_text"
+            android:id="@+id/system_punktow_text2"
+            />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:id="@+id/system_punktow_rl1"
+            android:layout_below="@id/system_punktow_text2"
+
+            >
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/monety_system1"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/my_informations_share_points"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/monety_system1_text"
+            android:layout_marginTop="10dp"
+            android:textSize="18sp"
+            android:layout_marginStart="5dp"
+            android:textStyle="bold"
+            android:layout_toEndOf="@id/monety_system1"
+            android:text="monety za polecenie"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Polecaj znajomym aplikację i otrzymuj za to monety! Za każde skuteczne polecenie TY i TWÓJ ZNAJOMY otrzymacie po 10 monet. Otwórz zakładkę Zaproś znajomego, aby dowiedzieć się więcej. "
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:textSize="12sp"
+            android:layout_toEndOf="@id/monety_system1"
+            android:layout_below="@id/monety_system1_text"
+
+            />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/system_punktow_rl2"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/system_punktow_rl1"
+
+            >
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/monety_system2"
+                android:layout_marginTop="10dp"
+                app:srcCompat="@drawable/my_informations_promo_points"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/monety_system2_text"
+                android:layout_marginTop="10dp"
+                android:textSize="18sp"
+                android:layout_marginStart="5dp"
+                android:textStyle="bold"
+                android:layout_toEndOf="@id/monety_system2"
+                android:text="monety za promocje"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wykonuj promocje korzystając z instrukcji i reflinków znajdujących się w naszej aplikacji otrzymuj za to bonusowe monety! Wystarczy, że po wykonaniu promocji oznaczonej niebieską gwiazdką oznajmisz ten fakt klikając w odpowiedni przycisk znajdujący się w instrukcji promocji. Udaj się do zakładki Pomoc>Promocje by dowiedzieć się więcej."
+                android:layout_marginTop="10dp"
+                android:textSize="12sp"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@id/monety_system2"
+                android:layout_below="@id/monety_system2_text"
+
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/system_punktow_rl3"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/system_punktow_rl2"
+
+            >
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/monety_system3"
+                android:layout_marginTop="10dp"
+                app:srcCompat="@drawable/my_informations_tasks_points"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/monety_system3_text"
+                android:layout_marginTop="10dp"
+                android:textSize="18sp"
+                android:layout_marginStart="5dp"
+                android:textStyle="bold"
+                android:layout_toEndOf="@id/monety_system3"
+                android:text="monety za zadania"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/monety_system3"
+                android:text="W naszej aplikacji znajdują się także specjalne zadania dostępne dla każdego użytkownika. Z czasem będzie ich coraz więcej. Wykonuj je i otrzymuj za nie stosowną ilość monet. Udaj się do zakładki Pomoc>Zadania aby dowiedzieć się więcej."
+                android:layout_below="@id/monety_system3_text"
+                android:layout_marginTop="10dp"
+                android:textSize="12sp"
+                android:layout_marginStart="5dp"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/system_punktow_rl4"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/system_punktow_rl3"
+
+            >
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/monety_system4"
+                android:layout_marginTop="10dp"
+                app:srcCompat="@drawable/my_informations_ads_points"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/monety_system4_text"
+                android:layout_marginTop="10dp"
+                android:textSize="18sp"
+                android:layout_marginStart="5dp"
+                android:textStyle="bold"
+                android:layout_toEndOf="@id/monety_system4"
+                android:text="monety za reklamy"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Specjalnie dla naszych użytkowników przygotowaliśmy także możliwość zdobywania monet za oglądanie reklam. Za obejrzenie reklamy otrzymasz od 0.01 do 0.10 monet. Więcej informacji znajdziesz w zakładce Pomoc>Reklamy."
+                android:layout_marginTop="10dp"
+                android:textSize="12sp"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@id/monety_system4"
+                android:layout_below="@id/monety_system4_text"
+
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/system_punktow_rl5"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/system_punktow_rl4"
+
+            >
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/monety_system5"
+                android:layout_marginTop="10dp"
+                app:srcCompat="@drawable/my_informations_games_points"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/monety_system5_text"
+                android:layout_marginTop="10dp"
+                android:textSize="18sp"
+                android:layout_marginStart="5dp"
+                android:textStyle="bold"
+                android:layout_toEndOf="@id/monety_system5"
+                android:text="monety za gry"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jesteśmy w trakcie prac nad przygotowaniem dla naszych użytkowników możliwości pozyskiwania monet z grania w gry. Więcej informacji wkrótce."
+                android:layout_marginTop="10dp"
+                android:textSize="12sp"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@id/monety_system5"
+                android:layout_below="@id/monety_system5_text"
+
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/system_punktow_rl5"
+
+            >
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/monety_system6"
+                android:layout_marginTop="10dp"
+                app:srcCompat="@drawable/my_informations_important_points"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/monety_system6_text"
+                android:layout_marginTop="10dp"
+                android:textSize="18sp"
+                android:layout_marginStart="5dp"
+                android:textStyle="bold"
+                android:layout_toEndOf="@id/monety_system6"
+                android:text="Ważna informacja"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Na ten moment monety pełnią jedynie rolę czegoś w rodzaju statystyk, nie można wymienić ich na pieniądze, vouchery, ani inne nagrody rzeczowe lub pieniężne, aczkolwiek stale nad tym pracujemy i jak tylko uda nam się dopracować zabezpieczenia i funkcjonalność systemu, zintegrować płatności, oraz rozwiązać regulacje prawne - udostępnimy formy wymiany monet."
+                android:layout_marginTop="10dp"
+                android:textSize="12sp"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@id/monety_system6"
+                android:layout_below="@id/monety_system6_text"
+
+                />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</RelativeLayout>
+    </com.profitz.app.util.ScrollViewPremium>

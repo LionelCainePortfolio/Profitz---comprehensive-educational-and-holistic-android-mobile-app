@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#fff"
+    android:layout_height="match_parent"
+    tools:context="com.profitz.app.promos.activities.LoginActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minHeight="700dp"
+            android:id="@+id/global_const_bg"
+            android:background="@color/white"
+            android:layout_marginTop="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="15dp"
+                android:id="@+id/arrow_back_introduction"
+
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="@drawable/ripple_effect"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_baseline_arrow_back_ios_gold_24"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:maxWidth="300dp"
+                android:layout_height="wrap_content"
+                android:text="Czym są kryptowaluty?"
+                android:textSize="20sp"
+                android:id="@+id/text_title_quiz_introduction"
+                android:layout_marginTop="13dp"
+                android:layout_marginEnd="20dp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textColor="@color/bg_Profitz"
+                app:layout_constraintStart_toEndOf="@id/arrow_back_introduction"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/top_buttons"
+                app:layout_constraintTop_toBottomOf="@id/text_title_quiz_introduction"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="10dp"
+                android:background="@color/transparent"
+                >
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/view_pager_airdrop_introduction"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="match_parent">
+
+                </androidx.viewpager.widget.ViewPager>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <Button
+                android:id = "@+id/nextStepIntroductionQuizAirdrop"
+                android:layout_width = "310dp"
+                android:layout_height = "40dp"
+                android:textSize="15sp"
+                android:layout_alignParentBottom="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:textStyle="bold"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="@drawable/ripple_effect"
+                android:textColor="@color/white"
+                android:background="@drawable/gradient_button_shape"
+                android:layout_centerHorizontal = "true"
+                android:layout_marginTop = "5dp"
+                android:text = "Dalej"/>
+
+            <Button
+                android:id = "@+id/startQuizAirdrop"
+                android:layout_width = "310dp"
+                android:layout_height = "40dp"
+                android:textSize="15sp"
+                android:visibility="gone"
+                android:layout_alignParentBottom="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginBottom="55dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:textStyle="bold"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="@drawable/ripple_effect"
+                android:textColor="@color/white"
+                android:background="@drawable/gradient_button_shape"
+                android:layout_centerHorizontal = "true"
+                android:layout_marginTop = "5dp"
+                android:text = "Rozpocznij quiz"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</RelativeLayout>

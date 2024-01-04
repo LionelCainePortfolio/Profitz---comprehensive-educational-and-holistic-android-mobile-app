@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/need_help_from_global"
+        android:title="Pomoc"
+        android:theme="@style/AppTheme"
+        android:icon="@drawable/ic_help_outline_gold_24dp"
+        app:showAsAction="always"
+    />
+    <item
+        android:id="@+id/action_settings"
+        android:title="Rodzaj zarobku"
+        android:theme="@style/AppTheme"
+        android:icon="@drawable/ads_earn"
+        app:showAsAction="always"
+        android:orderInCategory="0" />
+</menu>

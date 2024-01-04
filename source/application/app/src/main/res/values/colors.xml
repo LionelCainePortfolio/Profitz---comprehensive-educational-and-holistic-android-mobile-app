@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright 2018 Felipe Joglar Santos
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="colorPrimary">#FFC107</color>
+    <color name="colorPrimaryMid">#FFAC07</color>
+    <color name="colorPrimaryDark">#FF9800</color>
+    <color name="colorAccent">#FFC107</color>
+    <color name="design_bottom_navigation_shadow_color" tools:override="true">#00000000</color>
+    <color name="bg_Profitz">#1E1E1E</color>
+    <!-- AppRate Colors -->
+    <!-- Used for the title -->
+    <color name="list_divider">#dedede</color>
+    <!-- Used for the text -->
+    <!-- Used for the Buttons -->
+    <color name="app_rate_btn_color">#1E1E1E</color>
+    <!-- Used for the background -->
+
+    <color name="otp_box_background_active">#FFE9C3</color>
+    <color name="otp_box_background_error">#D85151</color>
+    <color name="otp_box_background_success">#83F883</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="dark_bg_opacity">#DA000000</color>
+    <color name="light_font">#FBFBFB</color>
+    <color name="text_shadow">#7F000000</color>
+    <color name="bgGradientStart">#000000</color>
+    <color name="bgGradientEnd">#d8000000</color>
+
+    <color name="colorListDivider">#e6e6e6</color>
+    <color name="white">#ffffff</color>
+    <color name="gray">#b6b5b7</color>
+    <color name="blue">#36A9FF</color>
+    <color name="blue_confetti">#36A0EF</color>
+    <color name="orange_confetti">#EF950F</color>
+    <color name="purple_confetti">#AC28C3</color>
+
+    <color name="green">#00D700</color>
+    <color name="red">#D81300</color>
+    <color name="yellow">#FFA400</color>
+    <color name="black">#000000</color>
+
+    <color name="darkGray">#808080</color>
+    <color name="grayEnd">#666567</color>
+
+    <color name="searchBackground">#e0e0e0</color>
+    <color name="searchHint">#616161</color>
+    <color name="searchText">#212121</color>
+    <color name="magenta">#ff00ff</color>
+    <color name="pink">#ff99cc</color>
+    <color name="aqua">#00FFFF</color>
+    <color name="sky_blue">#00ccff</color>
+    <color name="pale_cyan">#ccffff</color>
+    <color name="maroon">#800000</color>
+    <color name="blue_gray_light">#D3D3D3</color>
+    <color name="orange">#FF6600</color>
+    <color name="lime">#00FF00</color>
+    <color name="lbl_name">#333333</color>
+
+    <color name="bg_screen1">#333333</color>
+    <color name="bg_screen3">#333333</color>
+
+    <!-- dots inactive colors -->
+    <color name="dot_dark_screen1">#444444</color>
+    <color name="dot_dark_screen2">#444444</color>
+    <color name="dot_dark_screen3">#444444</color>
+    <color name="dot_dark_screen4">#444444</color>
+
+    <!-- dots active colors -->
+    <color name="dot_light_screen1">#FFC107</color>
+    <color name="dot_light_screen2">#FFC107</color>
+    <color name="dot_light_screen3">#FFC107</color>
+    <color name="dot_light_screen4">#FFC107</color>
+
+    <array name="array_dot_active">
+        <item>@color/dot_light_screen1</item>
+        <item>@color/dot_light_screen2</item>
+        <item>@color/dot_light_screen3</item>
+        <item>@color/dot_light_screen4</item>
+    </array>
+
+    <array name="array_dot_inactive">
+        <item>@color/dot_dark_screen1</item>
+        <item>@color/dot_dark_screen2</item>
+        <item>@color/dot_dark_screen3</item>
+        <item>@color/dot_dark_screen4</item>
+    </array>
+
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorRed">#ff0000</color>
+    <color name="colorGreen">#00ff00</color>
+    <color name="colorOffline">#666666</color>
+
+    <color name="colorTransparent">#00000000</color>
+    <color name="colorGray">#e1e1e1</color>
+
+    <color name="colorDarkGray">#828282</color>
+    <color name="tabUnSelected">#80ffffff</color>
+    <color name="io_customerly__text_color_grey_lightgrey">#FF999999</color>
+
+
+    <color name="io_customerly__hints_textcolor">#FF999999</color>
+    <color name="io_customerly__welcomecard_texts">#FF999999</color>
+
+    <color name="io_customerly__li_conversation_name">#FF1A1A1A</color>
+    <color name="io_customerly__li_conversation_content">#CC60686E</color>
+</resources>

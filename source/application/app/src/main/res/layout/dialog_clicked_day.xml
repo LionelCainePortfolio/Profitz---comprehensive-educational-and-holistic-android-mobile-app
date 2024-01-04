@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape"
+        android:paddingLeft="15dp"
+        android:gravity="center"
+        android:paddingRight="15dp"
+        android:paddingBottom="15dp">
+        <ImageView
+            android:id="@+id/iv_congrats"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_marginTop="0dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:elevation="10dp"
+            app:srcCompat="@drawable/prezent" />
+        <TextView
+            android:id="@+id/dialog_done_info"
+            android:layout_below="@id/iv_congrats"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-35dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Gratulacje!"
+            android:textSize="35dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/dialog_done_info2"
+            android:layout_below="@id/dialog_done_info"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-10dp"
+            android:layout_centerInParent="true"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text=""
+            android:textSize="20sp"
+             />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_below="@+id/dialog_done_info2"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/button_done_clicked_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/gradient"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?selectableItemBackgroundBorderless"
+                android:foregroundGravity="center"
+                android:gravity="center"
+                android:paddingLeft="55dp"
+                android:paddingTop="8dp"
+                android:paddingRight="55dp"
+                android:paddingBottom="8dp"
+                android:stateListAnimator="@null"
+                android:text="Dzięki!"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/done_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/dialog_done_info2"
+            android:gravity="center">
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

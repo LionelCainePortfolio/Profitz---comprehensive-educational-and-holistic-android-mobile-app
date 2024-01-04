@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "809302478322",
+    "project_id": "pc-api-8100452626705267216-746",
+    "storage_bucket": "pc-api-8100452626705267216-746.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:809302478322:android:be87ca90a19f025efeef6b",
+        "android_client_info": {
+          "package_name": "com.profitz.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "809302478322-85fsbsuk47oaho2or7pd2nm0md6tr12e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALuVZXB9M70Ao_pFwJq9exBNhJhkEFOOU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "809302478322-85fsbsuk47oaho2or7pd2nm0md6tr12e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

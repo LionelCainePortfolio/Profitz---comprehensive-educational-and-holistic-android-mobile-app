@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:id="@+id/iv_circle_done"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="0dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:elevation="10dp"
+        app:srcCompat="@drawable/circle_done" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_circle_done"
+        android:layout_marginTop="-50dp"
+        android:background="@drawable/shape"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="15dp">
+
+        <TextView
+            android:id="@+id/dialog_done_info"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Wysłano pomyślnie!"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/dialog_done_info2"
+            android:layout_below="@id/dialog_done_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Otrzymaliśmy informacju o wykonaniu przez Ciebie tej promocji. Sprawdzimy to dokładnie i jeśli uznamy, że wszystkie warunki zostały spełnione - przyznamy Ci monety. Status i postęp weryfikacji, możesz śledzić w zakładce 'wykonane'."
+            android:textSize="13sp"
+             />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_below="@+id/dialog_done_info2"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/button_done_confirm_success"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                style="@style/MyButtonStyle"
+                android:background="@drawable/gradient_button_shape"                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?selectableItemBackgroundBorderless"
+                android:foregroundGravity="center"
+                android:gravity="center"
+                android:paddingLeft="25dp"
+                android:paddingTop="8dp"
+                android:paddingRight="25dp"
+                android:paddingBottom="8dp"
+                android:stateListAnimator="@null"
+                android:text="Rozumiem!"
+                android:textColor="#ffffff"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/done_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/dialog_done_info2"
+            android:gravity="center">
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

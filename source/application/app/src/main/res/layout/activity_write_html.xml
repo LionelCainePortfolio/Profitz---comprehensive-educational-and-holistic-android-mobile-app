@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+       >
+
+        <EditText
+            android:id="@+id/write_headline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bottom_border_white"
+            android:hint="@string/headline"
+            android:visibility="gone"
+            android:inputType="textPersonName"
+            android:paddingStart="12dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="0dp"
+            android:paddingBottom="8dp"
+            android:textSize="20sp" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:orientation="horizontal">
+
+                <com.profitz.app.WriteCustomButton
+                    android:id="@+id/write_textSize"
+                    android:layout_width="@dimen/toolbar_icon_width_size"
+                    android:layout_height="@dimen/toolbar_icon_height_size"
+                    android:background="?attr/selectableItemBackground"
+                    android:contentDescription="@string/textSize"
+                    android:layout_marginEnd="5dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/outline_format_size_black_48" />
+
+                <com.profitz.app.WriteCustomButton
+                    android:id="@+id/write_textColor"
+                    android:layout_width="@dimen/toolbar_icon_width_size"
+                    android:layout_height="@dimen/toolbar_icon_height_size"
+                    android:layout_marginEnd="5dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:contentDescription="@string/textColor"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/baseline_format_color_text_black_48" />
+
+                <com.profitz.app.WriteCustomButton
+                    android:id="@+id/write_textBgColor"
+                    android:layout_width="@dimen/toolbar_icon_width_size"
+                    android:layout_height="@dimen/toolbar_icon_height_size"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="5dp"
+
+                    android:background="?attr/selectableItemBackground"
+                    android:contentDescription="@string/textColor"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/baseline_format_color_fill_black_48" />
+
+                <com.profitz.app.WriteCustomButton
+                    android:id="@+id/write_textBold"
+                    android:layout_width="@dimen/toolbar_icon_width_size"
+                    android:layout_height="@dimen/toolbar_icon_height_size"
+                    android:layout_marginEnd="5dp"
+
+                    android:background="?attr/selectableItemBackground"
+                    android:contentDescription="@string/textBold"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/outline_format_bold_black_48" />
+
+                <com.profitz.app.WriteCustomButton
+                    android:id="@+id/write_textItalic"
+                    android:layout_width="@dimen/toolbar_icon_width_size"
+                    android:layout_height="@dimen/toolbar_icon_height_size"
+                    android:layout_marginEnd="5dp"
+
+                    android:background="?attr/selectableItemBackground"
+                    android:contentDescription="@string/textItalic"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/outline_format_italic_black_48" />
+
+                <com.profitz.app.WriteCustomButton
+                    android:id="@+id/write_textUnderLine"
+                    android:layout_width="@dimen/toolbar_icon_width_size"
+                    android:layout_height="@dimen/toolbar_icon_height_size"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="5dp"
+
+                    android:background="?attr/selectableItemBackground"
+                    android:contentDescription="@string/textAlign"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/baseline_format_underlined_black_48" />
+
+                <com.profitz.app.WriteCustomButton
+                    android:id="@+id/write_textStrike"
+                    android:layout_width="@dimen/toolbar_icon_width_size"
+                    android:layout_height="@dimen/toolbar_icon_height_size"
+                    android:layout_marginEnd="5dp"
+
+                    android:background="?attr/selectableItemBackground"
+                    android:contentDescription="@string/textStrike"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/outline_format_strikethrough_black_48" />
+                <com.profitz.app.WriteCustomButton
+                    android:id="@+id/write_textNumbers"
+                    android:layout_width="@dimen/toolbar_icon_width_size"
+                    android:layout_height="@dimen/toolbar_icon_height_size"
+                    android:layout_marginEnd="5dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:contentDescription="Lista numerowana"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/outline_format_numbers_black_48" />
+                <com.profitz.app.WriteCustomButton
+                    android:id="@+id/write_textBullets"
+                    android:layout_width="@dimen/toolbar_icon_width_size"
+                    android:layout_height="@dimen/toolbar_icon_height_size"
+                    android:layout_marginEnd="5dp"
+
+                    android:background="?attr/selectableItemBackground"
+                    android:contentDescription="Lista"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/outline_format_bullets_black_48" />
+
+                <com.profitz.app.WriteCustomButton
+                    android:id="@+id/write_textAlign"
+                    android:layout_width="@dimen/toolbar_icon_width_size"
+                    android:layout_height="@dimen/toolbar_icon_height_size"
+                    android:layout_marginEnd="5dp"
+
+                    android:background="?attr/selectableItemBackground"
+                    android:contentDescription="@string/textAlign"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/outline_format_align_left_black_48" />
+                <ImageButton
+                    android:id="@+id/write_imageInsert"
+                    android:layout_width="@dimen/toolbar_icon_width_size"
+                    android:layout_height="@dimen/toolbar_icon_height_size"
+                    android:background="?attr/selectableItemBackground"
+                    android:contentDescription="@string/ImageUpload"
+                    android:scaleType="fitCenter"
+                    android:layout_marginEnd="5dp"
+
+                    app:srcCompat="@drawable/outline_image_black_48"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <ImageButton
+                    android:id="@+id/write_videoInsert"
+                    android:layout_width="@dimen/toolbar_icon_width_size"
+                    android:layout_height="@dimen/toolbar_icon_height_size"
+                    android:background="?attr/selectableItemBackground"
+                    android:contentDescription="@string/videoUpload"
+                    android:scaleType="fitCenter"
+                    android:layout_marginEnd="5dp"
+
+                    app:srcCompat="@drawable/outline_slideshow_black_48"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.135"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:fitsSystemWindows="true"
+            android:minHeight="?attr/actionBarSize"
+            app:contentInsetEnd="0dp"
+            android:visibility="gone"
+            app:contentInsetLeft="0dp"
+            app:contentInsetRight="0dp"
+            app:contentInsetStart="8dp"
+            app:titleMarginStart="20dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:orientation="horizontal">
+
+
+                <Button
+                    android:id="@+id/write_confirmButton"
+                    android:layout_width="88dp"
+                    android:layout_height="@dimen/toolbar_icon_height_size"
+                    android:background="?attr/selectableItemBackground"
+                    android:contentDescription="@string/confirmButton"
+                    android:text="@string/confirmButton"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/write_cancelButton"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <Button
+                    android:id="@+id/write_cancelButton"
+                    android:layout_width="88dp"
+                    android:layout_height="@dimen/toolbar_icon_height_size"
+                    android:background="?attr/selectableItemBackground"
+                    android:contentDescription="@string/cancelButton"
+                    android:text="@string/cancelButton"
+                    android:textSize="18sp"
+                    android:visibility="gone"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/write_confirmButton"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+            <com.profitz.app.RichEditor.RichEditor
+                android:id="@+id/write_content"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                 android:layout_marginTop="10dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:autoLink="web|email"
+                android:gravity="start"
+                android:textColor="@color/bg_Profitz"
+                android:textCursorDrawable="@color/colorPrimaryMid"
+                app:layout_anchorGravity="center" />
+
+
+
+    </LinearLayout>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/scene_03"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:id="@+id/MotionLayoutAdmin"
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent"
+        android:background="#fff"
+        app:layoutDescription="@xml/scene_03_header"
+        app:showPaths="false">
+
+        <RelativeLayout
+            android:id="@+id/background"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/no_shape_gradient"
+            android:padding="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/text_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chcesz szybko odznaleźć użytkownika?"
+                android:textColor="@color/white"
+                android:textSize="21sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_1"
+                android:layout_margin="5dp"
+                android:text="Wpisz nazwę użytkownika poniżej."
+                android:textColor="@color/white" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/text_step"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="20dp"
+            android:paddingBottom="15dp"
+            android:gravity="center_horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <RelativeLayout
+                android:id="@+id/search_rl2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="90dp"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <include layout="@layout/user_search" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.robertlevonyan.views.customfloatingactionbutton.FloatingActionButton
+                    android:id="@+id/fab_add_done"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_horizontal"
+                    app:backgroundTint="@color/white"
+                    app:fabColor="@color/white"
+                    app:fabIcon="@drawable/ic_baseline_filter_24"
+                    app:fabIconColor="#FFC107"
+                    app:fabIconPosition="top"
+                    app:fabRippleColor="@color/white"
+                    app:fabSizes="mini"
+                    app:fabType="circle"
+                    app:tint="@color/white" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/usersAdminRV"
+
+        android:fillViewport="true"
+        app:layoutDescription="@xml/scene_03"
+        android:isScrollContainer="true"
+        android:measureAllChildren="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintTop_toBottomOf="@id/MotionLayoutAdmin"        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="15dp"
+        android:minHeight="500dp"
+        android:fastScrollEnabled="true"
+        android:scrollbarStyle="insideInset"
+        android:scrollbars="vertical"
+        android:splitMotionEvents="false"
+        android:verticalScrollbarPosition="right"
+        android:elevation="10dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true" />
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

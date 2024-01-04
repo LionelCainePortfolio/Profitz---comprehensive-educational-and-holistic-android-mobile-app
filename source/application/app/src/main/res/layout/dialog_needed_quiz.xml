@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#fff"
+    android:layout_height="match_parent"
+    tools:context="com.profitz.app.promos.activities.LoginActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="700dp"
+            android:id="@+id/global_const_bg"
+            android:background="@color/white"
+            android:layout_marginTop="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/top_buttons"
+                android:layout_marginTop="25dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@color/transparent"
+                >
+
+                <ImageView
+                    android:id="@+id/arrow_back"
+                    android:layout_width="17dp"
+                    android:layout_height="18dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="@drawable/ripple_effect"
+                    app:srcCompat="@drawable/ic_baseline_arrow_back_ios_gold_24"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="12dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@id/top_buttons"
+>
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:scaleType="centerCrop"
+                    app:riv_corner_radius="20dip"
+                    app:riv_mutate_background="true"
+                    app:riv_oval="false"
+                    android:src="@drawable/airdrop_crypto_banner"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Witaj!"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/bg_Profitz"
+
+                />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_height="wrap_content"
+                    android:text="Cieszymy się, że zainteresowały Cię Airdropy (Zrzuty kryptowalut). "
+                    android:textSize="15sp"
+                    android:textAlignment="center"
+                    android:layout_marginTop="15dp"
+                    android:textColor="#4C4C4C"
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:textAlignment="center"
+                    android:layout_marginEnd="30dp"
+                    android:layout_height="wrap_content"
+                    android:text="Zanim jednak udostępnimy Ci tę zawartość, chcemy mieć pewność, że masz podstawową wiedzę, czyli wiesz czym są kryptowaluty, jak funkcjonują, jak się nimi posługiwać, oraz jakie wiążą się z nimi zagrożenia. "
+                    android:textSize="15sp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#4C4C4C"
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_height="wrap_content"
+                    android:text="Dbamy o bezpieczeństwo naszych użytkowników i ta zawartość może zostać Ci udostępniona tylko i wyłącznie po przejściu krótkiego wprowadzenia dotyczącego kryptowalut i samych airdropów, który dla Ciebie przygotowaliśmy. "
+                    android:textSize="15sp"
+                    android:textAlignment="center"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#4C4C4C"
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_height="wrap_content"
+                    android:text="Przejście wprowadzenia, oraz krótkiego testu sprawdzającego poziom wiedzy powinno zająć około 5-10 minut. Ta czynność jest niezbędna jeśli chcesz uzyskać dostęp do zakładki Airdropy i otrzymać więcej możliwości zarabiania."
+                    android:textSize="15sp"
+                    android:textAlignment="center"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#4C4C4C"
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_height="wrap_content"
+                    android:text="Czy chcesz dowiedzieć się więcej na temat kryptowalut?"
+                    android:textSize="15sp"
+                    android:textAlignment="center"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#4C4C4C"
+
+                    />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <Button
+        android:id = "@+id/startIntroductionAirdrop"
+        android:layout_width = "310dp"
+        android:layout_height = "40dp"
+        android:textSize="15sp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="55dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:textStyle="bold"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="@drawable/ripple_effect"
+        android:textColor="@color/white"
+        android:background="@drawable/gradient_button_shape"
+        android:layout_centerHorizontal = "true"
+        android:layout_marginTop = "5dp"
+        android:text = "Zaczynajmy!"/>
+</RelativeLayout>

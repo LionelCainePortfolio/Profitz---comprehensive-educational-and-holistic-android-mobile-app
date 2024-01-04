@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="53dp"
+android:id="@+id/rl_global_article_one"
+    android:focusable="true"
+    android:clickable="true"
+    android:foreground="@drawable/ripple_effect_rectangle"
+android:layout_marginBottom="10dp"
+app:layout_constraintTop_toBottomOf="@id/topics_text"
+app:layout_constraintStart_toStartOf="parent"
+android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:id="@+id/linear"
+    android:orientation="horizontal">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="Początki"
+        android:maxWidth="270dp"
+        android:gravity="center_vertical"
+        android:layout_marginTop="5dp"
+        android:textSize="15sp"
+        android:id="@+id/text_article_name"
+        android:textColor="@color/bg_Profitz"
+        />
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:gravity="center_vertical"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        app:srcCompat="@drawable/ic_baseline_arrow_forward_ios_24"
+        />
+
+</RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="3dp"
+        android:layout_below="@id/linear"
+        android:layout_marginBottom="1dp"
+        android:background="@color/colorListDivider"/>
+</RelativeLayout>

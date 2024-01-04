@@ -1,0 +1,28 @@
+<!-- res/layout/your_layout.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+>
+<RelativeLayout
+    android:layout_width="200dp"
+    android:layout_height="200dp"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentTop="true"
+    android:layout_marginStart="25dp"
+    android:layout_marginEnd="25dp"
+    android:padding="50dp"
+    android:background="@drawable/rounded_background"
+    >
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/image_discount_1" />
+</RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        >
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="15dp"
+            android:paddingTop="20dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="10dp"
+            app:srcCompat="@drawable/ic_baseline_arrow_back_ios_gold_24" />
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@id/back"
+            android:gravity="center"
+            android:text="Dodaj kontakt"
+            android:textColor="@color/bg_Profitz"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/back"
+            android:orientation="vertical"
+            android:id="@+id/lr1"
+            >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Prośby kontaktu (0)"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:id="@+id/pending_contacts_text"
+            android:layout_marginBottom="0dp"
+            android:layout_marginStart="20dp"
+            android:textColor="@color/bg_Profitz"
+            android:textSize="20sp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvFriendRequests"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="0dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/add_contacts_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lr1"
+            android:layout_marginStart="20dp"
+            android:gravity="center"
+            android:text="Poleceni znajomi (0)"
+            android:textColor="@color/bg_Profitz"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/search_rl2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/add_contacts_text"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp">
+
+            <EditText
+                android:id="@+id/search_to_add_contacts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/round_textedit_grey"
+                android:drawableStart="@drawable/ic_search_black_24dp"
+                android:drawablePadding="4dp"
+                android:fontFamily="sans-serif-light"
+                android:hint="Szukaj..."
+                android:inputType="textNoSuggestions"
+                android:paddingStart="12dp"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:textColor="@color/searchText"
+                android:textColorHint="@color/searchHint"
+                android:textCursorDrawable="@drawable/cursor_color"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvRefers"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/search_rl2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/noRecordFound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:text="Nie znaleziono poleconych znajomych."
+        style="@style/MyTextView"
+        android:layout_centerInParent="true"/>
+</RelativeLayout>

@@ -1,0 +1,635 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.profitz.app.promos.activities.LoginActivity"
+    >
+
+    <com.profitz.app.util.ScrollViewPremium
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView"
+        >
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+   >
+      <RelativeLayout
+          android:visibility="gone"
+          android:id="@+id/layout_fragments"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"/>
+        <RelativeLayout
+            android:id="@+id/relative_global"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
+            >
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingRight="30dp"
+                android:paddingLeft="30dp"
+                >
+
+            </RelativeLayout>
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/global_const_bg"
+                android:background="@drawable/shape_round"
+                android:layout_marginTop="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                >
+
+                <RelativeLayout
+                    android:id="@+id/points_layout_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="230dp"
+                    android:background="@drawable/gold_gradient_shape"
+                    android:bottomLeftRadius="25dp"
+                    android:bottomRightRadius="25dp"
+                    android:elevation="9dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/arrow_back"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="15dp"
+                        app:srcCompat="@drawable/ic_baseline_arrow_back_ios_white_24"
+                        card_view:layout_constraintStart_toStartOf="parent"
+                        card_view:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/help_button"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="15dp"
+                        app:srcCompat="@drawable/ic_baseline_help_outline_white_24"
+                        card_view:layout_constraintEnd_toEndOf="parent"
+                        card_view:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textbalance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/arrow_back"
+                        android:layout_marginTop="10dp"
+                        android:text="Twoje saldo"
+                        android:textAlignment="center"
+                        android:textColor="#ffffff"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/layoutbalancepoints"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textbalance"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/textpoints"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="0.00"
+                            android:textAlignment="center"
+                            android:textColor="#ffffff"
+                            android:textSize="40sp"
+                            android:textStyle="bold"
+
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="-10dp"
+                            android:text="PKT"
+                            android:textAlignment="center"
+                            android:textColor="#ffffff"
+                            android:textSize="11sp"
+
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layouttradeeur"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/layoutbalancepoints"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="165dp"
+                            android:layout_height="15dp"
+                            android:text="Planowany przelicznik monet na EURO (planowana wartość) = "
+                            android:textAlignment="center"
+                            android:textColor="#ffffff"
+                            android:textSize="11sp"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/texttradeeur2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="#ffffff"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/layouttradeeur"
+                        android:layout_marginTop="5dp"
+                        android:text="1.00 pkt = 0.10 eur"
+                        android:textAlignment="center"
+                        android:textColor="#ffffff"
+                        android:textSize="10sp"
+                        android:visibility="gone" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/points_layout_tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="170dp"
+                    android:background="@drawable/shapewoshadow"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:paddingRight="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:paddingLeft="10dp"
+                    android:layout_marginRight="15dp"
+                    android:elevation="10dp"
+                    >
+
+                    <RelativeLayout
+                        android:layout_marginLeft="-5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+
+                        >
+
+                        <RelativeLayout
+                            android:id="@+id/relativepoints1"
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginRight="20dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="@drawable/ripple_effect_rectangle">
+
+                            <ImageView
+                                android:id="@+id/iv_topuppoints"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                app:srcCompat="@drawable/topuppoints" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/iv_topuppoints"
+                                android:layout_marginTop="0dp"
+                                android:foregroundGravity="center"
+                                android:gravity="center"
+                                android:text="Doładuj monety"
+                                android:textAlignment="center"
+                                android:textColor="@color/bg_Profitz"
+                                android:textSize="11.5sp"
+                                android:textStyle="bold"
+
+                                />
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_toRightOf="@id/relativepoints1"
+                            android:id="@+id/relativepoints2"
+                            android:layout_marginTop="3dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="@drawable/ripple_effect_rectangle"
+
+                            >
+
+                            <ImageView
+                                android:id="@+id/iv_topuppoints2"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerInParent="true"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                app:srcCompat="@drawable/tradepoints" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/iv_topuppoints2"
+                                android:layout_marginTop="0dp"
+                                android:gravity="center"
+                                android:textStyle="bold"
+                                android:text="Wymień monety"
+                                android:textAlignment="center"
+                                android:textColor="@color/bg_Profitz"
+                                android:textSize="11.5sp"
+
+                                />
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:id="@+id/relativepoints3"
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:layout_marginRight="0dp"
+                            android:layout_toRightOf="@id/relativepoints2"
+                            android:layout_marginTop="3dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="@drawable/ripple_effect_rectangle"
+
+                            >
+
+                            <ImageView
+                                android:id="@+id/iv_topuppoints3"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerInParent="true"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                app:srcCompat="@drawable/sendpoints" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/iv_topuppoints3"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="0dp"
+                                android:gravity="center"
+                                android:textStyle="bold"
+                                android:text="Wyślij monety"
+                                android:textAlignment="center"
+                                android:textColor="@color/bg_Profitz"
+                                android:textSize="11.5sp"
+
+                                />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/relativepoints4"
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_below="@+id/relativepoints1"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="@drawable/ripple_effect_rectangle"
+
+                            >
+
+                            <ImageView
+                                android:id="@+id/iv_topuppoints4"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerInParent="true"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                app:srcCompat="@drawable/historypoints" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/iv_topuppoints4"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="0dp"
+                                android:text="Historia monet"
+                                android:textStyle="bold"
+                                android:textAlignment="center"
+                                android:textColor="@color/bg_Profitz"
+                                android:textSize="11.5sp"
+
+                                />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/relativepoints5"
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:layout_below="@+id/relativepoints2"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_toRightOf="@id/relativepoints4"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="@drawable/ripple_effect_rectangle"
+                            >
+
+                            <ImageView
+                                android:id="@+id/iv_topuppoints5"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerInParent="true"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                app:srcCompat="@drawable/earnpoints" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/iv_topuppoints5"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="0dp"
+                                android:text="Zdobywaj monety"
+                                android:textAlignment="center"
+                                android:textColor="@color/bg_Profitz"
+                                android:textSize="11.5sp"
+                                android:textStyle="bold"
+
+                                />
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:id="@+id/relativepoints6"
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:layout_marginRight="0dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_below="@+id/relativepoints3"
+                            android:layout_toRightOf="@+id/relativepoints5"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="@drawable/ripple_effect_rectangle"
+
+                            >
+
+                            <ImageView
+                                android:id="@+id/iv_topuppoints6"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerInParent="true"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                app:srcCompat="@drawable/referfriendpoints" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/iv_topuppoints6"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="0dp"
+                                android:text="Zaproś znajomego"
+                                android:textStyle="bold"
+                                android:textAlignment="center"
+                                android:textColor="@color/bg_Profitz"
+                                android:textSize="11.5sp"
+
+                                />
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/points_layout_earn_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/shape_gradient"
+                    app:layout_constraintTop_toBottomOf="@id/points_layout_tabs"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:paddingRight="5dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:paddingLeft="5dp"
+                    android:layout_marginRight="15dp"
+                    android:elevation="10dp"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:orientation="horizontal"
+                        >
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="start"
+                            android:layout_gravity="start">
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="start"
+                                android:layout_marginTop="10dp"
+
+                                >
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="3dp"
+                                    android:orientation="vertical"
+                                    app:srcCompat="@drawable/unlock" />
+                                <TextView
+                                    android:id="@+id/textInfo2"
+                                    android:text="ODBLOKUJ DARMOWE 10 monet"
+                                    android:layout_width="wrap_content"
+                                    android:maxWidth="160dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_gravity="left"
+                                    android:textStyle="bold"
+                                    android:textColor="#ffffff"
+                                    android:textSize="14.5sp"
+
+                                    />
+                            </LinearLayout>
+                            <TextView
+                                android:id="@+id/textInfo3"
+                                android:text="Zyskaj darmowe 10 monet w postaci prezentu za zaproszenie swojego znajomego do skorzystania z aplikacji! "
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:maxWidth="175dp"
+                                android:layout_marginTop="-10dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_gravity="left"
+                                android:layout_below="@+id/textInfo2"
+                                android:textColor="#ffffff"
+                                android:textSize="10.5sp"
+
+                                />
+                            <Button
+                                android:id="@+id/my_rounded_sign_in_button"
+                                android:layout_width="140dp"
+                                android:layout_height="35dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_below="@+id/textInfo3"
+                                android:padding="5dp"
+                                android:textColor="#ffffff"
+                                android:text="Zacznij polecać"
+                                android:textSize="11sp"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:foreground="@drawable/ripple_effect_rectangle"
+                                android:background="@drawable/btn_round_transparent" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="end"
+                            android:layout_alignParentRight="true"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="122dp"
+                                android:layout_height="110dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="0dp"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                app:srcCompat="@drawable/circle" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/points_layout_history"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/points_layout_earn_info">
+
+                    <TextView
+                        android:id="@+id/textInfo6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="1dp"
+                        android:text="NAJNOWSZA AKTYWNOŚĆ"
+                        android:textColor="#000000"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/NotificationListPoints"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/textInfo6"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="5dp"
+                        android:paddingBottom="5dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/textInfo6" />
+
+                    <TextView
+                        android:id="@+id/see_all_notifications_points"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/NotificationListPoints"
+                        android:layout_alignParentEnd="true"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="Zobacz wszystkie >"
+                        android:textSize="15sp"
+
+                        />
+                </RelativeLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/nothings_here_points_lr"
+                    android:gravity="center"
+                    app:layout_constraintTop_toBottomOf="@id/points_layout_history"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:visibility="gone"
+                    android:layout_marginTop="30dp"
+                    android:orientation="vertical"
+                    >
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        app:srcCompat="@drawable/nothings_here_awards"
+                        android:layout_gravity="center"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_marginTop="20dp"
+                        android:textSize="18sp"
+                        android:textColor="@color/bg_Profitz"
+                        android:text="Nic tu nie ma!"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/gray_holo_light"
+                        android:text="Nie otrzymałeś/aś jeszcze żadnych monet."
+                        />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </RelativeLayout>
+
+  </RelativeLayout>
+
+    </com.profitz.app.util.ScrollViewPremium>
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" />
+</RelativeLayout>

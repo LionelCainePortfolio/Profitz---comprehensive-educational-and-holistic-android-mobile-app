@@ -1,0 +1,909 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.profitz.app.promos.activities.LoginActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/swipe_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/arrow_back"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="@drawable/ripple_effect"
+                app:srcCompat="@drawable/ic_baseline_arrow_back_ios_gold_24" />
+
+            <TextView
+                android:id="@+id/edit_text"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="2dp"
+                android:layout_toEndOf="@id/arrow_back"
+                android:gravity="center"
+                android:text="Ustawienia"
+                android:textColor="@color/bg_Profitz"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edit_text"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:minHeight="600dp"
+                android:orientation="vertical"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="5dp"
+                    android:gravity="center"
+                    android:text="Domyślna waluta"
+                    android:textColor="@color/bg_Profitz"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:gravity="start"
+                    android:paddingBottom="5dp"
+                    android:text="Wybierz domyślną walutę, w której będą wyświetlane ceny i kwoty potencjalnego zarobku."
+                    android:textColor="@color/colorOffline"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.profitz.app.util.SegmentedButtonGroup
+                    android:id="@+id/buttonGroup_default_currency"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/gray"
+                    android:elevation="2dp"
+                    app:borderColor="@color/transparent"
+                    app:borderWidth="1dp"
+                    app:divider="@color/transparent"
+                    app:dividerPadding="10dp"
+                    app:dividerWidth="1dp"
+                    app:position="0"
+                    app:radiusSegmented="30dp"
+                    app:ripple="false"
+                    app:rippleColor="@color/transparent"
+                    app:selectedBackground="@color/white"
+                    app:selectedButtonRadius="30dp">
+
+                    <com.profitz.app.util.SegmentedButton
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="10dp"
+                        app:drawableGravity="top"
+                        app:selectedTextColor="@color/bg_Profitz"
+                        app:text="$"
+                        app:textColor="@color/white"
+                        app:textSize="20sp"
+                        app:textStyle="bold" />
+
+                    <com.profitz.app.util.SegmentedButton
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="10dp"
+                        app:drawableGravity="top"
+                        app:selectedTextColor="@color/bg_Profitz"
+                        app:text="€"
+                        app:textColor="@color/white"
+                        app:textSize="20sp"
+                        app:textStyle="bold" />
+
+                    <com.profitz.app.util.SegmentedButton
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="10dp"
+                        app:drawableGravity="top"
+                        app:selectedTextColor="@color/bg_Profitz"
+                        app:text="£"
+                        app:textColor="@color/white"
+                        app:textSize="20sp"
+                        app:textStyle="bold" />
+                </com.profitz.app.util.SegmentedButtonGroup>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <TextView
+                        android:id="@+id/txt_language"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="Język"
+                        android:textColor="@color/bg_Profitz"
+                        android:textSize="19sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txt_language" />
+
+
+                    <TextView
+                        android:id="@+id/txt_language2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="Polski"
+                        android:textColor="@color/bg_Profitz"
+                        android:textSize="21sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txt_language2" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <TextView
+                        android:id="@+id/txt_hide_balance_points"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="Ukryj saldo monet"
+                        android:textColor="@color/bg_Profitz"
+                        android:textSize="19sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txt_hide_balance_points" />
+
+
+                    <com.suke.widget.SwitchButton
+                        android:id="@+id/txt_hide_balance_points2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txt_hide_balance_points2"
+                        app:sb_background="@color/gray"
+                        app:sb_border_width="0dp"
+                        app:sb_checked="false"
+                        app:sb_checkline_width="0dp"
+                        app:sb_shadow_radius="5dp"
+                        app:sb_show_indicator="false"
+                        app:sb_uncheck_color="@color/gray" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="5dp"
+                    android:gravity="center"
+                    android:text="Konto"
+                    android:textColor="@color/bg_Profitz"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/txt_hide_profile3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="Ukryj profil"
+                            android:textColor="@color/bg_Profitz"
+                            android:textSize="19sp" />
+
+                        <TextView
+                            android:layout_width="260dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="15dp"
+                            android:gravity="start"
+                            android:paddingBottom="5dp"
+                            android:text="Zaznacz tę opcję jeśli chcesz ukryć swój profil przed innymi użytkownikami. Twoje komentarze, opinie, oraz inne działania nie bedą widoczne publicznie. Użytkownicy nie bedą mogli też wysyłać do Ciebie wiadomości."
+                            android:textColor="@color/colorOffline"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+
+                    <com.suke.widget.SwitchButton
+                        android:id="@+id/txt_hide_profile3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:sb_background="@color/gray"
+                        app:sb_border_width="0dp"
+                        app:sb_checked="false"
+                        app:sb_checkline_width="0dp"
+                        app:sb_shadow_radius="5dp"
+                        app:sb_show_indicator="false"
+                        app:sb_uncheck_color="@color/gray" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/txt_hide_comments3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="Ukryj moje komentarze"
+                            android:textColor="@color/bg_Profitz"
+                            android:textSize="19sp" />
+
+                        <TextView
+                            android:layout_width="260dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="15dp"
+                            android:gravity="start"
+                            android:paddingBottom="5dp"
+                            android:text="Zaznacz tę opcję jeśli chcesz ukryć wszystkie swoje komentarze. Nie będziesz mógł/mogła dodawać nowych komentarzy, jeśli ta opcja będzie włączona."
+                            android:textColor="@color/colorOffline"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+                    <com.suke.widget.SwitchButton
+                        android:id="@+id/txt_hide_comments3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:sb_background="@color/gray"
+                        app:sb_border_width="0dp"
+                        app:sb_checked="false"
+                        app:sb_checkline_width="0dp"
+                        app:sb_shadow_radius="5dp"
+                        app:sb_show_indicator="false"
+                        app:sb_uncheck_color="@color/gray" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/txt_hide_reviews3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="Ukryj moje opinie"
+                            android:textColor="@color/bg_Profitz"
+                            android:textSize="19sp" />
+
+                        <TextView
+                            android:layout_width="260dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="15dp"
+                            android:gravity="start"
+                            android:paddingBottom="5dp"
+                            android:text="Zaznacz tę opcję jeśli chcesz ukryć wszystkie swoje opinie. Nie będziesz mógł/mogła dodawać nowych opinii, jeśli ta opcja będzie włączona."
+                            android:textColor="@color/colorOffline"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+
+                    <com.suke.widget.SwitchButton
+                        android:id="@+id/txt_hide_reviews3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:sb_background="@color/gray"
+                        app:sb_border_width="0dp"
+                        app:sb_checked="false"
+                        app:sb_checkline_width="0dp"
+                        app:sb_shadow_radius="5dp"
+                        app:sb_show_indicator="false"
+                        app:sb_uncheck_color="@color/gray" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="5dp"
+                    android:gravity="center"
+                    android:text="Powiadomienia"
+                    android:textColor="@color/bg_Profitz"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:gravity="start"
+                    android:paddingBottom="5dp"
+                    android:text="Zaznacz, jakie powiadomienia chciałbyś/chciałabyś otrzymywać od Profitz."
+                    android:textColor="@color/colorOffline"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/txt_new_promo_notifications3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="Nowa promocja"
+                            android:textColor="@color/bg_Profitz"
+                            android:textSize="19sp" />
+
+                        <TextView
+                            android:layout_width="260dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="15dp"
+                            android:gravity="start"
+                            android:paddingBottom="5dp"
+                            android:text="Powiadom mnie za każdym razem, gdy zostanie dodana nowa promocja do Profitz."
+                            android:textColor="@color/colorOffline"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+
+                    <com.suke.widget.SwitchButton
+                        android:id="@+id/txt_new_promo_notifications3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:sb_background="@color/gray"
+                        app:sb_border_width="0dp"
+                        app:sb_checked="false"
+                        app:sb_checkline_width="0dp"
+                        app:sb_shadow_radius="5dp"
+                        app:sb_show_indicator="false"
+                        app:sb_uncheck_color="@color/gray" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/txt_new_airdrop_notifications3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="Nowy airdrop"
+                            android:textColor="@color/bg_Profitz"
+                            android:textSize="19sp" />
+
+                        <TextView
+                            android:layout_width="260dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="15dp"
+                            android:gravity="start"
+                            android:paddingBottom="5dp"
+                            android:text="Powiadom mnie za każdym razem, gdy zostanie dodany nowy airdrop (zrzut kryptowalut) do Profitz."
+                            android:textColor="@color/colorOffline"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+
+                    <com.suke.widget.SwitchButton
+                        android:id="@+id/txt_new_airdrop_notifications3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:sb_background="@color/gray"
+                        app:sb_border_width="0dp"
+                        app:sb_checked="false"
+                        app:sb_checkline_width="0dp"
+                        app:sb_shadow_radius="5dp"
+                        app:sb_show_indicator="false"
+                        app:sb_uncheck_color="@color/gray" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/txt_new_message_notifications3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="Nowa wiadomość"
+                            android:textColor="@color/bg_Profitz"
+                            android:textSize="19sp" />
+
+                        <TextView
+                            android:layout_width="260dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="15dp"
+                            android:gravity="start"
+                            android:paddingBottom="5dp"
+                            android:text="Powiadom mnie za każdym razem, gdy zostanie wysłana do mnie nowa wiadomość."
+                            android:textColor="@color/colorOffline"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+
+                    <com.suke.widget.SwitchButton
+                        android:id="@+id/txt_new_message_notifications3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:sb_background="@color/gray"
+                        app:sb_border_width="0dp"
+                        app:sb_checked="false"
+                        app:sb_checkline_width="0dp"
+                        app:sb_shadow_radius="5dp"
+                        app:sb_show_indicator="false"
+                        app:sb_uncheck_color="@color/gray" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/txt_new_comment_notifications3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="Nowy komentarz"
+                            android:textColor="@color/bg_Profitz"
+                            android:textSize="19sp" />
+
+                        <TextView
+                            android:layout_width="260dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="15dp"
+                            android:gravity="start"
+                            android:paddingBottom="5dp"
+                            android:text="Powiadom mnie za każdym razem, gdy ktoś doda komentarz do dodanej przeze mnie instrukcji do promocji lub aidropu."
+                            android:textColor="@color/colorOffline"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+
+                    <com.suke.widget.SwitchButton
+                        android:id="@+id/txt_new_comment_notifications3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:sb_background="@color/gray"
+                        app:sb_border_width="0dp"
+                        app:sb_checked="false"
+                        app:sb_checkline_width="0dp"
+                        app:sb_shadow_radius="5dp"
+                        app:sb_show_indicator="false"
+                        app:sb_uncheck_color="@color/gray" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/txt_new_comment_reply_notifications3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="Odpowiedź na komentarz"
+                            android:textColor="@color/bg_Profitz"
+                            android:textSize="19sp" />
+
+                        <TextView
+                            android:layout_width="260dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="15dp"
+                            android:gravity="start"
+                            android:paddingBottom="5dp"
+                            android:text="Powiadom mnie za każdym razem, gdy ktoś odpowie na jeden z dodanych przeze mnie komentarzy."
+                            android:textColor="@color/colorOffline"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+
+                    <com.suke.widget.SwitchButton
+                        android:id="@+id/txt_new_comment_reply_notifications3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:sb_background="@color/gray"
+                        app:sb_border_width="0dp"
+                        app:sb_checked="false"
+                        app:sb_checkline_width="0dp"
+                        app:sb_shadow_radius="5dp"
+                        app:sb_show_indicator="false"
+                        app:sb_uncheck_color="@color/gray" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/txt_upadate_promos_notifications3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="Aktualizacja promocji"
+                            android:textColor="@color/bg_Profitz"
+                            android:textSize="19sp" />
+
+                        <TextView
+                            android:layout_width="260dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="15dp"
+                            android:gravity="start"
+                            android:paddingBottom="5dp"
+                            android:text="Powiadom mnie za każdym razem, gdy jakaś promocja zostanie zaaktualizowana (zmiana instrukcji, dat zakończenia, kwoty bonusu itp.)."
+                            android:textColor="@color/colorOffline"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+
+                    <com.suke.widget.SwitchButton
+                        android:id="@+id/txt_upadate_promos_notifications3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:sb_background="@color/gray"
+                        app:sb_border_width="0dp"
+                        app:sb_checked="false"
+                        app:sb_checkline_width="0dp"
+                        app:sb_shadow_radius="5dp"
+                        app:sb_show_indicator="false"
+                        app:sb_uncheck_color="@color/gray" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/txt_upadate_airdrop_notifications3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="Aktualizacja airdropu"
+                            android:textColor="@color/bg_Profitz"
+                            android:textSize="19sp" />
+
+                        <TextView
+                            android:layout_width="260dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="15dp"
+                            android:gravity="start"
+                            android:paddingBottom="5dp"
+                            android:text="Powiadom mnie za każdym razem, gdy jakiś airdrop (zrzut kryptowalut) zostanie zaaktualizowany (zmiana instrukcji, dat zakończenia, kwoty bonusu itp.)."
+                            android:textColor="@color/colorOffline"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+
+                    <com.suke.widget.SwitchButton
+                        android:id="@+id/txt_upadate_airdrop_notifications3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:sb_background="@color/gray"
+                        app:sb_border_width="0dp"
+                        app:sb_checked="false"
+                        app:sb_checkline_width="0dp"
+                        app:sb_shadow_radius="5dp"
+                        app:sb_show_indicator="false"
+                        app:sb_uncheck_color="@color/gray" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/txt_received_points_notifications3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="monety i nagrody"
+                            android:textColor="@color/bg_Profitz"
+                            android:textSize="19sp" />
+
+                        <TextView
+                            android:layout_width="260dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="15dp"
+                            android:gravity="start"
+                            android:paddingBottom="5dp"
+                            android:text="Powiadom mnie za każdym razem, gdy otrzymam monety, lub inne nagrody."
+                            android:textColor="@color/colorOffline"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+
+                    <com.suke.widget.SwitchButton
+                        android:id="@+id/txt_received_points_notifications3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:sb_background="@color/gray"
+                        app:sb_border_width="0dp"
+                        app:sb_checked="false"
+                        app:sb_checkline_width="0dp"
+                        app:sb_shadow_radius="5dp"
+                        app:sb_show_indicator="false"
+                        app:sb_uncheck_color="@color/gray" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

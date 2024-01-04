@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/toolbar_background">
+
+    <ImageButton
+        android:id="@+id/popup_insert_image"
+        android:src="@drawable/ic_image"
+        style="@style/action_button"/>
+
+    <ImageButton
+        android:id="@+id/popup_capture_photo"
+        android:src="@drawable/ic_camera"
+        style="@style/action_button"/>
+
+    <ImageButton
+        android:id="@+id/popup_edit_image"
+        android:enabled="false"
+        android:src="@android:drawable/ic_menu_edit"
+        style="@style/action_button"/>
+
+</LinearLayout>

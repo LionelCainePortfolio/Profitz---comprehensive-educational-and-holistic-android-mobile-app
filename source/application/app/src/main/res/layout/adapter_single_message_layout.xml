@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingEnd="10dp"
+    android:paddingStart="10dp">
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/messageDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="1dp"
+            android:layout_marginTop="1dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="1dp"
+            android:textSize="9sp"
+            android:visibility="gone"
+            android:textAlignment="center"
+            android:textColor="@color/grey" />
+        <include
+            android:id="@+id/myMessageLayout"
+            layout="@layout/layout_my_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           />
+
+        <include
+            android:id="@+id/otherMessageLayout"
+            layout="@layout/layout_other_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+</RelativeLayout>

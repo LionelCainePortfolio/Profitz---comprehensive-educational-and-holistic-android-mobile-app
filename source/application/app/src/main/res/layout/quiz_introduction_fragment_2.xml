@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#fff"
+    android:layout_height="match_parent"
+    tools:context="com.profitz.app.promos.activities.LoginActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minHeight="700dp"
+            android:id="@+id/global_const_bg"
+            android:background="@color/white"
+            android:layout_marginTop="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:paddingBottom="120dp"
+                >
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/bitcoin_and_blockchain"
+                    app:riv_corner_radius="20dip"
+                    app:riv_mutate_background="true"
+                    app:riv_oval="false" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Zainteresowały Cię kryptowaluty? Poznaj historię ich powstania"
+                    android:textSize="18sp"
+                    android:textAlignment="center"
+                    android:id="@+id/text1"
+                    android:layout_marginTop="15dp"
+                    android:textColor="#151515"
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Koncepcja powstania zdecentralizowanego systemu płatności elektronicznych powstała jeszcze w latach 90-ych ubiegłego wieku, ale na sile ruch ten przybrał w okresie ostatniego kryzysu finansowego, którego szczyt przypadł na lata 2008-2009. Według wielu programistów, każdy użytkownik sieci internetowej powinien zachować prawo do zachowania dla siebie wybranych danych, ukrycia swojej tożsamości i braku regulacji ze strony władz."
+                    android:textSize="15sp"
+                    android:layout_marginTop="15dp"
+                    android:textAlignment="center"
+
+                    android:textColor="#3A3A3A"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pierwsze kryptowaluty powstały w 2008 r. i były to m.in. hashcash oraz bit gold. O bitcoinie (BTC) zaczęło być głośno za sprawą manifestu Satoshi Nakamoto (anonimowa osoba lub grupa osób). Manifest pt. Bitcoin: Elektroniczny system pieniężny peer-to-peer (Bitcoin: A Peer-to-Peer Electronic Cash System) pojawił się w sieci 31 października 2008 r., gdzie autor w dokładny sposób przedstawił i opisał metody wykorzystania sieci peer-to-peer (P2P) w celu stworzenia 'systemu elektronicznych transakcji nieopartych jedynie na wzajemnym zaufaniu'."
+                    android:textSize="15sp"
+                    android:textAlignment="center"
+
+                    android:layout_marginTop="15dp"
+                    android:textColor="#3A3A3A"
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="W styczniu 2009 r. powstaje sieć bitcoin a razem z nią pierwszy klient BTC (udostępniony na licencji open source). Satoshi Nakamoto 'wykopał' wtedy pierwszy blok bitcoinów (określany obecnie mianem genesis) o wartości 50 BTC. Pierwszy, realny kurs bitcoina ustalono na podstawie kosztu wydobycia."
+                    android:textSize="15sp"
+                    android:textAlignment="center"
+
+                    android:layout_marginTop="15dp"
+                    android:textColor="#3A3A3A"
+
+                    />
+
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

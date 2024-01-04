@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="15dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_dialog_promo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="0dp"
+            android:src="@drawable/logo" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rl_review"
+            android:layout_marginStart="10dp"
+            android:layout_below="@id/iv_dialog_promo"
+            >
+        <TextView
+            android:id="@+id/dialog_promo_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:paddingBottom="5dp"
+
+            android:text="Jak oceniasz tą promocję?"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/dialog_promo_info_points"
+            android:layout_below="@id/dialog_promo_name"
+            android:layout_width="wrap_content"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            android:textColor="#A5A5A5"
+            android:text="Dodaj opinię by otrzymać bonusowych monet."
+            android:textSize="12dp"
+            android:textStyle="bold" />
+
+
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/dialog_review_name"
+            android:layout_toEndOf="@id/iv_dialog_promo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:padding="10dp"
+            android:text="Nazwa"
+            android:textSize="19sp"
+            android:textStyle="bold" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_below="@id/rl_review"
+            android:layout_marginTop="5dp"
+            android:id="@+id/rl_dialog_licence"
+            >
+            <RatingBar
+                android:id="@+id/rating_score"
+                style="@style/Widget.AppCompat.RatingBar.Indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="31dp"
+                android:isIndicator="false"
+                android:progressBackgroundTint="@color/gray"
+                android:maxHeight="31dp"
+                android:numStars="5"
+                android:paddingTop="0dp"
+                android:elevation="2dp"
+                android:scaleX="0.8"
+                android:scaleY="0.8"
+                android:stepSize="0.1"
+                android:layout_marginStart="10dp"
+                android:transformPivotX="0dp"
+                android:transformPivotY="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                tools:ignore="RtlCompat,RtlHardcoded" />
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/rating_score_img_star"
+                app:srcCompat="@drawable/rating_score_img_star"
+                style="@style/Widget.AppCompat.RatingBar.Indicator"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.0"
+                android:id="@+id/rating_score_text"
+                android:textSize="18sp"
+                android:layout_marginEnd="4dp"
+                android:layout_toStartOf="@id/rating_score_img_star"
+                android:layout_marginTop="3dp"
+                />
+            <EditText
+                android:id="@+id/dialog_review_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rating_score"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:height="120dp"
+                android:background="@drawable/dialog_review_text_rounded"
+                android:foregroundGravity="center"
+                android:gravity="top"
+                android:textColorHint="#686868"
+                android:padding="10dp"
+                android:hint="Napisz opinię..."
+                android:textColor="#686868"
+                android:textSize="13sp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rll"
+            android:layout_marginLeft="5dp"
+            android:layout_below="@+id/rl_dialog_licence"
+            >
+
+        </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:layout_below="@id/rll"
+                >
+
+                <TextView
+                android:id = "@+id/button_review_confirm"
+                android:layout_width = "230dp"
+                android:layout_height = "wrap_content"
+                    android:textSize="14sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginBottom="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="4dp"
+                    android:paddingRight="20dp"
+                    android:textAlignment="center"
+                    android:paddingBottom="4dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:textColor="@color/white"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:background="@drawable/gradient_button_shape"
+                    android:textStyle="bold"
+                    android:layout_centerHorizontal = "true"
+                android:layout_marginTop = "5dp"
+                android:text = "Dodaj opinię"/>
+            </RelativeLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/done_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

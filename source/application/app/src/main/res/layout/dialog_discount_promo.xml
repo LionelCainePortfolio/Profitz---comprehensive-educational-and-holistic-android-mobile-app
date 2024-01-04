@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/discount_bg"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="X"
+        android:paddingTop="2dp"
+        android:id="@+id/dismiss_dialog_discount"
+        android:paddingBottom="2dp"
+        android:paddingEnd="5dp"
+        android:paddingStart="5dp"
+        android:textStyle="bold"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="20dp"
+        android:letterSpacing="0.08"
+        android:textSize="12sp"
+        android:layout_marginTop="45dp"
+        android:textColor="@color/colorPrimary"
+        android:background="@drawable/button_rectangle_yellow"
+        />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="PREMIUM"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:paddingEnd="15dp"
+    android:paddingStart="15dp"
+    android:textStyle="bold"
+    android:layout_alignParentEnd="true"
+    android:layout_marginEnd="20dp"
+    android:letterSpacing="0.08"
+    android:textSize="15sp"
+    android:layout_marginTop="45dp"
+    android:textColor="@color/colorPrimary"
+    android:background="@drawable/button_rectangle_yellow"
+    />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpagerDiscount"
+        android:layout_width="match_parent"
+        android:layout_marginTop="90dp"
+        android:layout_height="250dp" >
+
+    </androidx.viewpager.widget.ViewPager>
+    <LinearLayout
+        android:id="@+id/layoutDotsDiscount"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dots_height_discount"
+        android:layout_marginBottom="50dp"
+        android:gravity="center"
+        android:layout_below="@id/viewpagerDiscount"
+        android:orientation="horizontal"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:gravity="center_horizontal"
+        android:id="@+id/rl_white"
+        android:layout_below="@id/layoutDotsDiscount"
+        android:background="@drawable/rectangle_white"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:id="@+id/text1_rl_discount"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"
+            android:textSize="17sp"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:textColor="@color/bg_Profitz"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text2_rl_discount"
+            android:text="Oferta kończy się za:"
+            android:paddingTop="5dp"
+            android:textStyle="bold"
+            android:layout_below="@id/text1_rl_discount"
+            android:textSize="16sp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:gravity="center"
+            android:textColor="@color/bg_Profitz"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text3_rl_discount"
+            android:text="00:00:00"
+            android:paddingBottom="5dp"
+            android:textStyle="bold"
+            android:layout_below="@id/text2_rl_discount"
+            android:textSize="16sp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:gravity="center"
+            android:textColor="@color/bg_Profitz"
+            />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:layout_below="@id/rl_white"
+        android:layout_above="@id/reccuring_text"
+        android:orientation="horizontal"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        >
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="140dp"
+            android:layout_marginEnd="10dp"
+            android:gravity="center_horizontal"
+            android:background="@drawable/rectangle_discount"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DOSTĘP"
+                android:id="@+id/text1_first"
+                android:textSize="13sp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/bg_Profitz"
+                android:gravity="center_horizontal"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MIESIĘCZNY"
+                android:layout_below="@id/text1_first"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="@color/bg_Profitz"
+                android:gravity="center_horizontal"
+                />
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/rectangle_bottom_discount_grey"
+                >
+
+                <TextView
+                    android:id="@+id/text4_first"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_horizontal"
+                    android:text="00.00 zł"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="/ miesiąc *"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_below="@id/text4_first"
+                    android:textSize="10sp"
+                    android:textColor="@color/white"
+                    android:gravity="center_horizontal"
+                    />
+            </RelativeLayout>
+
+
+
+
+
+
+
+
+
+    </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="130dp"
+            android:layout_height="175dp"
+            android:layout_marginEnd="10dp"
+            android:gravity="center_horizontal"
+            android:background="@drawable/rectangle_discount"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DOSTĘP"
+                android:id="@+id/text1_middle"
+                android:textSize="17sp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/bg_Profitz"
+                android:gravity="center_horizontal"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ROCZNY"
+                android:layout_below="@+id/text1_middle"
+                android:textStyle="bold"
+                android:textSize="24sp"
+                android:textColor="@color/bg_Profitz"
+                android:gravity="center_horizontal"
+                />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="87.5dp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/rectangle_bottom_discount"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="00.00 zł"
+                    android:id="@+id/text3_middle"
+                    android:textSize="14sp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/grey"
+                    android:gravity="center_horizontal"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="00.00 zł"
+                    android:id="@+id/text4_middle"
+                    android:layout_below="@id/text3_middle"
+                    android:textStyle="bold"
+                    android:textSize="23sp"
+                    android:textColor="@color/white"
+                    android:gravity="center_horizontal"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="/ miesiąc *"
+                    android:layout_below="@id/text4_middle"
+                    android:textSize="10sp"
+                    android:textColor="@color/white"
+                    android:gravity="center_horizontal"
+                    />
+            </RelativeLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="140dp"
+            android:gravity="center_horizontal"
+            android:background="@drawable/rectangle_discount"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DOSTĘP"
+                android:id="@+id/text1_last"
+                android:textSize="13sp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/bg_Profitz"
+                android:gravity="center_horizontal"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DOŻYWOTNI"
+                android:layout_below="@id/text1_last"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="@color/bg_Profitz"
+                android:gravity="center_horizontal"
+                />
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/rectangle_bottom_discount_grey"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="00.00 zł"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/text4_last"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="@color/white"
+                    android:gravity="center_horizontal"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="płatne jednorazowo"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_below="@id/text4_last"
+                    android:textSize="10sp"
+                    android:textColor="@color/white"
+                    android:gravity="center_horizontal"
+                    />
+            </RelativeLayout>
+
+        </RelativeLayout>
+</LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="* rozliczane cyklicznie"
+        android:id="@+id/reccuring_text"
+        android:layout_alignParentBottom="true"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="50dp"
+        android:textColor="@color/white"
+        android:gravity="center_horizontal"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#fff"
+    android:layout_height="match_parent"
+    tools:context="com.profitz.app.promos.activities.LoginActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minHeight="700dp"
+            android:id="@+id/global_const_bg"
+            android:background="@color/white"
+            android:layout_marginTop="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:paddingBottom="120dp"
+                >
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/cryptocurrency_socialmedia_banner"
+                    app:riv_corner_radius="20dip"
+                    app:riv_mutate_background="true"
+                    app:riv_oval="false" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Proces udziału w aidropie jak i zrzutu różni się w zależności od danego projektu. Czasami wystarczy udostępnienie i polubienie profili firmy na social mediach, a czasami konieczne będzie spełnieni kilku warunków."
+                    android:textSize="18sp"
+                    android:textAlignment="center"
+                    android:id="@+id/text1"
+                    android:layout_marginTop="15dp"
+                    android:textColor="#151515"
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Niektóre „zrzuty posiadaczy” automatycznie wrzucają tokeny do portfeli użytkowników, którzy posiadają określoną monetę. Inne projekty są oparte na migawkach i mogą zostać przejęte tylko przez użytkowników, którzy posiadali wymagany token podczas „migawki”, która jest zapisem posiadaczy tokenów pobranych w określonym czasie/bloku. Przykładowo posiadałeś kryptowalutę X od 24.05 do 24.06 a migawka wykonana została dnia 13.06 - oznacza to że teoretycznie kwalfiwikowałbyś się do otrzymania zrzutu. Jeśli zaś przykładowo sprzedałbyś kryptowalutę X ze swoje portfela dnia 12.06, a migawka zostałaby wykonana 13.06, nie kwafilikowałbyś się do otrzymania zrzutu. "
+                    android:textSize="15sp"
+                    android:layout_marginTop="15dp"
+                    android:textAlignment="center"
+                    android:textColor="#3A3A3A"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Wszystko zależne jest kiedy dana firma/projekt wykonałby migawkę i czy w ogóle warunkiem zrzutu byłaby migawka, czy może trzymanie określonej kryptowaluty przez dany czas, bez migawki (HODL)."
+                    android:textSize="15sp"
+                    android:textAlignment="center"
+                    android:layout_marginTop="15dp"
+                    android:textColor="#3A3A3A"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Przykładem zrzutu posiadacza (HODL) jest Byteball, który początkowo był dystrybuowany wśród posiadaczy Bitcoina. Zrzucili również miesięczną ilość bajtów do portfeli posiadaczy Byteball proporcjonalnie do ilości BTC/GBYTE, które posiadali podczas zrzutu. Tego typu krople mogą wywołać podekscytowanie, które często skutkuje znaczącą akcją cenową dla konkretnej monety."
+                    android:textSize="15sp"
+                    android:textAlignment="center"
+                    android:layout_marginTop="15dp"
+                    android:textColor="#3A3A3A"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Aby wziąć udział w zrzutach nagród, prawdopodobnie będziesz potrzebować aktywnych kont w serwisach społecznościowych, takich jak Facebook, Twitter i Telegram. Powinieneś również mieć konto Bitcointalk.org, ponieważ niektóre zrzuty wymagają od uczestników opublikowania dowodu własności w wątkach na forum. Większość zrzutów nagród będzie wymagać dołączenia do grupy Telegram i udostępniania postów na Facebooku i Twitterze. Po wykonaniu kroków, aby zarezerwować nagrody, często będziesz musiał wypełnić formularz z nazwą użytkownika i adresem portfela kryptowalut."
+                    android:textSize="15sp"
+                    android:textAlignment="center"
+                    android:layout_marginTop="15dp"
+                    android:textColor="#3A3A3A"
+                    />
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

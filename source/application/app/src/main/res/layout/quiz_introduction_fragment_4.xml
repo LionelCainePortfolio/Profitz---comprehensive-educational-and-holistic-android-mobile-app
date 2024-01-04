@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#fff"
+    android:layout_height="match_parent"
+    tools:context="com.profitz.app.promos.activities.LoginActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minHeight="700dp"
+            android:id="@+id/global_const_bg"
+            android:background="@color/white"
+            android:layout_marginTop="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:paddingBottom="100dp"
+                >
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/altcoins_banner"
+                    app:riv_corner_radius="20dip"
+                    app:riv_mutate_background="true"
+                    app:riv_oval="false" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Znasz już stablecoiny? Pora na altcoiny. Poniżej dowiesz się czym są i jak powstały."
+                    android:textSize="18sp"
+                    android:textAlignment="center"
+                    android:id="@+id/text1"
+                    android:layout_marginTop="15dp"
+                    android:textColor="#151515"
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Wraz z rozwojem branży kryptowalut deweloperzy odkrywali ograniczenia Bitcoina. Wielu z nich wierzyło, że są w stanie stworzyć lepiej działające krypto. Tak właśnie powstały altcoiny."
+                    android:textSize="15sp"
+                    android:layout_marginTop="15dp"
+                    android:textAlignment="center"
+                    android:textColor="#3A3A3A"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Historia altcoinów sięga początków 2011 roku. Gdy Bitcoin miał za sobą już pierwsze rzeczywiste transakcje, ludzie uznali że można stworzyć coś opartego o pierwszą kryptowalutę z niewielkimi zmianami. Tak właśnie powstał Namecoin, czyli pierwszy w historii altcoin."
+                    android:textSize="15sp"
+                    android:textAlignment="center"
+                    android:layout_marginTop="15dp"
+                    android:textColor="#3A3A3A"
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Wypuszczona w kwietniu 2011 kryptowaluta Namecoin również polegała na kodzie źródłowym BTC, używała Proof-of-Work i miała tak jak Bitcoin ograniczoną podaż do 21 milionów coinów. Namecoin od Bitcoina różnił się tym, że był znacznie bardziej anonimowy i oporny na cenzurę."
+                    android:textSize="15sp"
+                    android:textAlignment="center"
+                    android:layout_marginTop="15dp"
+                    android:textColor="#3A3A3A"
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="6 miesięcy później światło dzienne ujrzał Litecoin, czyli pierwszy poważny rywal Bitcoina. Charlie Lee, twórca Litecoina, reklamował swój nowy produkt porównując go jako srebro do złota (którym był właśnie BTC). Litecoin różnił się od Bitcoina tym, że podaż została w nim zwiększona aż czterokrotnie, a czas wydobywania jednego bloku został zmniejszony czterokrotnie."
+                    android:textSize="15sp"
+                    android:textAlignment="center"
+                    android:layout_marginTop="15dp"
+                    android:textColor="#3A3A3A"
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Wraz z rozwojem branży kryptowalut i wzrostem cen powstawały kolejne altcoiny."
+                    android:textSize="15sp"
+                    android:textAlignment="center"
+                    android:layout_marginTop="15dp"
+                    android:textColor="#3A3A3A"
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Altcoin to termin, który powstał z połączenia słów alternative + coin, czyli w dosłownym tłumaczeniu alternatywna moneta. Alternatywna oczywiście do Bitcoina. To właśnie na bazie popularności pierwszej kryptowaluty narodziły się altcoiny."
+                    android:textSize="15sp"
+                    android:textAlignment="center"
+                    android:layout_marginTop="15dp"
+                    android:textColor="#3A3A3A"
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="W przestrzeni blockchainowej krąży kilka różnych definicji altcoinów. Najpopularniejsza z nich twierdzi, że altcoinem jest każda kryptowaluta i token inna niż Bitcoin. Według takiego oznaczenia łącznie powstało już ponad 5000 różnych altcoinów."
+                    android:textSize="15sp"
+                    android:textAlignment="center"
+                    android:layout_marginTop="15dp"
+                    android:textColor="#3A3A3A"
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Wiele altcoinów powstało na bazie Bitcoina i często są reklamowane jako ‘Bitcoin 2.0’, czyli ulepszona wersja BTC. Przeczyć wydaje się temu jednak popyt na rynku. Pomimo ponad 5 tys. istniejących altcoinów, Bitcoin stanowi ok. 70% całego rynku kryptowalutowego."
+                    android:textSize="15sp"
+                    android:textAlignment="center"
+                    android:layout_marginTop="15dp"
+                    android:textColor="#3A3A3A"
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Z czasem powstały też altcoiny, które nie mają z Bitcoinem wiele wspólnego. W dużej mierze przez to właśnie zaczęto dzielić altcoiny na kilka różnych typów."
+                    android:textSize="15sp"
+                    android:textAlignment="center"
+                    android:layout_marginTop="15dp"
+                    android:textColor="#3A3A3A"
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Najpopularniejsze altcoiny to Ethernum, Litecoin, Solana, XRP, Tether, Stellar Lumen."
+                    android:textSize="15sp"
+                    android:textAlignment="center"
+                    android:layout_marginTop="15dp"
+                    android:textColor="#3A3A3A"
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="15sp"
+                    android:textAlignment="center"
+                    android:layout_marginTop="15dp"
+                    android:textColor="#3A3A3A"
+
+                    />
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

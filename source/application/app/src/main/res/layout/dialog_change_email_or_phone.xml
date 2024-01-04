@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shapewoshadow"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:padding="5dp"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/rl_grey_line"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textAlignment="center"
+            android:gravity="center_horizontal">
+            <TextView
+                android:layout_width="70dp"
+                android:textAlignment="center"
+                android:layout_height="7dp"
+                android:gravity="center_horizontal"
+                android:background="@drawable/gradient_grey_button_shape_light_no_gradient"
+                />
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:layout_below="@id/rl_grey_line"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Zaaktualizuj dane"
+                android:textAlignment="center"
+                android:textColor="@color/bg_Profitz"
+                android:textSize="27sp"
+                android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:orientation="vertical"
+                android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar"
+            android:gravity="center">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_email"
+
+                    android:layout_width="match_parent"
+                    app:errorTextColor="@color/red"
+                    android:textColorHint="@color/bg_Profitz"
+                    app:helperTextTextColor="@color/gray"
+                    app:hintTextColor="@color/gray"
+                    style="@style/TextInputLayoutStyle"
+                    app:layout_constraintTop_toBottomOf="@id/text3_step2"
+                    app:counterOverflowTextAppearance="@style/counterOverride"
+                    app:counterTextAppearance="@style/counterText"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    app:boxStrokeColor="#878787"
+                    android:background="@color/transparent"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    app:boxStrokeWidth="1dp"
+
+                    app:shapeAppearance="@style/Rounded"
+                    app:counterTextColor="@color/gray"
+                    >
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/email_edit"
+                        android:drawableTint="@color/colorPrimaryMid"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:backgroundTint="@color/gray"
+                        android:textCursorDrawable="@drawable/cursor_color"
+                        android:textColorHint="@color/bg_Profitz"
+                        android:layout_centerHorizontal="true"
+                        android:paddingTop="10dp"
+                        android:textColorHighlight="@color/bg_Profitz"
+                        android:padding="10dp"
+                        android:textColorLink="@color/bg_Profitz"
+                        android:textAlignment="textStart"
+                        android:singleLine="true"
+                        android:ems="15"
+                        android:textColor="@color/bg_Profitz"
+                        android:hint="@string/text4_step2"
+                        android:inputType="textEmailAddress"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_number_phone"
+                    android:layout_width="match_parent"
+                    android:visibility="gone"
+                    app:errorTextColor="@color/red"
+                    app:layout_constraintTop_toBottomOf="@id/text2_step5"
+                    android:textColorHint="@color/bg_Profitz"
+                    app:helperTextTextColor="@color/gray"
+                    app:hintTextColor="@color/gray"
+                    style="@style/TextInputLayoutStyle"
+                    app:counterOverflowTextAppearance="@style/counterOverride"
+                    app:counterTextAppearance="@style/counterText"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    app:boxStrokeColor="#878787"
+                    app:prefixText="              "
+                    android:background="@color/transparent"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    app:boxStrokeWidth="1dp"
+                    app:prefixTextAppearance="@style/TextAppearance.AppCompat.Medium"
+                    app:shapeAppearance="@style/Rounded"
+                    app:counterTextColor="@color/gray"
+                    >
+
+
+                    <com.hbb20.CountryCodePicker
+                        android:id="@+id/editNumberCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:theme="@style/AppTheme.NoActionBar"
+                        android:textCursorDrawable="@drawable/cursor_color"
+                        app:ccpDialog_allowSearch="true"
+                        android:layout_marginTop="-41dp"
+                        app:ccpDialog_fastScroller_bubbleColor="@color/bg_Profitz"
+                        app:ccpDialog_fastScroller_handleColor="@color/colorPrimaryMid"
+                        app:ccpDialog_initialScrollToSelection="true"
+                        app:ccpDialog_keyboardAutoPopup="false"
+                        app:ccpDialog_searchEditTextTint="@color/white"
+                        app:ccpDialog_showCloseIcon="true"
+                        app:ccpDialog_showFastScroller="true"
+                        app:ccpDialog_showFlag="true"
+                        app:ccpDialog_showPhoneCode="true"
+                        app:ccpDialog_showTitle="true"
+                        app:ccpDialog_textColor="@color/white"
+                        app:ccp_arrowColor="@color/colorPrimaryMid"
+                        app:ccp_arrowSize="20dp"
+                        app:ccp_autoDetectCountry="true"
+                        android:layout_marginStart="2dp"
+                        app:ccp_autoDetectLanguage="true"
+                        app:ccp_autoFormatNumber="true"
+                        app:ccp_clickable="true"
+                        app:ccp_contentColor="@color/bg_Profitz"
+                        app:ccp_countryAutoDetectionPref="SIM_ONLY"
+                        app:ccp_countryPreference="PL"
+                        app:ccp_defaultLanguage="ENGLISH"
+                        app:ccp_defaultNameCode="PL"
+                        app:ccp_excludedCountries="in, is, ge, ao, am, gp, ca, yt, cv, td, bo,us, pk, af, al, dz, ad, ai, aq, ag, sa, aw, az, bs, bh, bb, bz, bd, bj, bm, bt, bi ba, bw, br, io, vg, bf, bn bi, cl, cn, cw, cy, me, cd, dm, do, dj, eg, ec, er, et, fk, fj, ph, ga, gm, gh, gi, gd, gl, gu, gg, gy, gf, go, gt, gn, gw, gq, ht, hn, hk, id, iq, ir, il, jm, jp, ye, je, jo, ky, kh, cm, qa, kz, ke ,kg, ki, co, km, cg, kr, kp, xk, cr, cu ,kw, la, lb, ls, lr, ly, li, mk, mg, mo, mw, my, ml, mt, mp, ma, mq, mr, mu, mx, mv, fm, mm, md, mc, mn, ms, mz, na, nr, np, ne, ng, ni, nu, nf, nc, nz, om, pw, ps, pa, pg, py, pe, pn,pf, ss, pr, za, cf, cy, re, rw, bl, kn, lc, mf, vc, pm, sv, ws, as, sm, sn, rs, sc, sl, sg, sx, so, lk, sz, sd, sr, sy, tj, th, tw, tz, tl, tg, tk, to, tt, tn, tr, tm, tc, tv, ug, uy, uz, vu, wf, va, ve, vn, ci, cx, im, sh, ax, ck, vi, cc, mh, fo, sb, st, zm, zw, ae"
+                        app:ccp_flagBorderColor="@color/transparent"
+                        app:ccp_hintExampleNumber="true"
+                        app:ccp_hintExampleNumberType="FIXED_LINE"
+                        app:ccp_rememberLastSelection="true"
+                        app:ccp_selectionMemoryTag="signupCCP"
+                        app:ccp_showArrow="false"
+                        app:ccp_showFlag="true"
+                        app:ccp_showFullName="false"
+                        app:ccp_showNameCode="false"
+                        app:ccp_showPhoneCode="true"
+                        app:ccp_textGravity="RIGHT"
+                        app:ccp_textSize="15sp"
+                        />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/phone_number_edit"
+                        android:drawableTint="@color/colorPrimaryMid"
+                        android:paddingStart="20dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/editNumberCode"
+                        android:paddingEnd="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:backgroundTint="@color/gray"
+                        android:textCursorDrawable="@drawable/cursor_color"
+                        android:textColorHint="@color/gray"
+                        android:layout_centerHorizontal="true"
+                        android:paddingTop="10dp"
+                        android:textColorHighlight="@color/bg_Profitz"
+                        android:paddingBottom="10dp"
+                        android:textColorLink="@color/bg_Profitz"
+                        android:textAlignment="textStart"
+                        android:singleLine="true"
+                        android:ems="15"
+                        android:textColor="@color/bg_Profitz"
+                        android:hint="Wprowadź numer telefonu"
+                        android:inputType="phone"
+                        />
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/const_update_phone"
+    android:visibility="gone"
+    >
+    <TextView
+        android:id="@+id/text1_const_update_phone"
+        android:layout_width="match_parent"
+
+        android:textAlignment="center"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/bg_Profitz"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Wysłaliśmy kod sms na numer null."
+        android:textSize="18sp" />
+    <TextView
+        android:id="@+id/text2_const_update_phone"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/text1_const_update_phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/bg_Profitz"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Wprowadź 6 cyfrowy kod poniżej:"
+        android:textSize="14sp" />
+    <in.aabhasjindal.otptextview.OtpTextView
+        android:id="@+id/otp_view_const_update_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/bg_Profitz"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:height="40dp"
+        app:layout_constraintTop_toBottomOf="@id/text2_const_update_phone"
+        app:width="40dp"
+        app:otp_box_background="@drawable/rounded_corner"
+        app:bar_enabled="false"
+        app:bar_height="2dp"
+        app:length="6"
+        app:otp_box_background_active="@drawable/rounded_otp_box_background_active"
+        app:otp_box_background_error="@drawable/rounded_otp_box_background_error"
+        app:otp_box_background_success="@drawable/rounded_otp_box_background_success"
+        app:otp_text_size="24dp"/>
+
+    <ProgressBar
+        android:id="@+id/pBarSms_const_update_phone"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="5dp"
+        android:layout_marginStart="25dp"
+        android:minWidth="140dp"
+        android:indeterminate="false"
+
+        android:progressDrawable="@drawable/progress_bar"
+        android:layout_marginEnd="25dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/otp_view_const_update_phone"
+        android:max="100"
+        />
+    <TextView
+        android:id="@+id/text3_const_update_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/pBarSms_const_update_phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/bg_Profitz"
+        android:gravity="center"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Możesz poprosić o ponowne wysłanie kodu za "
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/text4_const_update_phone"
+        android:layout_width="match_parent"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/text3_const_update_phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/bg_Profitz"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Nie otrzymałeś/aś kodu?"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/text5_const_update_phone"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/text4_const_update_phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/grey"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Wyślij ponownie"
+        android:textSize="11sp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/const_update_email"
+                    android:visibility="gone"
+
+                    >
+                    <TextView
+                        android:id="@+id/text1_const_update_email"
+                        android:layout_width="match_parent"
+
+                        android:textAlignment="center"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:textColor="@color/bg_Profitz"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:text="Wysłaliśmy kod na adres email null."
+                        android:textSize="18sp" />
+                    <TextView
+                        android:id="@+id/text2_const_update_email"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        app:layout_constraintTop_toBottomOf="@id/text1_const_update_email"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:textColor="@color/bg_Profitz"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:text="Wprowadź 6 cyfrowy kod poniżej:"
+                        android:textSize="14sp" />
+                    <in.aabhasjindal.otptextview.OtpTextView
+                        android:id="@+id/otp_view_const_update_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/bg_Profitz"
+                        android:layout_marginTop="20dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:height="40dp"
+                        app:layout_constraintTop_toBottomOf="@id/text2_const_update_email"
+                        app:width="40dp"
+                        app:otp_box_background="@drawable/rounded_corner"
+                        app:bar_enabled="false"
+                        app:bar_height="2dp"
+                        app:length="6"
+                        app:otp_box_background_active="@drawable/rounded_otp_box_background_active"
+                        app:otp_box_background_error="@drawable/rounded_otp_box_background_error"
+                        app:otp_box_background_success="@drawable/rounded_otp_box_background_success"
+                        app:otp_text_size="24dp"/>
+
+                    <ProgressBar
+                        android:id="@+id/pBarSms_const_update_email"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="5dp"
+                        android:layout_marginStart="25dp"
+                        android:minWidth="140dp"
+                        android:indeterminate="false"
+
+                        android:progressDrawable="@drawable/progress_bar"
+                        android:layout_marginEnd="25dp"
+                        android:layout_marginTop="30dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/otp_view_const_update_email"
+                        android:max="100"
+                        />
+                    <TextView
+                        android:id="@+id/text3_const_update_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        app:layout_constraintTop_toBottomOf="@id/pBarSms_const_update_email"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:textColor="@color/bg_Profitz"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:text="Możesz poprosić o ponowne wysłanie kodu za "
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/text4_const_update_email"
+                        android:layout_width="match_parent"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginEnd="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        app:layout_constraintTop_toBottomOf="@id/text3_const_update_email"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:textColor="@color/bg_Profitz"
+                        android:gravity="center"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:text="Nie otrzymałeś/aś kodu?"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/text5_const_update_email"
+                        android:layout_width="wrap_content"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginEnd="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        app:layout_constraintTop_toBottomOf="@id/text4_const_update_email"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:textColor="@color/grey"
+                        android:gravity="center"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:text="Wyślij ponownie"
+                        android:textSize="11sp" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/update_email_or_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/MyButtonStyle"
+                    android:background="@drawable/gradient_button_shape"
+                    android:text="Potwierdź aktualizację"
+                    android:paddingStart="30dp"
+                    android:paddingEnd="30dp"
+                    android:paddingTop="7dp"
+                    android:textStyle="bold"
+                    android:paddingBottom="7dp"
+                    android:textSize="20sp"
+                    android:layout_marginTop="20dp"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_margin="10dp"
+                    android:id="@+id/const_buttons_add_to_group"
+                    >
+                    <TextView
+                        android:id="@+id/reject"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/add"
+                        style="@style/MyButtonStyle"
+                        android:background="@drawable/gradient_grey_button_shape_light_no_gradient"
+                        android:text="Anuluj"
+                        android:paddingStart="40dp"
+                        android:paddingEnd="40dp"
+                        android:paddingTop="10dp"
+                        android:textColor="@color/bg_Profitz"
+                        android:textStyle="bold"
+                        android:paddingBottom="10dp"
+                        android:layout_marginEnd="5dp"
+                        android:textSize="15sp"
+                        android:layout_marginTop="15dp"/>
+                    <TextView
+                        android:id="@+id/add"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/reject"
+                        style="@style/MyButtonStyle"
+                        android:background="@drawable/gradient_button_shape"
+                        android:text="Zaproś"
+                        android:paddingStart="40dp"
+                        android:paddingEnd="40dp"
+                        android:layout_marginStart="5dp"
+                        android:paddingTop="10dp"
+                        android:textStyle="bold"
+                        android:paddingBottom="10dp"
+                        android:textSize="15sp"
+                        android:layout_marginTop="15dp"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>

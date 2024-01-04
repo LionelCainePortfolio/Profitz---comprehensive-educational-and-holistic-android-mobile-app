@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="90dp"
+    android:layout_height="90dp">
+    <RelativeLayout
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:id="@+id/rl_img_day"
+        >
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/rl_img_day_bg"
+            android:background="@drawable/circle_shape"
+            >
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/img_day"
+
+                />
+        </RelativeLayout>
+
+    </RelativeLayout>
+    <TextView
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_day"
+        android:text="Dzień 2"
+        android:textColor="@color/darkGray"
+        android:textAlignment="center"
+        android:textSize="12sp"
+        android:layout_marginTop="2dp"
+        android:layout_below="@id/rl_img_day"
+        />
+</RelativeLayout>

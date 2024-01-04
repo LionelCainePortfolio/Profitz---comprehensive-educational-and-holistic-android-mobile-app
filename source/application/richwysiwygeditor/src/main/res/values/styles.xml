@@ -1,0 +1,67 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="Theme.AppCompat.NoActionBar" parent="Base.Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="coordinatorLayoutStyle">@style/Widget.Support.CoordinatorLayout</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="RippleToolbarTheme" parent="@style/ThemeOverlay.AppCompat.Light">
+        <item name="colorControlHighlight">@color/dark_gray</item>
+        <item name="colorControlNormal">@color/black</item>
+        <item name="android:textColorPrimary">@color/black</item>
+    </style>
+
+    <style name="action_button">
+        <item name="android:layout_width">@dimen/toolbar_icon_width_size</item>
+        <item name="android:layout_height">@dimen/toolbar_icon_height_size</item>
+<!--        <item name="android:background">?attr/selectableItemBackground</item>-->
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:layout_marginLeft">0dp</item>
+        <item name="android:layout_marginRight">0dp</item>
+        <item name="android:layout_marginTop">2dp</item>
+        <item name="android:layout_marginBottom">2dp</item>
+        <item name="android:padding">2dp</item>
+        <item name="android:background">@color/action_background</item>
+    </style>
+
+    <style name="color_button">
+        <item name="android:layout_width">@dimen/color_button_size</item>
+        <item name="android:layout_height">@dimen/color_button_size</item>
+        <!--        <item name="android:background">?attr/selectableItemBackground</item>-->
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:visibility">gone</item>
+    </style>
+
+    <style name="label">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+    </style>
+
+    <style name="separ">
+        <item name="android:layout_width">3dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">#FFF</item>
+<!--        <item name="android:layout_marginLeft">2dp</item>-->
+<!--        <item name="android:layout_marginRight">2dp</item>-->
+        <item name="android:layout_marginTop">2dp</item>
+        <item name="android:layout_marginBottom">2dp</item>
+    </style>
+
+<!--    <style name="fab">-->
+<!--        <item name="android:layout_width">wrap_content</item>-->
+<!--        <item name="android:layout_height">wrap_content</item>-->
+<!--        <item name="android:layout_alignParentRight">true</item>-->
+<!--        <item name="android:layout_alignParentBottom">true</item>-->
+<!--        <item name="android:layout_margin">@dimen/fab_small_margin</item>-->
+<!--&lt;!&ndash;        <item name="fabSize">auto</item>&ndash;&gt;-->
+<!--    </style>-->
+
+</resources>

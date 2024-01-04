@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:background="#FFFFFF"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:id="@+id/animView"
+            android:elevation="110dp"
+            android:visibility="gone"
+            >
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:elevation="10dp"
+                android:translationY="-50dp"
+                android:id="@+id/anim_snow1"
+                android:layout_alignParentTop="true"
+                app:lottie_autoPlay="false"
+                app:lottie_renderMode="automatic"
+                app:lottie_repeatCount="0"
+                app:lottie_fileName="snow.json"
+                app:lottie_loop="false"
+                app:lottie_speed="1.5"
+                />
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="match_parent"
+                android:layout_height="225dp"
+                android:visibility="gone"
+                android:elevation="10dp"
+                android:layout_alignParentTop="true"
+                android:paddingStart="20dp"
+                android:translationY="-50dp"
+
+                android:paddingEnd="20dp"
+                android:id="@+id/anim_snow2"
+                app:lottie_autoPlay="false"
+                app:lottie_renderMode="automatic"
+                app:lottie_repeatCount="0"
+                app:lottie_fileName="snow.json"
+                app:lottie_loop="false"
+                app:lottie_speed="1.5"
+                />
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:elevation="10dp"
+                android:translationY="-50dp"
+
+                android:layout_alignParentTop="true"
+                android:paddingStart="20dp"
+                android:visibility="gone"
+                android:id="@+id/anim_snow3"
+                app:lottie_renderMode="automatic"
+                app:lottie_repeatCount="0"
+                app:lottie_autoPlay="false"
+                app:lottie_fileName="snow.json"
+                app:lottie_loop="false"
+                app:lottie_speed="1.5"
+                />
+        </RelativeLayout>
+
+
+<com.profitz.app.util.CustomSwipeToRefresh
+    android:id="@+id/swipe_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/scroll_layout"
+            tools:ignore="RedundantNamespace"
+                tools:context="com.profitz.app.promos.PromosActivity"
+                android:scaleType="fitXY"
+
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="start"
+                    android:id="@+id/nav_bar_non_visible"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:layout_editor_absoluteX="-16dp">
+                </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:elevation="10dp"
+            android:gravity="start"
+            android:id="@+id/nav_bar"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="-16dp">
+
+            <TextView
+                android:id="@+id/title_page"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:text="Zarabiaj"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@id/title_page"
+                android:layout_marginStart="5dp"
+                android:id="@+id/lr_premium_plan_my_profile"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:foregroundGravity="center"
+                    android:maxWidth="10dp"
+                    android:maxHeight="10dp"
+                    android:layout_marginEnd="3dp"
+                    app:srcCompat="@drawable/crown_premium"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginStart="1dp"
+                    android:paddingTop="1dp"
+                    android:text="Premium"
+                    android:textColor="@color/colorPrimaryMid"
+                    android:textStyle="bold"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textSize="8sp"
+                    android:paddingBottom="4dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="5dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/rl_points"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/gradient_button_shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="@drawable/ripple_effect"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:stateListAnimator="@null"
+                    android:textColor="@color/white"
+                    tools:ignore="NewApi"
+                    tools:targetApi="m">
+
+                    <TextView
+                        android:id="@+id/points_count_top"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="5dp"
+                        android:foregroundGravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/white"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_toEndOf="@id/points_count_top"
+                        android:foregroundGravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:text="monety"
+                        android:textColor="@color/white"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_energy"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="5dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="@drawable/ripple_effect"
+                    android:stateListAnimator="@null"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:visibility="gone"
+                    tools:ignore="NewApi"
+                    tools:targetApi="m">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        app:srcCompat="@drawable/energy_bg" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="3dp"
+                        android:text="99"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="7.5sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/icon_favorites"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="7dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:srcCompat="@drawable/ic_baseline_favorite_black_24" />
+
+                <ImageView
+                    android:id="@+id/icon_dones"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="7dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:srcCompat="@drawable/ic_baseline_done_all_black_24"
+
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/icon_help"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="5dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:srcCompat="@drawable/ic_baseline_help_outline_black_24" />
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="37dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_below="@id/title_page"
+                android:id="@+id/buttons"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="37dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/shape_black"
+                    android:id="@+id/promocje"
+                    android:gravity="start"
+                    >
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:foregroundGravity="center_vertical"
+                        android:layout_height="25dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginStart="3dp"
+                        android:id="@+id/iv_promocje"
+                        app:srcCompat="@drawable/promos_earn"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textSize="12sp"
+                        android:id="@+id/text_promocje"
+                        android:layout_marginEnd="5dp"
+                        android:textColor="#fff"
+                        android:gravity="center_vertical"
+                        android:foregroundGravity="center_vertical"
+                        android:textStyle="bold"
+                        android:layout_toEndOf="@id/iv_promocje"
+                        android:text="Promocje"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:clickable="true"
+                    android:layout_marginStart="5dp"
+                    android:focusable="true"
+                    android:layout_height="37dp"
+                    android:orientation="horizontal"
+                    android:id="@+id/reklamy"
+                    android:gravity="start"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="10dp"
+                    android:layout_toEndOf="@id/promocje"
+                    >
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:visibility="gone"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginStart="2dp"
+                        android:foregroundGravity="center_vertical"
+                        android:id="@+id/iv_reklamy"
+                        android:layout_height="25dp"
+                        app:srcCompat="@drawable/ads_earn"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_toEndOf="@id/iv_reklamy"
+                        android:layout_height="match_parent"
+                        android:textSize="11sp"
+                        android:id="@+id/text_reklamy"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/blue_gray_light"
+                        android:foregroundGravity="center_vertical"
+                        android:textStyle="bold"
+                        android:text="Reklamy"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/gry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="37dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@id/reklamy"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="start"
+                    android:orientation="horizontal"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="10dp"
+
+                    >
+
+                    <ImageView
+                        android:id="@+id/iv_gry"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:foregroundGravity="center_vertical"
+                        app:srcCompat="@drawable/games_earn"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/text_gry"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_toEndOf="@id/iv_gry"
+                        android:foregroundGravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:text="Gry"
+                        android:textColor="@color/blue_gray_light"
+
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:clickable="true"
+                    android:layout_marginStart="5dp"
+                    android:focusable="true"
+                    android:layout_height="37dp"
+                    android:id="@+id/market"
+                    android:gravity="start"
+                    android:layout_toEndOf="@id/gry"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="10dp"
+                    >
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:visibility="gone"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginStart="2dp"
+                            android:foregroundGravity="center_vertical"
+                            android:id="@+id/iv_market"
+                            android:layout_height="25dp"
+                            app:srcCompat="@drawable/marketplace_earn"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_toEndOf="@id/iv_market"
+                            android:layout_height="match_parent"
+                            android:textSize="11sp"
+                            android:id="@+id/text_market"
+                            android:textColor="@color/blue_gray_light"
+
+                            android:gravity="center_vertical"
+                            android:foregroundGravity="center_vertical"
+                            android:textStyle="bold"
+                            android:text="Market"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:clickable="true"
+                    android:layout_marginStart="5dp"
+                    android:focusable="true"
+                    android:layout_height="37dp"
+                    android:id="@+id/airdropy"
+                    android:gravity="start"
+                    android:layout_toEndOf="@id/market"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="10dp"
+                    >
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:visibility="gone"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginStart="2dp"
+                            android:foregroundGravity="center_vertical"
+                            android:id="@+id/iv_airdropy"
+                            android:layout_height="25dp"
+                            app:srcCompat="@drawable/airdrops_earn"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_toEndOf="@id/iv_airdropy"
+                            android:layout_height="match_parent"
+                            android:textSize="11sp"
+                            android:id="@+id/text_airdropy"
+                            android:gravity="center_vertical"
+                            android:foregroundGravity="center_vertical"
+                            android:textStyle="bold"
+                            android:text="Airdropy"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+<androidx.viewpager2.widget.ViewPager2
+    android:id="@+id/rv_promos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+    android:paddingEnd="5dp"
+    android:layout_marginTop="90dp"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+            android:layout_marginBottom="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+             />
+                <FrameLayout
+                    android:id="@+id/frame_layout_for_fragments"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/nav_bar">
+                </FrameLayout>
+
+        <ProgressBar
+            android:id="@+id/progress_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/empty_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@mipmap/empty_view" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:text="@string/empty_view_message"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <com.etebarian.meowbottomnavigation.MeowBottomNavigation
+                    android:id="@+id/bottom_navigation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    app:mbn_backgroundBottomColor="#1E1E1E"
+                    app:mbn_countBackgroundColor="#1E1E1E"
+                    app:mbn_rippleColor="#1E1E1E"
+
+                    app:mbn_defaultIconColor="#DFDFDF"
+                    app:mbn_selectedIconColor="#FFC000"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.profitz.app.util.CustomSwipeToRefresh>
+        <com.profitz.app.util.MovableFloatingActionButton
+            android:id="@+id/fab_chat"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:foregroundGravity="center"
+            android:background="@color/colorPrimaryDark"
+            android:layout_marginEnd="5dp"
+            android:layout_gravity="end|bottom"
+        android:layout_marginBottom="45dp"
+            android:scaleType="center"
+            app:fabSize="mini"
+            android:src="@drawable/ic_baseline_chat_15"
+            app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+

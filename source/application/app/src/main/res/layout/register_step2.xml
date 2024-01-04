@@ -1,0 +1,120 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:theme="@style/SignUp"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="220dp"
+            android:layout_height="220dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="80dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/img_s3_slajd_rejestracja_true"
+
+            />
+
+
+
+        <TextView
+            android:id="@+id/text2_step2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="330dp"
+            android:text="@string/text3_step2"
+            android:textColor="@color/bg_Profitz"
+            android:textSize="29sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/text3_step2"
+            android:layout_width="match_parent"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:textAlignment="center"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@id/text2_step2"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@color/bg_Profitz"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="Wprowadź swój adres email poniżej."
+            android:textSize="22sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:textAlignment="center"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@id/input_layout_email"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@color/bg_Profitz"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/text2_step2"
+            android:textSize="13sp" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_email"
+            android:layout_width="match_parent"
+            app:errorTextColor="@color/red"
+            android:textColorHint="@color/bg_Profitz"
+            app:helperTextTextColor="@color/gray"
+            app:hintTextColor="@color/gray"
+            style="@style/TextInputLayoutStyle"
+            app:layout_constraintTop_toBottomOf="@id/text3_step2"
+            app:counterOverflowTextAppearance="@style/counterOverride"
+            app:counterTextAppearance="@style/counterText"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            app:boxStrokeColor="#878787"
+            android:background="@color/transparent"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            app:boxStrokeWidth="1dp"
+
+            app:shapeAppearance="@style/Rounded"
+            app:counterTextColor="@color/gray"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextEmail"
+                android:drawableTint="@color/colorPrimaryMid"
+                android:paddingStart="20dp"
+                android:paddingEnd="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:backgroundTint="@color/gray"
+                android:textCursorDrawable="@drawable/cursor_color"
+                android:textColorHint="@color/bg_Profitz"
+                android:layout_centerHorizontal="true"
+                android:paddingTop="10dp"
+                android:textColorHighlight="@color/bg_Profitz"
+                android:padding="10dp"
+                android:textColorLink="@color/bg_Profitz"
+                android:textAlignment="textStart"
+                android:singleLine="true"
+                android:ems="15"
+                android:textColor="@color/bg_Profitz"
+                android:hint="@string/text4_step2"
+                android:inputType="textEmailAddress"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

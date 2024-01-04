@@ -1,0 +1,57 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext.kotlin_version = '1.7.0'
+    repositories {
+        mavenCentral()
+        maven {
+            url "https://dl.bintray.com/kotlin/kotlin-dev/"
+        }
+        maven {
+            url 'https://dl.bintray.com/giannign1/maven'
+        }
+        maven { url "https://jitpack.io" }
+        google()
+
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.0.4'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+        classpath 'com.google.gms:google-services:4.3.10'
+        classpath 'com.jakewharton:butterknife-gradle-plugin:10.2.3'
+
+
+    }
+}
+
+plugins {
+    id 'com.android.application' version '7.2.1' apply false
+    id 'com.android.library' version '7.2.1' apply false
+    id 'org.jetbrains.kotlin.android' version '1.8.22' apply false
+
+}
+allprojects {
+    repositories {
+        google()  // Google's Maven repository
+    }
+}
+configurations {
+    configureEach {
+        all*.exclude group: 'xpp3', module: 'xpp3'
+        implementation.exclude group: "org.apache.httpcomponents", module: "httpclient"
+        exclude group: 'org.json', module: 'json'
+        implementation.exclude module:'protobuf-java'
+
+
+    }
+
+}
+
+tasks.register('clean', Delete) {
+    delete rootProject.buildDir
+}
+
+
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
