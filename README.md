@@ -52,7 +52,7 @@ Java, Kotlin, PHP, MySQL, Rertorfit 2, Glide, Picasso, RecyclerView, Volley, Vie
 <table width="100%">
   <tr>
   <td style="border: none !important;" width="50%">
-<img src="https://github.com/LionelCainePortfolio/Profitz---comprehensive-educational-and-holistic-android-mobile-app/blob/main/gifs/signup_login.gif?raw=true" width="400px" />
+    <img src="https://github.com/LionelCainePortfolio/Profitz---comprehensive-educational-and-holistic-android-mobile-app/blob/main/gifs/signup_login.gif?raw=true" width="400px" />
   </td>
   <td style="border: none !important;" width="50%">
      Profitz's authentication and registration process has been optimized through the use of Firebase Authentication, ensuring a smooth user experience when logging in and creating an account. Users go through a multi-step process where they enter their username, set a password, provide an email address (which is verified in the database), and a phone number (secured with an SMS code). 
@@ -76,7 +76,7 @@ The entire feature is based on the efficient use of API and MySQL, which enables
 
   </td>
   <td style="border: none !important;" width="50%">
-<img src="https://github.com/LionelCainePortfolio/Profitz---comprehensive-educational-and-holistic-android-mobile-app/blob/main/gifs/promos.gif?raw=true" width="400px" />
+    <img src="https://github.com/LionelCainePortfolio/Profitz---comprehensive-educational-and-holistic-android-mobile-app/blob/main/gifs/promos.gif?raw=true" width="400px" />
   </td>
   </tr>
 </table>
@@ -88,7 +88,7 @@ The entire feature is based on the efficient use of API and MySQL, which enables
 <table width="100%">
   <tr>
   <td style="border: none !important;" width="50%">
-<img src="https://github.com/LionelCainePortfolio/Profitz---comprehensive-educational-and-holistic-android-mobile-app/blob/main/gifs/favorites_dones.gif?raw=true" width="400px" />
+    <img src="https://github.com/LionelCainePortfolio/Profitz---comprehensive-educational-and-holistic-android-mobile-app/blob/main/gifs/favorites_dones.gif?raw=true" width="400px" />
   </td>
   <td style="border: none !important;" width="50%">
      The "Favorite Offers" or "Executed" function allows users to save offers they are interested in, or those they have already executed, in special tabs. It uses the PHP language and a MySQL database to manage the data in the cloud. The application also uses the JSON format for data transfer and the Volley library to improve communication with the API.  <br><br>In addition, the feature uses the Room Persistence library to store data locally, improving access speed and the overall user experience. With this feature, users can easily customize their experience by creating a list of favorite promotions or keeping track of offers they have already made. T <br><br>he simple process of adding offers to the "Favorites" tab allows quick access to favorite offers, greatly enhancing the personalized and rewarding experience of using Profitz.
